@@ -898,11 +898,11 @@ def pagina(bestand, titel, omschrijving, namespace, pagina_css, css_naam,
 # bronsite en de feitelijke eigenschappen van het aanbod. Klantlogo's kunnen
 # hier later bij, zie CONTENT-TODO.md.
 KENMERKEN = [
-    ("badge", "badge-made-in-holland", "Made in Holland", 120),
+    ("badge", "badge-made-in-holland", "Made in Holland", 108),
     ("tekst", "2200K · 3000K · 4000K", "", 0),
-    ("badge", "badge-garantie", "Made in Holland, vijf jaar garantie", 183),
+    ("badge", "badge-garantie", "Made in Holland, vijf jaar garantie", 165),
     ("tekst", "DALI / DALI SR · 1-10V", "", 0),
-    ("badge", "badge-ik10", "IK10 rated", 80),
+    ("badge", "badge-ik10", "IK10 rated", 72),
     ("tekst", "Dynadimmer, dimregime 3A", "", 0),
     ("tekst", "RVS en polycarbonaat", "", 0),
     ("tekst", "Antigraffiticoating", "", 0),
@@ -921,7 +921,7 @@ def _kenmerkset(verborgen=False, plat=False):
             ext = "png" if waarde == "badge-garantie" else "webp"
             regels.append('          <li class="logo-slider__logo">'
                           f'<img {bron}="assets/foto/{waarde}.{ext}" alt="{alt}" '
-                          f'width="{breedte}" height="80" decoding="async"></li>')
+                          f'width="{breedte}" height="72" decoding="async"></li>')
         else:
             regels.append(f'          <li class="logo-slider__logo logo-slider__tekst">{waarde}</li>')
     return f'        <ul class="logo-slider__set"{extra}>\n' + "\n".join(regels) + '\n        </ul>'

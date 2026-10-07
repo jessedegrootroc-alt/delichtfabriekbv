@@ -71,8 +71,10 @@ inhoud = f'''  <!-- ================= 01 INTRODUCTIE ================= -->
     </div>
   </section>
 
-  <!-- ================= 02 WAT WE DOEN ================= -->
-  <section class="content-text-side-cta" id="s02-wat-we-doen">
+{kenmerkenband("02")}
+
+  <!-- ================= 03 WAT WE DOEN ================= -->
+  <section class="content-text-side-cta" id="s03-wat-we-doen">
     <div class="container">
       <div class="content-text-side-cta--container background--grey">
         <div class="row gx-0">
@@ -86,11 +88,11 @@ inhoud = f'''  <!-- ================= 01 INTRODUCTIE ================= -->
     </div>
   </section>
 
-  <!-- ================= 03 EEN PARTIJ =================
+  <!-- ================= 04 EEN PARTIJ =================
        Tekst en beeld naast elkaar, elk de helft (de horizontale kaart). Het
        uitlopende beeld van de template stapelde onder 1200px onder de tekst en
        liet daarboven een smalle tekstkolom naast een heel groot beeld over. -->
-  <section class="cta-blocks-advanced" id="s03-eigen-huis">
+  <section class="cta-blocks-advanced" id="s04-eigen-huis">
     <div class="container">
       <div class="row g-0">
         <div class="col-12">
@@ -118,8 +120,8 @@ inhoud = f'''  <!-- ================= 01 INTRODUCTIE ================= -->
     </div>
   </section>
 
-  <!-- ================= 04 ARMATUREN ================= -->
-  <section class="content-block" id="s04-armaturen">
+  <!-- ================= 05 ARMATUREN ================= -->
+  <section class="content-block" id="s05-armaturen">
     <div class="container">
 {sectiekop("Armaturen", "Drie armaturen, elk voor een andere plek",
            "Een offgrid bolder voor waar geen kabel ligt, een tunnelarmatuur dat we op jouw maten maken en een paaltoparmatuur voor straat en plein. Alle drie in 2200K, 3000K of 4000K en dimbaar met DALI, 1-10V of Dynadimmer.",
@@ -130,8 +132,8 @@ inhoud = f'''  <!-- ================= 01 INTRODUCTIE ================= -->
     </div>
   </section>
 
-  <!-- ================= 05 PROJECTEN ================= -->
-  <section class="cases-grid" id="s05-projecten">
+  <!-- ================= 06 PROJECTEN ================= -->
+  <section class="cases-grid" id="s06-projecten">
     <div class="container">
       <div class="cases-grid__header">
         <h2 class="cases-grid__heading">Gerealiseerde projecten</h2>
@@ -143,8 +145,8 @@ inhoud = f'''  <!-- ================= 01 INTRODUCTIE ================= -->
     </div>
   </section>
 
-  <!-- ================= 06 CIJFERS ================= -->
-  <section class="content-block" id="s06-cijfers">
+  <!-- ================= 07 CIJFERS ================= -->
+  <section class="content-block" id="s07-cijfers">
     <div class="container">
 {sectiekop("In cijfers", "Waar je op kunt rekenen")}
       <div class="panel-row panel-row--3">
@@ -153,8 +155,8 @@ inhoud = f'''  <!-- ================= 01 INTRODUCTIE ================= -->
     </div>
   </section>
 
-  <!-- ================= 07 DIENSTEN ================= -->
-  <section class="content-block" id="s07-diensten">
+  <!-- ================= 08 DIENSTEN ================= -->
+  <section class="content-block" id="s08-diensten">
     <div class="container">
 {sectiekop("Diensten", "Ook als er al iets hangt",
            "Bestaande armaturen verledden met een geartray, verlichting op maat voor een object waar geen standaardarmatuur past, of een warmtebeeld van een installatie die kuren vertoont.",
@@ -165,12 +167,12 @@ inhoud = f'''  <!-- ================= 01 INTRODUCTIE ================= -->
     </div>
   </section>
 
-{quoteslider("08", "reviews", "Wat opdrachtgevers zeggen", "Uit de samenwerking", REVIEWS)}
+{quoteslider("09", "reviews", "Wat opdrachtgevers zeggen", "Uit de samenwerking", REVIEWS)}
 
-{faq_blok("09", FAQ, "Wat men meestal eerst vraagt")}
+{faq_blok("10", FAQ, "Wat men meestal eerst vraagt")}
 
-  <!-- ================= 10 OVER DE LICHT FABRIEK ================= -->
-  <section class="streamer streamer--employee background--donker" id="s10-over">
+  <!-- ================= 11 OVER DE LICHT FABRIEK ================= -->
+  <section class="streamer streamer--employee background--donker" id="s11-over">
     <div class="container">
       <div class="streamer--employee-row">
         <figure class="streamer--employee-portrait">
@@ -191,7 +193,7 @@ inhoud = f'''  <!-- ================= 01 INTRODUCTIE ================= -->
     </div>
   </section>
 
-{slotblok("11", "Een plek die licht nodig heeft?")}
+{ctablok("12", "Een plek die licht nodig heeft?")}
 '''
 
 (UIT / "index.html").write_text(pagina(

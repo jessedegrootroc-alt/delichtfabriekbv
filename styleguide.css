@@ -929,14 +929,16 @@ main > section:has(+ section) > .container > .content-text-side-cta--container {
    (Stork, TES, Electrabel) houden de volle hoogte. Zo krijgen ze optisch
    ongeveer gelijk gewicht in plaats van gelijke hoogte. */
 .logo-slider__logo { flex-shrink: 0; padding: 0 var(--space-700); }
+/* De badges (Made in Holland, 5 jaar garantie, IK10) staan op 72px; op 40px
+   waren de garantie en de IK10-cirkel niet te lezen. */
 .logo-slider__logo img {
-  display: block; width: auto; height: 40px; max-width: 190px;
+  display: block; width: auto; height: 72px; max-width: 300px;
   object-fit: contain;
 }
 @media (max-width: 767px) {
   .logo-slider { padding: var(--space-600) 0; }
   .logo-slider__logo { padding: 0 var(--space-500); }
-  .logo-slider__logo img { height: 32px; max-width: 150px; }
+  .logo-slider__logo img { height: 52px; max-width: 220px; }
 }
 
 /* De slot-CTA: één donker vlak over de volle breedte met de kop, de tekst en de
@@ -2038,12 +2040,12 @@ section + section { margin-top: 0; }
    even hoog als een logo en staat in de labelstijl, zodat de band een geheel
    blijft. */
 .logo-slider__tekst {
-  display: flex; align-items: center; height: 40px; white-space: nowrap;
+  display: flex; align-items: center; height: 72px; white-space: nowrap;
   font-family: var(--font-medium); font-weight: var(--weight-medium);
   font-size: 0.8125rem; letter-spacing: var(--tracking-label); text-transform: uppercase;
   color: var(--color-text-primary);
 }
-@media (max-width: 767px) { .logo-slider__tekst { height: 32px; font-size: 0.75rem; } }
+@media (max-width: 767px) { .logo-slider__tekst { height: 52px; font-size: 0.75rem; } }
 
 /* Onder de knop in het slotblok: bellen als laagdrempelig alternatief. */
 .cta-slot__actie { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: var(--space-500); }

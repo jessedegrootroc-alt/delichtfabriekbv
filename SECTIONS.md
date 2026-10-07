@@ -80,16 +80,17 @@ dat is de conversie.
 | id | component | rol in de flow |
 |---|---|---|
 | `s01-introductie` | `.hero` met eigen foto en sluier, witte tekst linksonder | wie, voor wie, belofte, twee knoppen |
-| `s02-wat-we-doen` | `.content-text-side-cta` op grijs | herkenning van de situaties waarvoor DLF maakt |
-| `s03-eigen-huis` | `.cta-blocks-advanced__card--horizontal`: tekst links, beeld rechts, elk de helft; onder 992px gestapeld | één partij van vraag tot armatuur |
-| `s04-armaturen` | drie `.cta-blocks-advanced__card` met foto (16:10) | de drie armaturen |
-| `s05-projecten` | drie `.cases-grid__row` | bewijs |
-| `s06-cijfers` | `.panel-row--3` met `.usp__getal` (tellers) | drie cijfers met bron (5 jaar, 200 lm/W, 365 dagen) |
-| `s07-diensten` | `.panel-row--3` met `.panel--beeld` | de drie diensten |
-| `s08-reviews` | `.quotes` (quoteslider, wisselt elke 6 s) | placeholder-reviews |
-| `s09-faq` | `.accordion`, drie items, met `FAQPage` | bezwaren |
-| `s10-over` | `.streamer--employee` op leisteen, foto links | het bedrijf in Wormerveer |
-| `s11-kenmerken` + `s12-contact` | het slotblok | kenmerkenband + CTA |
+| `s02-kenmerken` | `.logo-slider`, direct onder de hero | de badges (Made in Holland, 5 jaar garantie, IK10) en de kenmerken als eerste bewijs |
+| `s03-wat-we-doen` | `.content-text-side-cta` op grijs | herkenning van de situaties waarvoor DLF maakt |
+| `s04-eigen-huis` | `.cta-blocks-advanced__card--horizontal`: tekst links, beeld rechts, elk de helft; onder 992px gestapeld | één partij van vraag tot armatuur |
+| `s05-armaturen` | drie `.cta-blocks-advanced__card` met foto (16:10) | de drie armaturen |
+| `s06-projecten` | drie `.cases-grid__row` | bewijs |
+| `s07-cijfers` | `.panel-row--3` met `.usp__getal` (tellers) | drie cijfers met bron (5 jaar, 200 lm/W, 365 dagen) |
+| `s08-diensten` | `.panel-row--3` met `.panel--beeld` | de drie diensten |
+| `s09-reviews` | `.quotes` (quoteslider, wisselt elke 6 s) | placeholder-reviews |
+| `s10-faq` | `.accordion`, drie items, met `FAQPage` | bezwaren |
+| `s11-over` | `.streamer--employee` op leisteen, foto links | het bedrijf in Wormerveer |
+| `s12-contact` | `.cta-slot` (alleen de CTA; de band staat op de homepage bovenaan) | conversie |
 
 ## Detailpagina's (`bouw_detail.py`)
 
@@ -155,7 +156,7 @@ Geen citaat, geen "uitdaging" en geen "resultaat": die staan niet op de bron.
 
 | component | wat |
 |---|---|
-| `.logo-slider` | doorlopende band met de drie badges van de bronsite (Made in Holland, 5 jaar garantie, IK10) afgewisseld met tekstkenmerken (`.logo-slider__tekst`). De reeks staat er twee keer in; pauzeert bij hover en focus, staat stil bij `prefers-reduced-motion`. Klantlogo's kunnen in `KENMERKEN` worden toegevoegd. |
+| `.logo-slider` | doorlopende band met de drie badges van de bronsite (Made in Holland, 5 jaar garantie, IK10) op 64px hoog, afgewisseld met tekstkenmerken (`.logo-slider__tekst`). Op de homepage staat de band direct onder de hero. De reeks staat er twee keer in; pauzeert bij hover en focus, staat stil bij `prefers-reduced-motion`. Klantlogo's kunnen in `KENMERKEN` worden toegevoegd. |
 | `.cta-slot` | één vlak over de volle breedte met het merkpatroon, kop, tekst, de knop en een belregel (`.cta-slot__bel`) |
 
 `slotblok("11")` levert `s11-kenmerken` en `s12-contact`.
