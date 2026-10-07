@@ -694,7 +694,9 @@ main > section:has(+ section) > .container > .content-text-side-cta--container {
    knop. Met 5fr/1fr duwde een lang woord als "Tunnelarmaturen" de ronde knop
    uit de kaart. Lange samenstellingen breken af in plaats van uit te lopen. */
 .cta-blocks-advanced__wrapper > .button--icon { flex-shrink: 0; }
-.cta-blocks-advanced__title { hyphens: auto; overflow-wrap: anywhere; }
+/* manual, niet auto: de afbreekpunten staan als &shy; in de titel
+   (Tunnel-armaturen), zodat de browser niet zelf op "Tunnelar-" breekt. */
+.cta-blocks-advanced__title { hyphens: manual; overflow-wrap: anywhere; }
 .cta-blocks-advanced__icon-button { justify-self: end; align-self: end; }
 .cta-blocks-advanced__title { font-size: clamp(1.5rem, 1.25rem + 1.5vw, 2.5rem); line-height: 1.1; }
 .cta-blocks-advanced__content { font-family: var(--font-regular); font-weight: var(--weight-regular);
