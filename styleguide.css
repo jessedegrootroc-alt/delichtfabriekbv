@@ -904,7 +904,7 @@ main > section:has(+ section) > .container > .content-text-side-cta--container {
    op, dus op het moment dat hij herstart staat er hetzelfde beeld. Daarom -50%
    en niet -100%. Het spoor is width:max-content zodat de logo's hun eigen
    breedte houden. */
-.logo-slider { background-color: var(--color-white); padding: var(--space-700) 0; }
+.logo-slider { background-color: var(--color-white); padding: var(--space-500) 0; }
 .logo-slider__venster { overflow: hidden; }
 .logo-slider__spoor {
   display: flex; width: max-content;
@@ -936,7 +936,7 @@ main > section:has(+ section) > .container > .content-text-side-cta--container {
   object-fit: contain;
 }
 @media (max-width: 767px) {
-  .logo-slider { padding: var(--space-600) 0; }
+  .logo-slider { padding: var(--space-400) 0; }
   .logo-slider__logo { padding: 0 var(--space-500); }
   .logo-slider__logo img { height: 52px; max-width: 220px; }
 }
