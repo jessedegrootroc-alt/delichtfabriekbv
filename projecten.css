@@ -103,7 +103,7 @@
 .case-kaart.is-even .case-kaart__link { background: var(--color-grey); }
 .case-kaart__link:focus-visible { outline: 2px solid var(--color-leisteen); outline-offset: -2px; }
 
-.case-kaart__beeld { margin: 0; overflow: hidden; aspect-ratio: 16/10; }
+.case-kaart__beeld { margin: 0; overflow: hidden; aspect-ratio: 16/9; }
 .case-kaart__beeld img { width: 100%; height: 100%; object-fit: cover;
                          transition: transform var(--duration-image) var(--ease-image); }
 .case-kaart__link:hover .case-kaart__beeld img { transform: scale(1.05); }

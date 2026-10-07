@@ -665,11 +665,16 @@ main > section:has(+ section) > .container > .content-text-side-cta--container {
   display: flex; flex-direction: column; width: 100%; height: 100%;
   overflow: hidden; color: inherit; text-decoration: none;
 }
+/* Elk beeldvak in een kaart is 16:9 (op verzoek van De Licht Fabriek): geen
+   vaste hoogtes meer, want een vaste 192px maakte van een staande foto een
+   streep. Het beeld staat absoluut in het vak, zodat de hoogte uit de
+   verhouding in elke browser betrouwbaar is. */
 .cta-blocks-advanced__banner {
-  position: relative; margin: 0; width: 100%; height: 192px;
+  position: relative; margin: 0; width: 100%; height: auto; aspect-ratio: 16 / 9;
   overflow: hidden; background: var(--color-leisteen); flex-shrink: 0;
 }
 .cta-blocks-advanced__banner img {
+  position: absolute; inset: 0;
   width: 100%; height: 100%; object-fit: cover; display: block;
   transition: transform var(--duration-image) var(--ease-image);
 }
@@ -726,11 +731,10 @@ main > section:has(+ section) > .container > .content-text-side-cta--container {
   .cta-blocks-advanced__card--horizontal { flex-direction: column-reverse; }
   /* Gestapeld krijgt het beeld een verhouding (3:2) in plaats van een vaste
      192px: op een tablet van 768px werd dat een streep van 4:1. */
-  .cta-blocks-advanced__card--horizontal .cta-blocks-advanced__banner { height: auto; aspect-ratio: 3 / 2; flex: 0 0 auto; }
+  .cta-blocks-advanced__card--horizontal .cta-blocks-advanced__banner { height: auto; aspect-ratio: 16 / 9; flex: 0 0 auto; }
   .cta-blocks-advanced__card--horizontal .cta-blocks-advanced__body { padding: var(--space-panel) var(--inset-x); gap: var(--space-600); }
 }
 @media (max-width: 576px) {
-  .cta-blocks-advanced__banner { height: 160px; }
   .cta-blocks-advanced__body { padding: var(--space-panel-sm) var(--inset-x); }
 }
 
@@ -746,7 +750,7 @@ main > section:has(+ section) > .container > .content-text-side-cta--container {
 
    De afbeelding staat absoluut, want een percentagehoogte tegen een hoogte die
    uit aspect-ratio komt is niet in elke browser even betrouwbaar. */
-.cta-blocks-advanced__banner--verhouding { height: auto; aspect-ratio: 16 / 10; }
+.cta-blocks-advanced__banner--verhouding { height: auto; aspect-ratio: 16 / 9; }
 .cta-blocks-advanced__banner--verhouding img { position: absolute; inset: 0; }
 
 /* ============================================================================
@@ -1420,7 +1424,7 @@ main > section:has(+ section) > .container > .content-text-side-cta--container {
      en rekent aspect-ratio de breedte daaruit terug, en dan loopt de foto het
      scherm uit. */
   .quote { grid-template-columns: 1fr; gap: var(--space-600); align-items: start; }
-  .quote__beeld { min-height: 0; aspect-ratio: 16 / 10; }
+  .quote__beeld { min-height: 0; aspect-ratio: 16 / 9; }
   .quote__streep { margin: var(--space-600) 0 var(--space-500); }
   .quotes__nav { padding-top: var(--space-700); }
 }
@@ -1986,7 +1990,7 @@ section + section { margin-top: 0; }
 .panel__beeld { margin: 0 calc(var(--inset-x) * -1); overflow: hidden; }
 .panel__beeld img {
   display: block; width: 100%; height: auto;
-  aspect-ratio: 16 / 10; object-fit: cover;
+  aspect-ratio: 16 / 9; object-fit: cover;
   transition: transform var(--duration-image) var(--ease-image);
 }
 .panel--link:hover .panel__beeld img { transform: scale(1.05); }

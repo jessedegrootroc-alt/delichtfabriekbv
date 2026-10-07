@@ -83,7 +83,7 @@ dat is de conversie.
 | `s02-kenmerken` | `.logo-slider`, direct onder de hero | de badges (Made in Holland, 5 jaar garantie, IK10) en de kenmerken als eerste bewijs |
 | `s03-wat-we-doen` | `.content-text-side-cta` op grijs | herkenning van de situaties waarvoor DLF maakt |
 | `s04-eigen-huis` | `.cta-blocks-advanced__card--horizontal`: tekst links, beeld rechts, elk de helft; onder 992px gestapeld | één partij van vraag tot armatuur |
-| `s05-armaturen` | drie `.cta-blocks-advanced__card` met foto (16:10) | de drie armaturen |
+| `s05-armaturen` | drie `.cta-blocks-advanced__card` met foto (16:9) | de drie armaturen |
 | `s06-projecten` | drie `.cases-grid__row` | bewijs |
 | `s07-cijfers` | `.panel-row--3` met `.usp__getal` (tellers) | drie cijfers met bron (5 jaar, 200 lm/W, 365 dagen) |
 | `s08-diensten` | `.panel-row--3` met `.panel--beeld` | de drie diensten |
@@ -126,7 +126,7 @@ FAQ en slotblok.
 
 **`projecten.html`**: `.paginahero--patroon`, intro, twee filtergroepen
 (toepassing en product, `projecten.js`), telling in `aria-live`, kaartraster
-(`.case-kaart`, 16:10-beeld), lege-staat, FAQ, slotblok. De kaarten staan in de
+(`.case-kaart`, 16:9-beeld), lege-staat, FAQ, slotblok. De kaarten staan in de
 HTML en worden alleen verborgen.
 
 **`project-<slug>.html`**: één template, statisch gebouwd uit `PROJECTEN`.
@@ -166,7 +166,7 @@ Geen citaat, geen "uitdaging" en geen "resultaat": die staan niet op de bron.
 - Elke foto is een `<picture>` met AVIF en WebP in een maatladder (`foto()` in
   `schil.py`, gegevens in `fotos.json`). `width`/`height` staan erbij tegen
   verspringen.
-- Vaste beeldvakken (kaarten 16:10, hero's, quotes) gebruiken `object-fit: cover`;
+- Vaste beeldvakken (kaarten en galerij 16:9, hero's, quotes) gebruiken `object-fit: cover`;
   vrijstaand beeld houdt zijn verhouding.
 - **Dezelfde foto staat nooit twee keer op één pagina.** De sleutels per pagina
   zijn daarop gekozen; de twee foto's in de uitklapper van het menu worden
