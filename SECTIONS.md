@@ -81,7 +81,7 @@ dat is de conversie.
 |---|---|---|
 | `s01-introductie` | `.hero` met eigen foto en sluier, witte tekst linksonder | wie, voor wie, belofte, twee knoppen |
 | `s02-wat-we-doen` | `.content-text-side-cta` op grijs | herkenning van de situaties waarvoor DLF maakt |
-| `s03-eigen-huis` | `.content-text-side-visual`, tekst links, beeld dat rechts uitloopt | één partij van vraag tot armatuur |
+| `s03-eigen-huis` | `.cta-blocks-advanced__card--horizontal`: tekst links, beeld rechts, elk de helft; onder 992px gestapeld | één partij van vraag tot armatuur |
 | `s04-armaturen` | drie `.cta-blocks-advanced__card` met foto (16:10) | de drie armaturen |
 | `s05-projecten` | drie `.cases-grid__row` | bewijs |
 | `s06-cijfers` | `.panel-row--3` met `.usp__getal` (tellers) | drie cijfers met bron (5 jaar, 200 lm/W, 365 dagen) |

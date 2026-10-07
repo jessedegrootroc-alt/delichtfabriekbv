@@ -86,24 +86,35 @@ inhoud = f'''  <!-- ================= 01 INTRODUCTIE ================= -->
     </div>
   </section>
 
-  <!-- ================= 03 EEN PARTIJ ================= -->
-  <section class="content-text-side-visual background--white" id="s03-eigen-huis">
+  <!-- ================= 03 EEN PARTIJ =================
+       Tekst en beeld naast elkaar, elk de helft (de horizontale kaart). Het
+       uitlopende beeld van de template stapelde onder 1200px onder de tekst en
+       liet daarboven een smalle tekstkolom naast een heel groot beeld over. -->
+  <section class="cta-blocks-advanced" id="s03-eigen-huis">
     <div class="container">
-      <div class="row gx-0">
-        <article class="col-lg-4 col-12">
-          <div class="content-text-side-visual--stack content-text-side-visual--article">
-            <h2>Van vraag tot armatuur, onder één dak</h2>
-            <div class="content-text-side-visual--body content-fit--quarter">
-              <p>De klantwens wordt vertaald naar een passende oplossing. Onze interne engineering en productie waarborgen de kwaliteit: het ontwerp wordt in 3D uitgewerkt, de behuizing in RVS of polycarbonaat gemaakt, de LED-module en de driver gemonteerd en ingeregeld op het dimregime dat jij wilt.</p>
-              <p>Daarna plaatsen we het armatuur, of leveren we het aan je installateur. Komt er later een vraag, dan zit de kennis van het armatuur nog bij dezelfde mensen.</p>
+      <div class="row g-0">
+        <div class="col-12">
+          <div class="cta-blocks-advanced__card cta-blocks-advanced__card--horizontal">
+            <figure class="cta-blocks-advanced__banner">
+              {foto("citylight-2025", maten="(max-width: 991px) 100vw, 50vw")}
+              <span class="cta-blocks-advanced__backdrop" aria-hidden="true"></span>
+            </figure>
+            <div class="cta-blocks-advanced__body cta-blocks-advanced__body--bg-white">
+              <span class="subtitle">Eigen huis</span>
+              <div class="cta-blocks-advanced__wrapper">
+                <div>
+                  <h2 class="cta-blocks-advanced__title" style="margin-bottom:var(--space-500)">Van vraag tot armatuur, onder één dak</h2>
+                  <div class="cta-blocks-advanced__content">
+                    <p>De klantwens wordt vertaald naar een passende oplossing. Onze interne engineering en productie waarborgen de kwaliteit: het ontwerp wordt in 3D uitgewerkt, de behuizing in RVS of polycarbonaat gemaakt, de LED-module en de driver gemonteerd en ingeregeld op het dimregime dat jij wilt.</p>
+                    <p>Daarna plaatsen we het armatuur, of leveren we het aan je installateur. Komt er later een vraag, dan zit de kennis van het armatuur nog bij dezelfde mensen.</p>
+                  </div>
+                </div>
+              </div>
+              <div>{knop("Lees over onze werkwijze", "over-ons.html")}</div>
             </div>
-            {knop("Lees over onze werkwijze", "over-ons.html")}
           </div>
-        </article>
+        </div>
       </div>
-    </div>
-    <div class="content-text-side-visual--visual added-distance">
-      {foto("citylight-2025", maten="(max-width: 991px) calc(100vw - 32px), (max-width: 1199px) calc(100vw - 96px), (max-width: 1352px) 940px, 70vw")}
     </div>
   </section>
 
