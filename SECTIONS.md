@@ -82,10 +82,10 @@ dat is de conversie.
 | `s01-introductie` | `.hero` met eigen foto en sluier, witte tekst linksonder | wie, voor wie, belofte, twee knoppen |
 | `s02-kenmerken` | `.logo-slider`, direct onder de hero | de badges (Made in Holland, 5 jaar garantie, IK10) en de kenmerken als eerste bewijs |
 | `s03-wat-we-doen` | `.content-text-side-cta` op grijs | herkenning van de situaties waarvoor DLF maakt |
-| `s04-eigen-huis` | `.cta-blocks-advanced__card--horizontal`: tekst links, beeld rechts, elk de helft; onder 992px gestapeld | één partij van vraag tot armatuur |
-| `s05-armaturen` | drie `.cta-blocks-advanced__card` met foto (16:9) | de drie armaturen |
-| `s06-projecten` | drie `.cases-grid__row` | bewijs |
-| `s07-cijfers` | `.panel-row--3` met `.usp__getal` (tellers) | drie cijfers met bron (5 jaar, 200 lm/W, 365 dagen) |
+| `s04-cijfers` | `.panel-row--3` met `.usp__getal` (tellers) | drie cijfers met bron (5 jaar, 200 lm/W, 365 dagen) |
+| `s05-eigen-huis` | `.cta-blocks-advanced__card--horizontal`: tekst links, beeld rechts, elk de helft; onder 992px gestapeld | één partij van vraag tot armatuur |
+| `s06-armaturen` | drie `.cta-blocks-advanced__card` met foto (16:9) | de drie armaturen |
+| `s07-projecten` | drie `.cases-grid__row` | bewijs |
 | `s08-diensten` | `.panel-row--3` met `.panel--beeld` | de drie diensten |
 | `s09-reviews` | `.quotes` (quoteslider, wisselt elke 6 s) | placeholder-reviews |
 | `s10-faq` | `.accordion`, drie items, met `FAQPage` | bezwaren |

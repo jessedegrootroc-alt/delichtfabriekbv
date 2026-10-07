@@ -95,11 +95,21 @@ inhoud = f'''  <!-- ================= 01 INTRODUCTIE ================= -->
     </div>
   </section>
 
-  <!-- ================= 04 EEN PARTIJ =================
+  <!-- ================= 04 CIJFERS ================= -->
+  <section class="content-block" id="s04-cijfers">
+    <div class="container">
+{sectiekop("In cijfers", "Waar je op kunt rekenen")}
+      <div class="panel-row panel-row--3">
+{cijfers}
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 05 EEN PARTIJ =================
        Tekst en beeld naast elkaar, elk de helft (de horizontale kaart). Het
        uitlopende beeld van de template stapelde onder 1200px onder de tekst en
        liet daarboven een smalle tekstkolom naast een heel groot beeld over. -->
-  <section class="cta-blocks-advanced" id="s04-eigen-huis">
+  <section class="cta-blocks-advanced" id="s05-eigen-huis">
     <div class="container">
       <div class="row g-0">
         <div class="col-12">
@@ -127,8 +137,8 @@ inhoud = f'''  <!-- ================= 01 INTRODUCTIE ================= -->
     </div>
   </section>
 
-  <!-- ================= 05 ARMATUREN ================= -->
-  <section class="content-block" id="s05-armaturen">
+  <!-- ================= 06 ARMATUREN ================= -->
+  <section class="content-block" id="s06-armaturen">
     <div class="container">
 {sectiekop("Armaturen", "Drie armaturen, elk voor een andere plek",
            "Een offgrid bolder voor waar geen kabel ligt, een tunnelarmatuur dat we op jouw maten maken en een paaltoparmatuur voor straat en plein. Alle drie in 2200K, 3000K of 4000K en dimbaar met DALI, 1-10V of Dynadimmer.",
@@ -139,8 +149,8 @@ inhoud = f'''  <!-- ================= 01 INTRODUCTIE ================= -->
     </div>
   </section>
 
-  <!-- ================= 06 PROJECTEN ================= -->
-  <section class="cases-grid" id="s06-projecten">
+  <!-- ================= 07 PROJECTEN ================= -->
+  <section class="cases-grid" id="s07-projecten">
     <div class="container">
       <div class="cases-grid__header">
         <h2 class="cases-grid__heading">Gerealiseerde projecten</h2>
@@ -148,16 +158,6 @@ inhoud = f'''  <!-- ================= 01 INTRODUCTIE ================= -->
       </div>
       <div class="cases-grid__list">
 {projecten}
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= 07 CIJFERS ================= -->
-  <section class="content-block" id="s07-cijfers">
-    <div class="container">
-{sectiekop("In cijfers", "Waar je op kunt rekenen")}
-      <div class="panel-row panel-row--3">
-{cijfers}
       </div>
     </div>
   </section>
