@@ -86,10 +86,29 @@ Vervalt uit de template: cursussen (4 + overzicht), cases uit Supabase, admin.ht
 ## Status
 
 - [x] Fase 1–6 vastgelegd
-- [ ] Fase 7–13 bouw (zie git-log)
-- [ ] Fase 14 image-replacements.json
-- [ ] Fase 15–21 QA (resultaten hieronder)
+- [x] Fase 7–13 gebouwd: 34 pagina's (home, 2 overzichten, 3 armaturen, 3 diensten, projectenoverzicht, 20 projecten, over ons, contact, privacy, cookies)
+- [x] Fase 14 `image-replacements.json` (Thermolight-hero en -galerij, klantlogo's optioneel)
+- [x] Fase 15–21 QA, zie log
 
-## QA-log
+## QA-log (7 oktober 2026)
 
-(wordt gevuld)
+| Controle | Hoe | Resultaat |
+|---|---|---|
+| Links, assets, srcsets | statisch script over alle 34 html-bestanden | 0 ontbrekende bestanden, 0 dode interne links |
+| Eén h1 per pagina, unieke title en description | idem | ok; descriptions ≤ 160 tekens, titles van enkele projecten 70–88 tekens (Google kapt af, geen fout) |
+| Dubbele foto op één pagina | idem (sleutel per `<img>`) | 0 |
+| Template-restanten in html/css/js | grep op MADEGRO, Martin, cursus, Supabase, lorem | 0 in html/js; css-commentaren opgeschoond |
+| JavaScript-syntax | `node -e new Function(...)` over alle scripts | ok (na herstel van `window.DLF`) |
+| Horizontale scroll | iframe-scan van 18 pagina's op 320, 375 en 768 px | nergens `scrollWidth > viewport`; alleen het mobiele paneel staat bewust buiten beeld |
+| Desktop 1280 | screenshots per sectie: home (12 secties), tunnelarmaturen, project Schielandhuis, projecten, over ons, contact, retrofit | ok; h1 "Tunnelarmaturen" liep over het beeld → `hyphens: auto` + `&shy;`; kenmerken met een woord als waarde → `.kerncijfer__getal--tekst` |
+| Desktop 1440 | tunnelarmaturen-hero | ok |
+| Tablet 768 | home: kaarten, projectrijen, diensten | ok, kolommen stapelen zoals bedoeld |
+| Mobiel 375 | home (hero, armaturen, projecten, band, kenmerken, CTA, voet), tunnelarmaturen (hero, trap, specs), project Buikslotermeer (hero, kenmerken), projecten (filters) | ok; Citylight-mini droeg nog een watermerk → strakker gesneden |
+| Toegankelijkheid (home) | JS: alt op elk beeld, naam op elke knop/link, label bij elk veld, kopvolgorde, `lang`, skip-link | 0 beelden zonder alt, 0 naamloze knoppen, 0 velden zonder label; sprong h2→h4 in de voet → voetkoppen zijn h2 |
+| Contrast | berekend op de tokens | nacht op wit 17,9:1; wit op leisteen 11,6:1; zwart op oranje 7,0:1; oranje wordt niet als tekstkleur gebruikt |
+| Beeldgewicht | bestandsgroottes + netwerklog | hero 1800px AVIF ≈ 120 kB, 2400px ≈ 184 kB; de browser kiest AVIF; alle foto's lazy behalve de hero (`fetchpriority="high"`) |
+| Formulier | contactpagina | zeven onderwerpen, labels, verplichte velden, akkoordvinkje; endpoint nog leeg (CONTENT-TODO) |
+| Reduced motion | code | smoother uit, band stil, timer verborgen, tellers over (template) |
+| Dark mode / navigatiegradient | n.v.t. | de template heeft geen dark mode en geen gradient in de balk; niet toegevoegd |
+
+Niet uitvoerbaar: Lighthouse/LCP-meting in een echte browser (pane zonder meetgereedschap); echte browsers buiten Chromium.

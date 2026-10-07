@@ -548,10 +548,10 @@ CHEVRON = _icoon("chevron-down", klasse="submenu--chevron", maat=12)
 
 LOGO_DONKER = ('<img class="header--logo-kleur" src="assets/logo/logo-donker.png" '
                'srcset="assets/logo/logo-donker.png 1x, assets/logo/logo-donker@2x.png 2x" '
-               f'alt="{BEDRIJF}" width="228" height="40">')
+               f'alt="{BEDRIJF}" width="292" height="36">')
 LOGO_WIT = ('<img class="header--logo-wit" src="assets/logo/logo-wit.png" '
             'srcset="assets/logo/logo-wit.png 1x, assets/logo/logo-wit@2x.png 2x" '
-            'alt="" aria-hidden="true" width="228" height="40">')
+            'alt="" aria-hidden="true" width="292" height="36">')
 
 
 def header(actief):
@@ -675,18 +675,18 @@ def footer():
     <div class="footer--widgets">
       <div class="row footer--gap">
         <div class="col-lg-3 col-md-4 col-12 widget">
-          <img src="assets/logo/logo-donker.png" srcset="assets/logo/logo-donker.png 1x, assets/logo/logo-donker@2x.png 2x" alt="{BEDRIJF}" width="228" height="40" style="margin-bottom:var(--space-500)">
+          <img src="assets/logo/logo-donker.png" srcset="assets/logo/logo-donker.png 1x, assets/logo/logo-donker@2x.png 2x" alt="{BEDRIJF}" width="292" height="36" style="margin-bottom:var(--space-500)">
           <p class="footer--intro">LED-verlichting voor openbare ruimte, outdoor en solar. Ontwerp, engineering en productie in Wormerveer, met {GARANTIE} garantie.</p>
         </div>
         <div class="col-lg-3 col-md-4 col-12 widget">
-          <h4>Armaturen</h4>
+          <h2 class="footer--kop">Armaturen</h2>
           <ul role="list">
             <li><a href="armaturen.html">Alle armaturen</a></li>
 {armaturen}
           </ul>
         </div>
         <div class="col-lg-3 col-md-4 col-12 widget">
-          <h4>Diensten</h4>
+          <h2 class="footer--kop">Diensten</h2>
           <ul role="list">
             <li><a href="diensten.html">Alle diensten</a></li>
 {diensten}
@@ -694,7 +694,7 @@ def footer():
           </ul>
         </div>
         <div class="col-lg-3 col-md-4 col-12 widget">
-          <h4>Contact</h4>
+          <h2 class="footer--kop">Contact</h2>
           <ul role="list">
             <li><a href="tel:{TELEFOON_LINK}">{TELEFOON_WEERGAVE}</a></li>
             <li><a href="mailto:{EMAIL}">{EMAIL}</a></li>

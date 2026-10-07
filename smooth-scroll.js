@@ -24,7 +24,7 @@
    de site precies zoals hij zonder dit bestand zou doen.
    ========================================================================== */
 
-window.De Licht Fabriek = window.De Licht Fabriek || {};
+window.DLF = window.DLF || {};
 
 (() => {
   const { gsap, ScrollTrigger, ScrollSmoother } = window;
@@ -79,7 +79,7 @@ window.De Licht Fabriek = window.De Licht Fabriek || {};
     },
   };
 
-  window.De Licht Fabriek.smoother = api;
+  window.DLF.smoother = api;
   api.maak();
 
   /* --------------------------------------------------------- ankerlinks ----

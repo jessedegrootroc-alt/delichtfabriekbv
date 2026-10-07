@@ -240,11 +240,11 @@
              kill(), terwijl window.scrollY daarna een oude waarde kan geven.
              Dat was te zien bij de vooruitknop, die op de stand van de vorige
              pagina uitkwam. */
-          const smoother = window.De Licht Fabriek?.smoother?.instantie;
+          const smoother = window.DLF?.smoother?.instantie;
           const scroll = smoother ? Math.round(smoother.scrollTop()) : window.scrollY;
           scrollGeheugen.set(data.current.url.path, scroll);
 
-          window.De Licht Fabriek?.smoother?.sloop();
+          window.DLF?.smoother?.sloop();
           window.scrollTo(0, scroll);
 
           /* Barba geeft de opgehaalde pagina als tekst mee; hieruit halen we
@@ -367,7 +367,7 @@
           /* Pas opbouwen als de nieuwe pagina op zijn plek staat en de
              scrollpositie klopt: de smoother meet bij het aanmaken de hoogte
              van de inhoud op. */
-          const sm = window.De Licht Fabriek?.smoother?.maak();
+          const sm = window.DLF?.smoother?.maak();
           window.ScrollTrigger?.refresh();
 
           /* En dan de stand er nog een keer in zetten. ScrollSmoother bewaart

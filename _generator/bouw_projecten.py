@@ -104,7 +104,7 @@ def overzicht():
     (UIT / "projecten.html").write_text(pagina(
         bestand="projecten.html",
         titel="Projecten | De Licht Fabriek",
-        omschrijving="Gerealiseerde projecten van De Licht Fabriek: tunnelverlichting, brug- en trapverlichting, Citylight-armaturen, Solarbolders en retrofit naar LED in Amsterdam, Rotterdam, Hoofddorp en Beverwijk.",
+        omschrijving="Gerealiseerde projecten: tunnelverlichting, brug- en trapverlichting, Citylight, Solarbolders en retrofit naar LED, onder meer in Amsterdam en Rotterdam.",
         namespace="projecten",
         pagina_css="projecten.css",
         css_naam="projecten",
@@ -117,9 +117,14 @@ def overzicht():
 
 # ================================================================ detailpagina
 def kenmerken(items):
+    """Vier feiten in het kerncijferblok. Een getal ("2200", "48") staat groot;
+       een woord ("terrazzo", "Rotterdam") krijgt de kleinere tekstvariant,
+       anders loopt het uit zijn kolom."""
+    def klasse(waarde):
+        return "kerncijfer__getal" if re.fullmatch(r"[\d.,]+|IK10|HE|UHE|PC|T3|3A", waarde) else "kerncijfer__getal kerncijfer__getal--tekst"
     return "\n".join(f'''        <div class="kerncijfer">
           <span class="kerncijfer__label">{label}</span>
-          <p class="kerncijfer__getal">{waarde}<span class="kerncijfer__eenheid">{eenheid}</span></p>
+          <p class="{klasse(waarde)}">{waarde}<span class="kerncijfer__eenheid">{eenheid}</span></p>
         </div>''' for label, waarde, eenheid in items)
 
 
@@ -157,7 +162,7 @@ def detailpagina(p):
         <span class="subtitle" style="color:var(--color-white)">{label}</span>
         <h1 class="service-hero--titel">{p["titel"]}</h1>
         <div class="hero--actions">
-          {knop(f"Over de {product_naam.split(' ')[0] if p['product'] != 'maatwerk' else 'maatwerk'}", product_link, "secondary")}
+          {knop("Over maatwerk" if p['product'] == 'maatwerk' else f"Over de {product_naam.split(' ')[0]}", product_link, "secondary")}
           {knop("Bespreek je project", "contact.html")}
         </div>
       </div>
@@ -234,7 +239,7 @@ def detailpagina(p):
     omschrijving = _plat(p["kort"])
     (UIT / f'project-{p["slug"]}.html').write_text(pagina(
         bestand=f'project-{p["slug"]}.html',
-        titel=f'{_plat(p["titel"])} | Projecten | De Licht Fabriek',
+        titel=f'{_plat(p["titel"])} | De Licht Fabriek',
         omschrijving=omschrijving,
         namespace="project",
         pagina_css="projecten.css",

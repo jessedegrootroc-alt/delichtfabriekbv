@@ -1,0 +1,62 @@
+{
+  "thermolight-hero": {
+    "page": "/thermolight.html",
+    "section": "paginahero (s01-introductie)",
+    "currentImage": "/assets/foto/thermo-radiator-1232.webp",
+    "currentImageVariants": "/assets/foto/thermo-radiator-{480,800,1232}.{webp,avif}",
+    "searchQuery": "thermal imaging inspection electrical switchboard technician infrared camera Europe industrial",
+    "recommendedSource": "Pexels or Unsplash — manual search only",
+    "aspectRatio": "4:3",
+    "idealDimensions": "2400x1800",
+    "description": "Technicus met warmtebeeldcamera bij een geopende verdeelkast of installatie, binnen, natuurlijk industrieel beeld. Vervangt het bestaande (kleine) warmtebeeld van een radiator dat nu als hero dient; de hero toont de linkerhelft op desktop en een band van 16:9 op mobiel.",
+    "status": "needs-stock-photo",
+    "replaceBy": "Zet het nieuwe beeld als bron in de beeldpijplijn onder de sleutel thermo-radiator (zie assets/foto/HERKOMST.md) en maak de maten 480, 800, 1200, 1800 en 2400 in WebP en AVIF; bestandsnamen en HTML blijven gelijk."
+  },
+  "thermolight-galerij-connector": {
+    "page": "/thermolight.html",
+    "section": "In beeld, paneel 1 (s06-in-beeld)",
+    "currentImage": "/assets/foto/thermo-connector-828.webp",
+    "currentImageVariants": "/assets/foto/thermo-connector-{480,828}.{webp,avif}",
+    "searchQuery": "thermal image electrical connection terminal hot spot infrared",
+    "recommendedSource": "Eigen opname van De Licht Fabriek heeft voorrang; anders Pexels of Unsplash — manual search only",
+    "aspectRatio": "16:10",
+    "idealDimensions": "1600x1000",
+    "description": "Warmtebeeld van een opwarmende elektrische aansluiting. Het huidige beeld van de bronsite is 828x738 en zacht; op een kaart van een derde pagina gaat dat net, op een groot scherm niet.",
+    "status": "needs-stock-photo"
+  },
+  "thermolight-galerij-kast": {
+    "page": "/thermolight.html",
+    "section": "In beeld, paneel 2 (s06-in-beeld)",
+    "currentImage": "/assets/foto/thermo-kast-600.webp",
+    "currentImageVariants": "/assets/foto/thermo-kast-{480,600}.{webp,avif}",
+    "searchQuery": "thermography switchgear cabinet infrared and visible photo side by side",
+    "recommendedSource": "Eigen opname van De Licht Fabriek heeft voorrang; anders Pexels of Unsplash — manual search only",
+    "aspectRatio": "16:10",
+    "idealDimensions": "1600x1000",
+    "description": "Schakelkast met warmtebeeld en gewone foto naast elkaar. Het huidige beeld is 600x1136 (staand) en wordt in de 16:10-kaart hard bijgesneden.",
+    "status": "needs-stock-photo"
+  },
+  "thermolight-galerij-motor": {
+    "page": "/thermolight.html",
+    "section": "In beeld, paneel 3 (s06-in-beeld)",
+    "currentImage": "/assets/foto/thermo-motor-480.webp",
+    "currentImageVariants": "/assets/foto/thermo-motor-480.{webp,avif}",
+    "searchQuery": "thermal image electric motor bearing overheating infrared industrial",
+    "recommendedSource": "Eigen opname van De Licht Fabriek heeft voorrang; anders Pexels of Unsplash — manual search only",
+    "aspectRatio": "16:10",
+    "idealDimensions": "1600x1000",
+    "description": "Warmtebeeld van een elektromotor in bedrijf. Het huidige beeld is 500x500 en komt van de bronsite; te klein voor schermen boven 1x pixeldichtheid.",
+    "status": "needs-stock-photo"
+  },
+  "kenmerkenband-klantlogos": {
+    "page": "alle pagina's met het slotblok (index, armaturen, diensten, projecten, over-ons en de zes detailpagina's)",
+    "section": "logo-slider (sNN-kenmerken)",
+    "currentImage": "/assets/foto/badge-made-in-holland.webp, /assets/foto/badge-garantie.png, /assets/foto/badge-ik10.webp plus tekstkenmerken",
+    "searchQuery": "n.v.t. (logo's van echte opdrachtgevers, met toestemming)",
+    "recommendedSource": "Opdrachtgevers van De Licht Fabriek zelf",
+    "aspectRatio": "vrij, op 40px hoogte uitgelijnd",
+    "idealDimensions": "minimaal 80px hoog, SVG of PNG met transparantie",
+    "description": "De band toont nu de drie badges van de bronsite en feitelijke kenmerken als tekst. Zodra er klantlogo's met toestemming zijn, kunnen die in KENMERKEN (schil.py) als extra badge-regels worden toegevoegd.",
+    "status": "optional-client-logos"
+  }
+}

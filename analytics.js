@@ -5,7 +5,7 @@
    G-ABC1234XYZ. Zolang dit leeg is, gebeurt er niets: er wordt geen script
    geladen en er komt geen cookie op de site.
 
-   TODO-CONTENT: meet-ID aanleveren door Martin (of laten staan als er geen
+   TODO-CONTENT: meet-ID aanleveren door De Licht Fabriek (of laten staan als er geen
    statistieken gemeten worden).                                              */
 const META_ID = '';
 

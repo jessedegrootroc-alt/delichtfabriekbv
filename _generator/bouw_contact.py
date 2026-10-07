@@ -59,7 +59,7 @@ inhoud = f'''{patroonhero("01", "contact", "Contact", "Contact")}
 (UIT / "contact.html").write_text(pagina(
     bestand="contact.html",
     titel="Contact | De Licht Fabriek",
-    omschrijving=f"Neem contact op met De Licht Fabriek in Wormerveer over tunnelarmaturen, de Solarbolder, Citylight, retrofit of maatwerk. Bel {TELEFOON_WEERGAVE} of mail {EMAIL}.",
+    omschrijving=f"Neem contact op met De Licht Fabriek in Wormerveer over armaturen, retrofit of maatwerk. Bel {TELEFOON_WEERGAVE} of mail {EMAIL}.",
     namespace="contact",
     pagina_css="contact.css",
     css_naam="contact",

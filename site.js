@@ -32,7 +32,7 @@
 
   const gsapAanwezig = window.gsap || null;
   const kalm = window.matchMedia('(prefers-reduced-motion: reduce)');
-  const smoother = () => window.De Licht Fabriek?.smoother?.instantie || null;
+  const smoother = () => window.DLF?.smoother?.instantie || null;
 
   /* Met ScrollSmoother loopt de inhoud achter op de scrollbalk. Voor de header
      telt wat je ziet en niet waar de scrollbalk staat, anders wisselt hij van

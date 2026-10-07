@@ -80,7 +80,7 @@ inhoud_armaturen = f'''{patroonhero("01", "armaturen", "Armaturen", "Armaturen")
 (UIT / "armaturen.html").write_text(pagina(
     bestand="armaturen.html",
     titel="Armaturen: Solarbolder, tunnelarmaturen en paaltop | De Licht Fabriek",
-    omschrijving="Drie LED-armaturen voor drie soorten plekken: de offgrid Solarbolder, Titan tunnelarmaturen op maat en het Citylight paaltoparmatuur. 2200K tot 4000K, dimbaar, vijf jaar garantie.",
+    omschrijving="Drie LED-armaturen: de offgrid Solarbolder, Titan tunnelarmaturen op maat en het Citylight paaltoparmatuur. 2200K tot 4000K, dimbaar, vijf jaar garantie.",
     namespace="armaturen",
     pagina_css="service.css",
     css_naam="service",
@@ -203,7 +203,7 @@ inhoud_diensten = f'''{patroonhero("01", "diensten", "Diensten", "Diensten")}
 (UIT / "diensten.html").write_text(pagina(
     bestand="diensten.html",
     titel="Diensten: retrofit, maatwerk en thermografie | De Licht Fabriek",
-    omschrijving="Bestaande armaturen verledden met LED-geartrays, verlichting op maat voor bruggen, trappen en bijzondere objecten, en thermografisch onderzoek. Ontwerp, engineering, productie en installatie in eigen huis.",
+    omschrijving="Bestaande armaturen verledden met LED-geartrays, verlichting op maat voor bruggen en bijzondere objecten, en thermografisch onderzoek. Alles in eigen huis in Wormerveer.",
     namespace="diensten",
     pagina_css="service.css",
     css_naam="service",
@@ -333,7 +333,7 @@ inhoud_over = f'''{paginahero("01", "over", "Over De Licht Fabriek", "Over ons",
 (UIT / "over-ons.html").write_text(pagina(
     bestand="over-ons.html",
     titel="Over ons | De Licht Fabriek",
-    omschrijving="De Licht Fabriek B.V. in Wormerveer ontwerpt, engineert en produceert LED-verlichting voor openbare ruimte, outdoor en solar. Maatwerk, duurzaam gedacht, slim licht, Made in Holland.",
+    omschrijving="De Licht Fabriek B.V. in Wormerveer ontwerpt, engineert en produceert LED-verlichting voor openbare ruimte, outdoor en solar. Maatwerk, duurzaam, Made in Holland.",
     namespace="over-ons",
     pagina_css="over-ons.css",
     css_naam="over-ons",

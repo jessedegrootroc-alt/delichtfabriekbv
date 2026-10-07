@@ -1,3 +1,6 @@
 # De iconenset wordt inline in de HTML gezet door de generator; de losse
-# bestanden (3185 svg, 12 MB) hoeven niet mee naar de server.
+# bestanden (3185 svg, 12 MB) hoeven niet mee naar de server. De generator en
+# het werkdocument evenmin.
 assets/iconen
+_generator
+work

@@ -1,9 +1,9 @@
 /* ============================================================================
    styleguide.css: het systeem uit STYLEGUIDE.md
    ----------------------------------------------------------------------------
-   MADEGRO. Overgenomen uit de referentie-implementatie (Webjoy) met één
-   verschil: de lettertypen staan hier lokaal in assets/fonts/ in plaats van op
-   de Google Fonts CDN, zoals de projectbrief vraagt.
+   De Licht Fabriek. Het ontwerpsysteem komt uit de template; de kleuren zijn
+   die van De Licht Fabriek (oranje, nacht, leisteen), de lettertypen staan
+   lokaal in assets/fonts/.
    ----------------------------------------------------------------------------
    Dit bestand bevat alleen wat op elke pagina geldt: de tokens (§2), de
    body-defaults (§2.2), typografie (§3), de layout-utilities (§4.4) en de
@@ -48,12 +48,13 @@
 
 :root {
   /* ---------- Merkkleuren (§2) ---------- */
-  --color-oranje:              #FF6310;
+  --color-oranje:            #FF6310;  /* CTA: knoppen, accenten, markeringen */
   --color-oranje-hover:        #E85300;
-  /* Het groen komt uit het logo dat Martin heeft aangeleverd: #2A3340. Alle
-     drie de tonen hebben dezelfde tint (182,7&deg;) en verzadiging als het logo
-     zelf; ze verschillen alleen in helderheid. Daarvoor stond hier een groen
-     dat niet uit de huisstijl kwam. */
+  /* Het donkere palet van De Licht Fabriek: nacht (#111518, uit het thema van
+     de bronsite) voor tekst en de donkerste vlakken, leisteen (#2A3340) voor
+     merkvlakken en koppen, en een tussentoon voor haarlijnen en hover. Het
+     oranje (#FF6310) is de accentkleur van de bron en doet hier het werk van de
+     CTA. */
   --color-leisteen:              #2A3340;  /* het logo: merkvlakken en accenten */
   --color-leisteen-diep:         #1C232D;  /* haarlijnen en kleine labels */
   --color-ink:               #030104;
@@ -931,10 +932,9 @@ main > section:has(+ section) > .container > .content-text-side-cta--container {
   .logo-slider__logo img { height: 32px; max-width: 150px; }
 }
 
-/* De slot-CTA: één groen vlak over de volle breedte met de kop, de tekst en de
+/* De slot-CTA: één donker vlak over de volle breedte met de kop, de tekst en de
    knop gecentreerd. Verwijst naar contact.html; het formulier en de gegevens
-   van Martin staan daar. Er stond hier eerder een contactkaart naast; die is
-   eruit gehaald omdat dezelfde gegevens een klik verderop staan.
+   staan daar.
 
    Geen ruimte onder het slotblok: het groene vlak sluit direct aan op de voet. */
 .cta-slot { background-color: var(--color-white); }
@@ -1052,7 +1052,7 @@ main > section:has(+ section) > .container > .content-text-side-cta--container {
 /* Bij een staand portret werkt de 16/9-band op mobiel niet: die snijdt door het
    gezicht. Vandaar 4/3.
 
-   Horizontaal blijft het beeldpunt in het midden; Martin zit midden in beeld. In
+   Horizontaal blijft het beeldpunt in het midden; het onderwerp staat midden in beeld. In
    de liggende band eronder wordt er verticaal bijgesneden, en dan valt hij te
    laag uit: het beeldpunt staat daarom op 65%, wat de onderkant van de foto
    toont en hem dus hoger in het kader zet. */
@@ -1425,7 +1425,9 @@ main > section:has(+ section) > .container > .content-text-side-cta--container {
   .footer--widgets { padding: var(--space-section-y-mobile) var(--inset-x); }
   .footer .widget { margin-bottom: var(--space-700); }
 }
-.footer h4 {
+/* De voetkoppen zijn h2 (na de h2's van de pagina, geen sprong in de
+   kopvolgorde) in de maat van een label. */
+.footer h4, .footer .footer--kop {
   font-size: 0.9rem; text-transform: uppercase; letter-spacing: var(--tracking-label);
   margin-bottom: var(--space-600); font-family: var(--font-medium); font-weight: var(--weight-medium);
 }
@@ -1558,9 +1560,9 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible, .field:focus-vi
    TODO-CONTENT: een compacte variant zonder ondertitel is wat een balk eigenlijk
    nodig heeft. Zie CONTENT-TODO.md. */
 .header--logo img { grid-area: 1 / 1;
-                    height: 40px; max-height: 40px; width: auto; max-width: 227px;
+                    height: 36px; max-height: 36px; width: auto; max-width: 300px;
                     transition: opacity var(--duration-base) var(--ease-standard); }
-@media (max-width: 768px) { .header--logo img { height: 34px; max-height: 34px; max-width: 193px; } }
+@media (max-width: 768px) { .header--logo img { height: 28px; max-height: 28px; max-width: 230px; } }
 .header--logo-wit { opacity: 0; }
 
 .header--tagline {
@@ -1570,11 +1572,9 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible, .field:focus-vi
 }
 @media (max-width: 1199px) { .header--tagline { display: none; } }
 
-/* Boven de groene hero staat de header op wit; daarna schakelt hij om. */
-/* Op een donkere achtergrond wisselt het logo naar de witte variant die Martin
-   heeft aangeleverd. Een filter over het gekleurde logo kan hier niet: de
-   letters MADEGRO zijn uitgespaard, dus brightness(0) invert(1) laat een
-   massief wit blok over. Vandaar twee bestanden in plaats van één. */
+/* Boven een donkere hero staat de header licht; daarna schakelt hij om. */
+/* Op een donkere achtergrond wisselt het logo naar de witte variant: twee
+   png's met transparantie die van opacity wisselen, zodat er niets verspringt. */
 .header--light .header--logo-kleur { opacity: 0; }
 .header--light .header--logo-wit { opacity: 1; }
 .header--light .header--tagline { color: var(--color-white); }
@@ -2021,3 +2021,40 @@ section + section { margin-top: 0; }
                        font-size: 0.875rem; line-height: 1.35; }
 .review--name span { display: block; font-family: var(--font-light); font-weight: var(--weight-light);
                      font-size: 0.875rem; line-height: 1.35; }
+
+/* ============================================================================
+   De Licht Fabriek: aanvullingen op het systeem
+   ========================================================================== */
+
+/* Tekstkenmerken in de doorlopende band. In de template stonden hier alleen
+   logo's; hier wisselen badges en feitelijke kenmerken elkaar af. Een tekst is
+   even hoog als een logo en staat in de labelstijl, zodat de band een geheel
+   blijft. */
+.logo-slider__tekst {
+  display: flex; align-items: center; height: 40px; white-space: nowrap;
+  font-family: var(--font-medium); font-weight: var(--weight-medium);
+  font-size: 0.8125rem; letter-spacing: var(--tracking-label); text-transform: uppercase;
+  color: var(--color-text-primary);
+}
+@media (max-width: 767px) { .logo-slider__tekst { height: 32px; font-size: 0.75rem; } }
+
+/* Onder de knop in het slotblok: bellen als laagdrempelig alternatief. */
+.cta-slot__actie { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: var(--space-500); }
+.cta-slot__bel { color: var(--color-white); text-decoration: underline; text-underline-offset: 3px; }
+.cta-slot__bel:hover { color: var(--color-oranje); }
+
+/* Intro onder de kop van een vlakkenrij. */
+.vlakkenband__intro { margin-top: var(--space-500); max-width: var(--content-max-half); }
+
+/* Specificatiepaneel: de titel is de waarde ("2200K, 3000K of 4000K") en mag
+   dus kleiner dan een gewone paneeltitel, anders breekt hij over drie regels. */
+.spec__titel { font-size: clamp(1.125rem, 1rem + 0.5vw, 1.5rem); }
+
+/* Lange samengestelde woorden in de paginakop ("Tunnelarmaturen",
+   "Thermografisch") mogen afbreken in plaats van over het beeld te lopen. */
+.paginahero__titel { hyphens: auto; overflow-wrap: anywhere; }
+
+/* Kenmerk met een woord als waarde ("terrazzo", "Rotterdam") in plaats van een
+   getal: kleiner, zodat het in zijn kolom blijft; de eenheid gaat eronder. */
+.kerncijfer__getal--tekst { font-size: clamp(1.5rem, 1rem + 1.5vw, 2.5rem); overflow-wrap: anywhere; }
+.kerncijfer__getal--tekst .kerncijfer__eenheid { display: block; margin-left: 0; margin-top: var(--space-100); }

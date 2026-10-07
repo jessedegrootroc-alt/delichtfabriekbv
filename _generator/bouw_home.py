@@ -185,8 +185,8 @@ inhoud = f'''  <!-- ================= 01 INTRODUCTIE ================= -->
 
 (UIT / "index.html").write_text(pagina(
     bestand="index.html",
-    titel="De Licht Fabriek | LED-verlichting voor openbare ruimte, outdoor en solar",
-    omschrijving="De Licht Fabriek ontwerpt, engineert en produceert LED-verlichting in Wormerveer: tunnelarmaturen op maat, de offgrid Solarbolder, het Citylight paaltoparmatuur en LED-geartrays voor retrofit. Vijf jaar garantie.",
+    titel="De Licht Fabriek | LED-verlichting voor openbare ruimte en solar",
+    omschrijving="LED-verlichting uit Wormerveer: tunnelarmaturen op maat, de offgrid Solarbolder, Citylight paaltoparmaturen en LED-geartrays voor retrofit. Vijf jaar garantie.",
     namespace="home",
     pagina_css="index.css",
     css_naam="index",
