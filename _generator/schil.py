@@ -947,8 +947,9 @@ def kenmerkenband(nr):
 
 
 def ctablok(nr, kop, tekst=None):
-    """Eén donker vlak over de volle breedte met kop, tekst en de knop naar de
-       contactpagina. Geen reactietijd: die staat niet op de bron."""
+    """Eén vlak over de volle breedte met het rood-oranje verloop, kop, tekst en
+       de knop naar de contactpagina. De knop is hier de witte variant: oranje
+       valt weg tegen het verloop. Geen reactietijd: die staat niet op de bron."""
     regel = tekst or 'Stuur je maten, tekening of vraag. We denken mee over wat er past en maken een prijsopgave.'
     return (f'  <section class="cta-slot" id="s{nr}-contact">\n'
             '    <div class="container">\n'
@@ -957,7 +958,7 @@ def ctablok(nr, kop, tekst=None):
             f'        <h2 class="cta-slot__kop">{kop}</h2>\n'
             f'        <p class="cta-slot__tekst">{regel}</p>\n'
             '        <div class="cta-slot__actie">\n'
-            f'          {knop("Bespreek je project", "contact.html")}\n'
+            f'          {knop("Bespreek je project", "contact.html", "secondary")}\n'
             f'          <a class="cta-slot__bel" href="tel:{TELEFOON_LINK}">of bel {TELEFOON_WEERGAVE}</a>\n'
             '        </div>\n'
             '      </div>\n'
