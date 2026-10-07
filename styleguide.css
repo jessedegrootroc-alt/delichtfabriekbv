@@ -687,9 +687,14 @@ main > section:has(+ section) > .container > .content-text-side-cta--container {
 .cta-blocks-advanced__body--bg-groen  { background-color: var(--color-leisteen); }
 .cta-blocks-advanced__body--bg-groen :is(h1,h2,h3,h4,h5,h6,p,li) { color: var(--color-white); }
 .cta-blocks-advanced__wrapper {
-  flex: 1 1 auto; display: grid; grid-template-columns: 5fr 1fr;
-  gap: var(--space-500); width: 100%;
+  flex: 1 1 auto; display: grid; grid-template-columns: minmax(0, 1fr) auto;
+  gap: var(--space-500); width: 100%; align-items: start;
 }
+/* De tekstkolom mag krimpen (minmax(0, …)) en de knopkolom is zo breed als de
+   knop. Met 5fr/1fr duwde een lang woord als "Tunnelarmaturen" de ronde knop
+   uit de kaart. Lange samenstellingen breken af in plaats van uit te lopen. */
+.cta-blocks-advanced__wrapper > .button--icon { flex-shrink: 0; }
+.cta-blocks-advanced__title { hyphens: auto; overflow-wrap: anywhere; }
 .cta-blocks-advanced__icon-button { justify-self: end; align-self: end; }
 .cta-blocks-advanced__title { font-size: clamp(1.5rem, 1.25rem + 1.5vw, 2.5rem); line-height: 1.1; }
 .cta-blocks-advanced__content { font-family: var(--font-regular); font-weight: var(--weight-regular);

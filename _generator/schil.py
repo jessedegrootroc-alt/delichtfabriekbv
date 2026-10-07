@@ -40,7 +40,7 @@ GARANTIE = "5 jaar"
 # de overzichten en de kaarten op de homepage.
 ARMATUREN = [
     ("solarbolder.html", "Solarbolder", "Offgrid licht, 365 dagen per jaar", "schielandhuis-bolder"),
-    ("tunnelarmaturen.html", "Tunnelarmaturen", "Titan: op maat, in RVS en polycarbonaat", "tunnel-3000k"),
+    ("tunnelarmaturen.html", "Tunnel&shy;armaturen", "Titan: op maat, in RVS en polycarbonaat", "tunnel-3000k"),
     ("paaltop-armaturen.html", "Paaltop-armaturen", "Citylight: slagvast en gelijkmatig licht", "citylight-straat"),
 ]
 DIENSTEN = [
