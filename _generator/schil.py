@@ -780,7 +780,7 @@ ORGANISATIE_LD = f'''{{
 }}'''
 
 OG_BEELD = "assets/social/lichtfabriek-deelafbeelding.png"
-OG_ALT = "De Licht Fabriek: LED-verlichting voor openbare ruimte, tunnels en solar"
+OG_ALT = "De Licht Fabriek: LED-verlichting. Buiten gewoon goed. Monteur werkt aan een lichtmast."
 
 
 def pagina(bestand, titel, omschrijving, namespace, pagina_css, css_naam,
