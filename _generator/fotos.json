@@ -958,5 +958,23 @@
   ],
   "alt": "IK10 rated",
   "badge": true
+ },
+ "hero-video-poster": {
+  "bron": "hero-video-poster.png (eerste beeldje van assets/video/hero-licht.mp4)",
+  "breedtes": [
+   480,
+   800,
+   1200,
+   1280
+  ],
+  "groot": [
+   1280,
+   720
+  ],
+  "klein": [
+   480,
+   270
+  ],
+  "alt": "Verlichte stadsstraat bij nacht met LED-straatverlichting op masten"
  }
 }

@@ -52,7 +52,14 @@ cijfers = "\n".join(f'''        <div>
 inhoud = f'''  <!-- ================= 01 INTRODUCTIE ================= -->
   <section class="hero" id="s01-introductie" data-header-theme="light">
     <div class="hero--beeld" aria-hidden="true">
-      {foto("hero-tunnel-titan", laden="eager", maten="100vw")}
+      {foto("hero-video-poster", laden="eager", maten="100vw")}
+      <!-- De film ligt over het stilstaande beeld heen en komt pas in beeld als
+           hij speelt. site.js hangt de bron er pas in, en alleen als beweging
+           aan staat en de lijn het aankan: zonder script, met
+           prefers-reduced-motion of op 2G blijft het bij de foto hierboven,
+           en dat is het eerste beeldje van dezelfde film. -->
+      <video class="hero--video" data-herovideo="assets/video/hero-licht.mp4"
+             width="1280" height="720" muted loop playsinline preload="none"></video>
       <span class="hero--sluier"></span>
     </div>
     <div class="container hero--container">

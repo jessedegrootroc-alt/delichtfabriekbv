@@ -57,7 +57,7 @@ wat je moet weten om hier te werken, en waar De Licht Fabriek afwijkt.
 | Logo | svg-woordmerk | `logo-donker.png` / `logo-wit.png` (1x en 2x), 8,1:1 | de bron levert alleen een png met een kader; het kader is eraf, het lijnwerk is vrijgemaakt. Op een donkere hero wisselt de header naar de witte variant |
 | Merkpatroon | gele stralen | lichtkegels op donker (`assets/patronen/`) | getekend voor dit merk: licht in de duisternis |
 | Logoband | klantlogo's | badges en tekstkenmerken (`.logo-slider__tekst`) | er zijn geen opdrachtgevers met naam; kenmerken zijn wel feiten |
-| Homepagehero | foto met film erover | alleen een foto | er is geen film; de `<video>` en zijn script zijn niet in de HTML |
+| Homepagehero | foto met film erover | foto (eerste beeldje) met de aangeleverde film erover | `assets/video/hero-licht.mp4`, zie `assets/video/HERKOMST.md` |
 | Dienstpagina | één vast skelet | kop en staart vast, blokken per pagina gekozen (`cfg["volgorde"]`) | producten vragen specificaties, diensten een beeldverhaal; zonder nieuwe componenten |
 | Cases | database (Supabase) met beheer | statische projectpagina's uit `PROJECTEN` | geen beheeromgeving nodig; alles komt uit de bron |
 | Kerncijfers | getallen | getallen én woorden (`.kerncijfer__getal--tekst`) | "terrazzo" of "Rotterdam" past niet in de cijferstijl |

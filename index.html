@@ -227,7 +227,14 @@
   <!-- ================= 01 INTRODUCTIE ================= -->
   <section class="hero" id="s01-introductie" data-header-theme="light">
     <div class="hero--beeld" aria-hidden="true">
-      <picture><source type="image/avif" srcset="assets/foto/hero-tunnel-titan-480.avif 480w, assets/foto/hero-tunnel-titan-800.avif 800w, assets/foto/hero-tunnel-titan-1200.avif 1200w, assets/foto/hero-tunnel-titan-1800.avif 1800w, assets/foto/hero-tunnel-titan-2400.avif 2400w" sizes="100vw"><img src="assets/foto/hero-tunnel-titan-2400.webp" srcset="assets/foto/hero-tunnel-titan-480.webp 480w, assets/foto/hero-tunnel-titan-800.webp 800w, assets/foto/hero-tunnel-titan-1200.webp 1200w, assets/foto/hero-tunnel-titan-1800.webp 1800w, assets/foto/hero-tunnel-titan-2400.webp 2400w" sizes="100vw" width="2400" height="1476" alt="Onderdoorgang bij nacht met warmwit licht uit Titan-tunnelarmaturen, weerspiegeld in het water" loading="eager" fetchpriority="high" decoding="async"></picture>
+      <picture><source type="image/avif" srcset="assets/foto/hero-video-poster-480.avif 480w, assets/foto/hero-video-poster-800.avif 800w, assets/foto/hero-video-poster-1200.avif 1200w, assets/foto/hero-video-poster-1280.avif 1280w" sizes="100vw"><img src="assets/foto/hero-video-poster-1280.webp" srcset="assets/foto/hero-video-poster-480.webp 480w, assets/foto/hero-video-poster-800.webp 800w, assets/foto/hero-video-poster-1200.webp 1200w, assets/foto/hero-video-poster-1280.webp 1280w" sizes="100vw" width="1280" height="720" alt="Verlichte stadsstraat bij nacht met LED-straatverlichting op masten" loading="eager" fetchpriority="high" decoding="async"></picture>
+      <!-- De film ligt over het stilstaande beeld heen en komt pas in beeld als
+           hij speelt. site.js hangt de bron er pas in, en alleen als beweging
+           aan staat en de lijn het aankan: zonder script, met
+           prefers-reduced-motion of op 2G blijft het bij de foto hierboven,
+           en dat is het eerste beeldje van dezelfde film. -->
+      <video class="hero--video" data-herovideo="assets/video/hero-licht.mp4"
+             width="1280" height="720" muted loop playsinline preload="none"></video>
       <span class="hero--sluier"></span>
     </div>
     <div class="container hero--container">

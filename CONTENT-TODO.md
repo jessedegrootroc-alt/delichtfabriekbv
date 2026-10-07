@@ -40,6 +40,14 @@ de pagina (`.invulveld`) markeert een gat dat niet per ongeluk live mag.
 - **Oprichtingsjaar, team, certificeringen, levertijden, prijzen**: staan niet op de
   bron en niet op de site. Aanleveren als ze genoemd moeten worden.
 
+## Herofilm
+
+De film onder de homepagehero (`assets/video/hero-licht.mp4`) is gegenereerd
+promotiemateriaal, aangeleverd door Jesse: sfeerbeeld, geen opnamen van eigen
+projecten. Eigen filmbeeld van een project of de werkplaats kan hem één op één
+vervangen (zelfde bestandsnaam, 16:9); het eerste beeldje dan ook opnieuw als
+`hero-video-poster` in de beeldpijplijn.
+
 ## Wat de site bewust niet doet
 
 - Geen cijfers over besparing, levensduur in uren of aantal geplaatste armaturen.
