@@ -724,7 +724,9 @@ main > section:has(+ section) > .container > .content-text-side-cta--container {
   .cta-blocks-advanced__body { padding: var(--space-panel-md) var(--inset-x); gap: var(--space-500); }
   .cta-blocks-advanced__wrapper { grid-template-columns: 1fr; gap: var(--space-500); }
   .cta-blocks-advanced__card--horizontal { flex-direction: column-reverse; }
-  .cta-blocks-advanced__card--horizontal .cta-blocks-advanced__banner { height: 192px; flex: 0 0 auto; }
+  /* Gestapeld krijgt het beeld een verhouding (3:2) in plaats van een vaste
+     192px: op een tablet van 768px werd dat een streep van 4:1. */
+  .cta-blocks-advanced__card--horizontal .cta-blocks-advanced__banner { height: auto; aspect-ratio: 3 / 2; flex: 0 0 auto; }
   .cta-blocks-advanced__card--horizontal .cta-blocks-advanced__body { padding: var(--space-panel) var(--inset-x); gap: var(--space-600); }
 }
 @media (max-width: 576px) {
