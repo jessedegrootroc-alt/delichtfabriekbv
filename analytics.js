@@ -55,6 +55,6 @@ const META_ID = '';
 
   /* De cookiemelding zet de keuze klaar en meldt elke wijziging. Allebei
      afhandelen, want welke van de twee eerst is hangt af van de laadvolgorde. */
-  verwerk(window.madegroToestemming);
-  document.addEventListener('madegro:toestemming', (e) => verwerk(e.detail));
+  verwerk(window.dlfToestemming);
+  document.addEventListener('dlf:toestemming', (e) => verwerk(e.detail));
 })();

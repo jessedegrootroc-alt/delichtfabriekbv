@@ -14,7 +14,7 @@
   border-radius: var(--radius-none, 0);
   box-shadow: var(--shadow-popup, 0 8px 80px rgba(0, 0, 0, 0.15));
   padding: var(--space-panel, 48px);
-  color: var(--color-groen, #017E84);
+  color: var(--color-leisteen, #2A3340);
 }
 @media (max-width: 576px) { .cookiebalk { padding: var(--space-500, 24px) var(--space-400, 16px); max-width: 100%; } }
 .cookiebalk[hidden] { display: none; }
@@ -30,8 +30,8 @@
   font-size: 1rem; line-height: 1.5;
   margin: 0 0 var(--space-500, 24px);
 }
-.cookiebalk a { color: var(--color-groen, #017E84); text-decoration: underline; text-underline-offset: 3px; }
-.cookiebalk a:hover { color: var(--color-focus, #014144); }
+.cookiebalk a { color: var(--color-leisteen, #2A3340); text-decoration: underline; text-underline-offset: 3px; }
+.cookiebalk a:hover { color: var(--color-focus, #111518); }
 
 .cookie-knoppen { display: flex; flex-wrap: wrap; gap: var(--space-200, 8px); }
 .cookie-knop {
@@ -46,9 +46,9 @@
   color: var(--color-black, #000);
   transition: all var(--duration-legacy, 500ms) ease;
 }
-.cookie-knop:hover { background: var(--color-groen, #017E84); color: var(--color-white, #fff); }
-.cookie-knop--donker { background: var(--color-geel, #FFFC58); color: var(--color-black, #000); }
-.cookie-knop--donker:hover { background: var(--color-geel-hover, #F2EE3E); color: var(--color-black, #000); }
+.cookie-knop:hover { background: var(--color-leisteen, #2A3340); color: var(--color-white, #fff); }
+.cookie-knop--donker { background: var(--color-oranje, #FF6310); color: var(--color-black, #000); }
+.cookie-knop--donker:hover { background: var(--color-oranje-hover, #E85300); color: var(--color-black, #000); }
 
 /* ---- Paneel met de losse keuzes ---- */
 .cookie-keuzes { margin: 0 0 var(--space-500, 24px); display: flex; flex-direction: column; gap: var(--space-400, 16px); }
@@ -69,10 +69,10 @@
 }
 .cookie-schakelaar span::after {
   content: ''; position: absolute; top: 4px; left: 4px; width: 16px; height: 16px;
-  background: var(--color-groen, #017E84);
+  background: var(--color-leisteen, #2A3340);
   transition: transform var(--duration-fast, 200ms) var(--ease-standard, ease);
 }
-.cookie-schakelaar input:checked + span { background: var(--color-geel, #FFFC58); }
+.cookie-schakelaar input:checked + span { background: var(--color-oranje, #FF6310); }
 .cookie-schakelaar input:checked + span::after { transform: translateX(20px); }
 .cookie-schakelaar input:disabled + span { opacity: .5; }
-.cookie-schakelaar input:focus-visible + span { outline: 2px solid var(--color-focus, #014144); outline-offset: 2px; }
+.cookie-schakelaar input:focus-visible + span { outline: 2px solid var(--color-focus, #111518); outline-offset: 2px; }

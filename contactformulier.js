@@ -20,10 +20,12 @@
   const container = document.currentScript?.closest('[data-barba="container"]') || document;
 
   const ONDERWERPEN = [
-    ['veilig-gedrag', 'Veilig gedrag'],
-    ['ehs-rie', 'EHS RIE'],
-    ['safety-checks', 'Safety Checks'],
-    ['cursus', 'Cursus'],
+    ['solarbolder', 'Solarbolder'],
+    ['tunnelarmaturen', 'Tunnelarmaturen'],
+    ['paaltop-armaturen', 'Paaltop-armaturen (Citylight)'],
+    ['retrofit', 'Retrofit / LED-geartrays'],
+    ['maatwerk', 'Maatwerk en engineering'],
+    ['thermolight', 'Thermografisch onderzoek'],
     ['overig', 'Overig'],
   ];
 
@@ -197,7 +199,7 @@
         melding.textContent = 'Bedankt, je bericht is binnen. We reageren binnen twee werkdagen.';
         melding.className = 'contactformulier__melding is-goed';
       } catch (err) {
-        melding.textContent = 'Het versturen lukte niet. Mail ons op info@madegro.nl of bel 06 54243822.';
+        melding.textContent = 'Het versturen lukte niet. Mail ons op info@delichtfabriekbv.nl of bel 06 28553641.';
         melding.className = 'contactformulier__melding is-fout';
       } finally {
         knop.disabled = false;

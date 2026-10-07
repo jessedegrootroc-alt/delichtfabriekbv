@@ -3,34 +3,19 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>MADEGRO | Veiligheidskunde voor productie, bouw en techniek</title>
-<meta name="description" content="MADEGRO brengt het veiligheidsniveau van bedrijven omhoog: veilig gedrag, EHS RI&E en safety checks. Praktisch, met kennisoverdracht aan je eigen mensen." />
-<!-- De homepage is bereikbaar als / en als /index.html; de sitemap noemt /, dus
-     canonical en og:url ook, anders ziet Google twee adressen voor één pagina. -->
-<link rel="canonical" href="https://madegro.vercel.app/" />
+<title>De Licht Fabriek | LED-verlichting voor openbare ruimte, outdoor en solar</title>
+<meta name="description" content="De Licht Fabriek ontwerpt, engineert en produceert LED-verlichting in Wormerveer: tunnelarmaturen op maat, de offgrid Solarbolder, het Citylight paaltoparmatuur en LED-geartrays voor retrofit. Vijf jaar garantie." />
+<link rel="canonical" href="https://www.delichtfabriekbv.nl/" />
 <meta name="robots" content="index, follow, max-image-preview:large" />
-<meta name="author" content="Madegro Advies B.V." />
-<meta name="theme-color" content="#FFFFFF" />
+<meta name="author" content="De Licht Fabriek B.V." />
+<meta name="theme-color" content="#111518" />
 <meta name="color-scheme" content="light" />
 
-<!-- GSAP en Barba komen van jsDelivr. Het opzetten van die verbinding (dns,
-     tcp, tls) kost op een telefoon een paar honderd ms en begint nu al terwijl
-     de HTML nog binnenkomt, in plaats van pas onderaan de pagina. -->
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
-
-<!-- Het lettertype staat in de kop van de pagina en is dus onderdeel van de
-     LCP. Zonder preload vindt de browser het pas nadat styleguide.css binnen is
-     en ontleed is. crossorigin moet erbij, ook al staat het bestand op dezelfde
-     server: een font wordt altijd in CORS-modus opgehaald, en zonder dat woord
-     haalt de browser het twee keer op. -->
 <link rel="preload" href="assets/fonts/inter-tight-latin.woff2" as="font" type="font/woff2" crossorigin />
 
 <link rel="stylesheet" href="styleguide.css" />
 <link rel="stylesheet" href="transitions.css" />
-<!-- De cookiebalk verschijnt pas als cookiebalk.js hem opbouwt, dus zijn stijl
-     hoeft de eerste weergave niet op te houden. media="print" laat de browser
-     hem buiten het kritieke pad ophalen; onload zet hem daarna alsnog aan. De
-     noscript-regel vangt op dat zonder JavaScript ook die onload niet afgaat. -->
 <link rel="stylesheet" href="cookiebalk.css" media="print" onload="this.media='all'" />
 <noscript><link rel="stylesheet" href="cookiebalk.css" /></noscript>
 <link rel="stylesheet" href="index.css" data-page-css="index" />
@@ -41,39 +26,38 @@
 <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png" />
 
 <meta property="og:type" content="website" />
-<meta property="og:site_name" content="MADEGRO" />
+<meta property="og:site_name" content="De Licht Fabriek" />
 <meta property="og:locale" content="nl_NL" />
-<meta property="og:url" content="https://madegro.vercel.app/" />
-<meta property="og:title" content="MADEGRO | Veiligheidskunde voor productie, bouw en techniek" />
-<meta property="og:description" content="MADEGRO brengt het veiligheidsniveau van bedrijven omhoog: veilig gedrag, EHS RI&E en safety checks. Praktisch, met kennisoverdracht aan je eigen mensen." />
-<meta property="og:image" content="https://madegro.vercel.app/assets/social/madegro-deelafbeelding.png" />
+<meta property="og:url" content="https://www.delichtfabriekbv.nl/" />
+<meta property="og:title" content="De Licht Fabriek | LED-verlichting voor openbare ruimte, outdoor en solar" />
+<meta property="og:description" content="De Licht Fabriek ontwerpt, engineert en produceert LED-verlichting in Wormerveer: tunnelarmaturen op maat, de offgrid Solarbolder, het Citylight paaltoparmatuur en LED-geartrays voor retrofit. Vijf jaar garantie." />
+<meta property="og:image" content="https://www.delichtfabriekbv.nl/assets/social/lichtfabriek-deelafbeelding.png" />
 <meta property="og:image:type" content="image/png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content="MADEGRO: van risico naar grip op de werkvloer" />
+<meta property="og:image:alt" content="De Licht Fabriek: LED-verlichting voor openbare ruimte, tunnels en solar" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://madegro.vercel.app/assets/social/madegro-deelafbeelding.png" />
-<meta name="twitter:title" content="MADEGRO | Veiligheidskunde voor productie, bouw en techniek" />
-<meta name="twitter:description" content="MADEGRO brengt het veiligheidsniveau van bedrijven omhoog: veilig gedrag, EHS RI&E en safety checks. Praktisch, met kennisoverdracht aan je eigen mensen." />
+<meta name="twitter:image" content="https://www.delichtfabriekbv.nl/assets/social/lichtfabriek-deelafbeelding.png" />
+<meta name="twitter:title" content="De Licht Fabriek | LED-verlichting voor openbare ruimte, outdoor en solar" />
+<meta name="twitter:description" content="De Licht Fabriek ontwerpt, engineert en produceert LED-verlichting in Wormerveer: tunnelarmaturen op maat, de offgrid Solarbolder, het Citylight paaltoparmatuur en LED-geartrays voor retrofit. Vijf jaar garantie." />
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "Madegro Advies B.V.",
-  "alternateName": "MADEGRO",
-  "foundingDate": "2002-07",
-  "url": "https://madegro.vercel.app/",
-  "logo": "https://madegro.vercel.app/assets/logo/madegro-logo.svg",
-  "email": "info@madegro.nl",
-  "telephone": "+31654243822",
-  "vatID": null,
-  "identifier": { "@type": "PropertyValue", "name": "KvK", "value": "81812892" },
+  "name": "De Licht Fabriek B.V.",
+  "alternateName": "De Licht Fabriek",
+  "url": "https://www.delichtfabriekbv.nl/",
+  "logo": "https://www.delichtfabriekbv.nl/assets/logo/logo-donker@2x.png",
+  "email": "info@delichtfabriekbv.nl",
+  "telephone": "+31628553641",
+  "vatID": "NL859301655B01",
+  "identifier": { "@type": "PropertyValue", "name": "KvK", "value": "72963204" },
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Wieling 39",
-    "postalCode": "3371 PB",
-    "addressLocality": "Hardinxveld-Giessendam",
+    "streetAddress": "Rosbayerweg 19",
+    "postalCode": "1522 RW",
+    "addressLocality": "Wormerveer",
     "addressCountry": "NL"
   }
 }
@@ -85,26 +69,26 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Werken jullie ook voor kleinere bedrijven?",
+      "name": "Maken jullie ook armaturen op maat?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Ja. De aanpak schaalt mee: bij een bedrijf van vijftien man ziet een traject er anders uit dan bij een fabriek met tweehonderd medewerkers, maar de vragen zijn dezelfde. Bij minder dan 25 medewerkers hoeft een RI&E in veel gevallen niet getoetst te worden door een kerndeskundige. Dat scheelt tijd en geld; we kijken samen wat er in jouw situatie wel en niet moet."
+        "text": "Ja. Tunnelarmaturen ontwerpen en produceren we in eigen beheer op klantspecificatie, en voor bruggen, trappen en bijzondere objecten maken we verlichting die er niet uit de catalogus is: leuningverlichting op 48V, grondspots in een trap, een UV-A lichtbak voor een restauratieatelier. Alles gebeurt in eigen huis in Wormerveer: ontwerp, engineering, productie en installatie."
       }
     },
     {
       "@type": "Question",
-      "name": "Hoe lang duurt een traject?",
+      "name": "Kunnen bestaande armaturen worden omgebouwd naar LED?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Een safety check is meestal binnen een week rond, inclusief rapportage. Een RI&E met plan van aanpak kost twee tot zes weken, afhankelijk van de omvang en het aantal locaties. Een gedragstraject loopt langer: cultuur verandert niet in een maand. We werken daar in blokken, met vaste meetmomenten."
+        "text": "Ja. Met een LED-geartray vervangen we alleen de binnenkant: module, driver en waar nodig optiek en venster. De behuizing blijft hangen. Er zijn geartrays voor tunnelarmaturen en voor de Schréder Valentino en Albany, en we bouwen TL en CDO om naar LED."
       }
     },
     {
       "@type": "Question",
-      "name": "Blijven jullie betrokken na afloop?",
+      "name": "Welke lichtkleuren en sturingen leveren jullie?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Ja. Het doel is dat je het zelf kunt, niet dat je ons nodig blijft hebben. Daarom dragen we werkwijzen over aan je eigen mensen en blijven we daarna bereikbaar voor vragen. Veel klanten kiezen voor een periodieke check om scherp te blijven."
+        "text": "Standaard 2200K, 3000K en 4000K; afwijkende kleuren op aanvraag. Voor de sturing: Aan/Uit, DALI of DALI SR, 1-10V, of een Dynadimmer met het standaard 3A-dimregime of een klantspecifiek regime."
       }
     }
   ]
@@ -118,20 +102,19 @@
 <!-- De header en het mobiele paneel staan bewust BUITEN #smooth-wrapper.
      ScrollSmoother verschuift de inhoud met een transform, en onder een
      transform hangt position:fixed aan dat element in plaats van aan het
-     scherm. Ze blijven daardoor ook staan bij een pagina-overgang; welke
-     menulink actief is wordt in page-transitions.js bijgewerkt. -->
+     scherm. -->
 <header class="header header--scrolled" id="siteHeader">
   <div class="header--container">
-    <a href="index.html" class="header--logo" aria-label="MADEGRO, naar de homepage">
-      <img class="header--logo-kleur" src="assets/logo/madegro-logo.svg" alt="MADEGRO" width="227" height="40">
-      <img class="header--logo-wit" src="assets/logo/madegro-logo-wit.svg" alt="" aria-hidden="true" width="227" height="40">
+    <a href="index.html" class="header--logo" aria-label="De Licht Fabriek, naar de homepage">
+      <img class="header--logo-kleur" src="assets/logo/logo-donker.png" srcset="assets/logo/logo-donker.png 1x, assets/logo/logo-donker@2x.png 2x" alt="De Licht Fabriek" width="228" height="40">
+      <img class="header--logo-wit" src="assets/logo/logo-wit.png" srcset="assets/logo/logo-wit.png 1x, assets/logo/logo-wit@2x.png 2x" alt="" aria-hidden="true" width="228" height="40">
     </a>
 
     <nav class="submenu" aria-label="Hoofdmenu">
       <a class="submenu--link is-actief" href="index.html" aria-current="page">Home</a>
+      <button type="button" class="submenu--link submenu--trigger" data-uitklap="armaturen" aria-expanded="false" aria-controls="uitklap-armaturen">Armaturen<svg class="submenu--chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 8L12 17L3 8" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg></button>
       <button type="button" class="submenu--link submenu--trigger" data-uitklap="diensten" aria-expanded="false" aria-controls="uitklap-diensten">Diensten<svg class="submenu--chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 8L12 17L3 8" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg></button>
-      <button type="button" class="submenu--link submenu--trigger" data-uitklap="cursussen" aria-expanded="false" aria-controls="uitklap-cursussen">Cursussen<svg class="submenu--chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 8L12 17L3 8" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg></button>
-      <a class="submenu--link" href="cases.html">Cases</a>
+      <a class="submenu--link" href="projecten.html">Projecten</a>
       <a class="submenu--link" href="over-ons.html">Over ons</a>
       <a class="submenu--link highlight" href="contact.html">Contact</a>
     </nav>
@@ -142,46 +125,46 @@
     </button>
   </div>
 
+  <div class="uitklap" id="uitklap-armaturen" data-uitklap-paneel="armaturen" inert>
+    <div class="uitklap__inner">
+      <div class="uitklap__kolom">
+        <span class="subtitle">Armaturen</span>
+        <ul class="uitklap__lijst" role="list">
+          <li><a class="uitklap__link" href="armaturen.html"><span class="uitklap__naam">Alle armaturen</span><span class="uitklap__uitleg">Welk armatuur past waar</span></a></li>
+          <li><a class="uitklap__link" href="solarbolder.html"><span class="uitklap__naam">Solarbolder</span><span class="uitklap__uitleg">Offgrid licht, 365 dagen per jaar</span></a></li>
+          <li><a class="uitklap__link" href="tunnelarmaturen.html"><span class="uitklap__naam">Tunnelarmaturen</span><span class="uitklap__uitleg">Titan: op maat, in RVS en polycarbonaat</span></a></li>
+          <li><a class="uitklap__link" href="paaltop-armaturen.html"><span class="uitklap__naam">Paaltop-armaturen</span><span class="uitklap__uitleg">Citylight: slagvast en gelijkmatig licht</span></a></li>
+        </ul>
+      </div>
+      <div class="uitklap__kaart">
+        <picture><source type="image/avif" srcset="assets/foto/citylight-lens-480.avif 480w, assets/foto/citylight-lens-800.avif 800w, assets/foto/citylight-lens-1200.avif 1200w" sizes="(max-width: 1199px) 0px, 40vw"><img src="assets/foto/citylight-lens-1200.webp" srcset="assets/foto/citylight-lens-480.webp 480w, assets/foto/citylight-lens-800.webp 800w, assets/foto/citylight-lens-1200.webp 1200w" sizes="(max-width: 1199px) 0px, 40vw" width="1200" height="810" alt="" loading="lazy" decoding="async"></picture>
+        <span class="uitklap__sluier" aria-hidden="true"></span>
+        <div class="uitklap__kaart-tekst">
+          <p class="uitklap__kaart-kop">Past geen standaardarmatuur?</p>
+          <p class="uitklap__kaart-body">Tunnelarmaturen maken we op klantspecificatie. Stuur je maten of tekening, dan denken we mee.</p>
+          <a href="contact.html" class="button button--primary"><span class="button__inhoud">Bespreek je project<span class="button__spoor" aria-hidden="true"><svg class="arrow--animation is-1" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg><svg class="arrow--animation is-2" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg></span></span></a>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="uitklap" id="uitklap-diensten" data-uitklap-paneel="diensten" inert>
     <div class="uitklap__inner">
       <div class="uitklap__kolom">
         <span class="subtitle">Diensten</span>
         <ul class="uitklap__lijst" role="list">
-          <li><a class="uitklap__link" href="veilig-gedrag.html"><span class="uitklap__naam">Veilig gedrag</span><span class="uitklap__uitleg">Van papier naar werkvloer</span></a></li>
-          <li><a class="uitklap__link" href="ehs-rie.html"><span class="uitklap__naam">EHS RIE</span><span class="uitklap__uitleg">Risico&rsquo;s in kaart, met een plan dat werkt</span></a></li>
-          <li><a class="uitklap__link" href="safety-checks.html"><span class="uitklap__naam">Safety Checks</span><span class="uitklap__uitleg">Periodiek toetsen wat er echt gebeurt</span></a></li>
+          <li><a class="uitklap__link" href="diensten.html"><span class="uitklap__naam">Alle diensten</span><span class="uitklap__uitleg">Retrofit, maatwerk en onderzoek</span></a></li>
+          <li><a class="uitklap__link" href="retrofit.html"><span class="uitklap__naam">Retrofit en LED-geartrays</span><span class="uitklap__uitleg">Bestaande armaturen verledden</span></a></li>
+          <li><a class="uitklap__link" href="maatwerk.html"><span class="uitklap__naam">Maatwerk en engineering</span><span class="uitklap__uitleg">Van vraag tot armatuur, in eigen huis</span></a></li>
+          <li><a class="uitklap__link" href="thermolight.html"><span class="uitklap__naam">Thermografisch onderzoek</span><span class="uitklap__uitleg">Afwijkingen snel in beeld</span></a></li>
         </ul>
       </div>
       <div class="uitklap__kaart">
-        <picture><source type="image/avif" srcset="assets/foto/overleg-640.avif 640w, assets/foto/overleg-960.avif 960w" sizes="(max-width: 1199px) 0px, 40vw"><img src="assets/foto/overleg-960.webp" srcset="assets/foto/overleg-640.webp 640w, assets/foto/overleg-960.webp 960w" sizes="(max-width: 1199px) 0px, 40vw" width="960" height="640" alt="" loading="lazy" decoding="async"></picture>
+        <picture><source type="image/avif" srcset="assets/foto/ledmodule-buis-480.avif 480w, assets/foto/ledmodule-buis-800.avif 800w, assets/foto/ledmodule-buis-1200.avif 1200w" sizes="(max-width: 1199px) 0px, 40vw"><img src="assets/foto/ledmodule-buis-1200.webp" srcset="assets/foto/ledmodule-buis-480.webp 480w, assets/foto/ledmodule-buis-800.webp 800w, assets/foto/ledmodule-buis-1200.webp 1200w" sizes="(max-width: 1199px) 0px, 40vw" width="1200" height="336" alt="" loading="lazy" decoding="async"></picture>
         <span class="uitklap__sluier" aria-hidden="true"></span>
         <div class="uitklap__kaart-tekst">
-          <p class="uitklap__kaart-kop">Weten waar je staat?</p>
-          <p class="uitklap__kaart-body">In een gesprek van een halfuur brengen we in beeld welke van de drie het meest oplevert in jouw situatie.</p>
-          <a href="contact.html" class="button button--primary"><span class="button__inhoud">Plan een gesprek<span class="button__spoor" aria-hidden="true"><svg class="arrow--animation is-1" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg><svg class="arrow--animation is-2" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg></span></span></a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="uitklap" id="uitklap-cursussen" data-uitklap-paneel="cursussen" inert>
-    <div class="uitklap__inner">
-      <div class="uitklap__kolom">
-        <span class="subtitle">Cursussen</span>
-        <ul class="uitklap__lijst" role="list">
-          <li><a class="uitklap__link" href="cursusaanbod.html"><span class="uitklap__naam">Alle cursussen</span><span class="uitklap__uitleg">Het volledige aanbod op een rij</span></a></li>
-          <li><a class="uitklap__link" href="cursus-veiligheidsbewustzijn.html"><span class="uitklap__naam">Veiligheidsbewustzijn op de werkvloer</span><span class="uitklap__uitleg">Voor operators en uitvoerenden</span></a></li>
-          <li><a class="uitklap__link" href="cursus-risicobeoordeling.html"><span class="uitklap__naam">Risico&rsquo;s herkennen en beoordelen</span><span class="uitklap__uitleg">Voor voormannen en teamleiders</span></a></li>
-          <li><a class="uitklap__link" href="cursus-veiligheidsladder.html"><span class="uitklap__naam">Werken met de Veiligheidsladder</span><span class="uitklap__uitleg">Voor KAM- en HSE-co&ouml;rdinatoren</span></a></li>
-          <li><a class="uitklap__link" href="cursus-rie-praktijk.html"><span class="uitklap__naam">RI&amp;E in de praktijk</span><span class="uitklap__uitleg">Voor preventiemedewerkers</span></a></li>
-        </ul>
-      </div>
-      <div class="uitklap__kaart">
-        <picture><source type="image/avif" srcset="assets/foto/productiehal-640.avif 640w, assets/foto/productiehal-1024.avif 1024w" sizes="(max-width: 1199px) 0px, 40vw"><img src="assets/foto/productiehal-1024.webp" srcset="assets/foto/productiehal-640.webp 640w, assets/foto/productiehal-1024.webp 1024w" sizes="(max-width: 1199px) 0px, 40vw" width="1024" height="309" alt="" loading="lazy" decoding="async"></picture>
-        <span class="uitklap__sluier" aria-hidden="true"></span>
-        <div class="uitklap__kaart-tekst">
-          <p class="uitklap__kaart-kop">Twijfel je welke cursus past?</p>
-          <p class="uitklap__kaart-body">Vertel kort wie er meedoet en waar het werk om draait; we denken mee over de volgorde.</p>
-          <a href="contact.html" class="button button--primary"><span class="button__inhoud">Plan een gesprek<span class="button__spoor" aria-hidden="true"><svg class="arrow--animation is-1" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg><svg class="arrow--animation is-2" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg></span></span></a>
+          <p class="uitklap__kaart-kop">Bestaande armaturen behouden?</p>
+          <p class="uitklap__kaart-body">Met een LED-geartray blijft de behuizing hangen en gaat alleen de techniek eruit.</p>
+          <a href="contact.html" class="button button--primary"><span class="button__inhoud">Vraag een prijsopgave<span class="button__spoor" aria-hidden="true"><svg class="arrow--animation is-1" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg><svg class="arrow--animation is-2" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg></span></span></a>
         </div>
       </div>
     </div>
@@ -191,7 +174,7 @@
 <div class="mobile-panel--overlay" id="panelOverlay" hidden></div>
 <div class="mobile-panel" id="mobilePanel" role="dialog" aria-modal="true" aria-label="Menu">
   <div class="mobile-panel--topbar">
-    <a class="mobile-panel--chip" href="contact.html">Contact</a>
+    <a class="mobile-panel--chip" href="tel:+31628553641">Bel 06 28553641</a>
     <button type="button" class="mobile-panel--chip is-close" id="panelSluit">
       Sluiten
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M19 19L5 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M19 5L5 19" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg>
@@ -203,32 +186,32 @@
       <li><a class="mobile-panel--nav-link" href="index.html" data-panel-sluit style="transition-delay:0ms"><span class="mobile-panel--text-slide"><span class="mobile-panel--text-slide-inner"><span>Home</span><span>Home</span></span></span></a></li>
       <li>
         <button type="button" class="mobile-panel--nav-link mobile-panel--nav-knop"
-                data-mobiel-uitklap="diensten" aria-expanded="false"
-                aria-controls="mobiel-diensten" style="transition-delay:60ms"><span class="mobile-panel--text-slide"><span class="mobile-panel--text-slide-inner"><span>Diensten</span><span>Diensten</span></span></span><svg class="submenu--chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 8L12 17L3 8" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg></button>
-        <ul class="mobile-panel--sublijst" id="mobiel-diensten" role="list" hidden>
-          <li><a class="mobile-panel--sublink" href="veilig-gedrag.html" data-panel-sluit>Veilig gedrag</a></li>
-          <li><a class="mobile-panel--sublink" href="ehs-rie.html" data-panel-sluit>EHS RIE</a></li>
-          <li><a class="mobile-panel--sublink" href="safety-checks.html" data-panel-sluit>Safety Checks</a></li>
+                data-mobiel-uitklap="armaturen" aria-expanded="false"
+                aria-controls="mobiel-armaturen" style="transition-delay:60ms"><span class="mobile-panel--text-slide"><span class="mobile-panel--text-slide-inner"><span>Armaturen</span><span>Armaturen</span></span></span><svg class="submenu--chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 8L12 17L3 8" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg></button>
+        <ul class="mobile-panel--sublijst" id="mobiel-armaturen" role="list" hidden>
+          <li><a class="mobile-panel--sublink" href="armaturen.html" data-panel-sluit>Alle armaturen</a></li>
+          <li><a class="mobile-panel--sublink" href="solarbolder.html" data-panel-sluit>Solarbolder</a></li>
+          <li><a class="mobile-panel--sublink" href="tunnelarmaturen.html" data-panel-sluit>Tunnelarmaturen</a></li>
+          <li><a class="mobile-panel--sublink" href="paaltop-armaturen.html" data-panel-sluit>Paaltop-armaturen</a></li>
         </ul>
       </li>
       <li>
         <button type="button" class="mobile-panel--nav-link mobile-panel--nav-knop"
-                data-mobiel-uitklap="cursussen" aria-expanded="false"
-                aria-controls="mobiel-cursussen" style="transition-delay:120ms"><span class="mobile-panel--text-slide"><span class="mobile-panel--text-slide-inner"><span>Cursussen</span><span>Cursussen</span></span></span><svg class="submenu--chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 8L12 17L3 8" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg></button>
-        <ul class="mobile-panel--sublijst" id="mobiel-cursussen" role="list" hidden>
-          <li><a class="mobile-panel--sublink" href="cursusaanbod.html" data-panel-sluit>Alle cursussen</a></li>
-          <li><a class="mobile-panel--sublink" href="cursus-veiligheidsbewustzijn.html" data-panel-sluit>Veiligheidsbewustzijn op de werkvloer</a></li>
-          <li><a class="mobile-panel--sublink" href="cursus-risicobeoordeling.html" data-panel-sluit>Risico&rsquo;s herkennen en beoordelen</a></li>
-          <li><a class="mobile-panel--sublink" href="cursus-veiligheidsladder.html" data-panel-sluit>Werken met de Veiligheidsladder</a></li>
-          <li><a class="mobile-panel--sublink" href="cursus-rie-praktijk.html" data-panel-sluit>RI&amp;E in de praktijk</a></li>
+                data-mobiel-uitklap="diensten" aria-expanded="false"
+                aria-controls="mobiel-diensten" style="transition-delay:120ms"><span class="mobile-panel--text-slide"><span class="mobile-panel--text-slide-inner"><span>Diensten</span><span>Diensten</span></span></span><svg class="submenu--chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 8L12 17L3 8" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg></button>
+        <ul class="mobile-panel--sublijst" id="mobiel-diensten" role="list" hidden>
+          <li><a class="mobile-panel--sublink" href="diensten.html" data-panel-sluit>Alle diensten</a></li>
+          <li><a class="mobile-panel--sublink" href="retrofit.html" data-panel-sluit>Retrofit en LED-geartrays</a></li>
+          <li><a class="mobile-panel--sublink" href="maatwerk.html" data-panel-sluit>Maatwerk en engineering</a></li>
+          <li><a class="mobile-panel--sublink" href="thermolight.html" data-panel-sluit>Thermografisch onderzoek</a></li>
         </ul>
       </li>
-      <li><a class="mobile-panel--nav-link" href="cases.html" data-panel-sluit style="transition-delay:180ms"><span class="mobile-panel--text-slide"><span class="mobile-panel--text-slide-inner"><span>Cases</span><span>Cases</span></span></span></a></li>
+      <li><a class="mobile-panel--nav-link" href="projecten.html" data-panel-sluit style="transition-delay:180ms"><span class="mobile-panel--text-slide"><span class="mobile-panel--text-slide-inner"><span>Projecten</span><span>Projecten</span></span></span></a></li>
       <li><a class="mobile-panel--nav-link" href="over-ons.html" data-panel-sluit style="transition-delay:240ms"><span class="mobile-panel--text-slide"><span class="mobile-panel--text-slide-inner"><span>Over ons</span><span>Over ons</span></span></span></a></li>
     </ul>
   </nav>
   <div class="mobile-panel--cta button__mobile-width">
-    <a href="contact.html" class="button button--primary"><span class="button__inhoud">Contact opnemen<span class="button__spoor" aria-hidden="true"><svg class="arrow--animation is-1" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg><svg class="arrow--animation is-2" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg></span></span></a>
+    <a href="contact.html" class="button button--primary"><span class="button__inhoud">Bespreek je project<span class="button__spoor" aria-hidden="true"><svg class="arrow--animation is-1" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg><svg class="arrow--animation is-2" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg></span></span></a>
   </div>
 </div>
 
@@ -244,40 +227,33 @@
   <!-- ================= 01 INTRODUCTIE ================= -->
   <section class="hero" id="s01-introductie" data-header-theme="light">
     <div class="hero--beeld" aria-hidden="true">
-      <picture><source type="image/avif" srcset="assets/foto/logistiek-1200.avif 1200w, assets/foto/logistiek-2400.avif 2400w" sizes="100vw"><img src="assets/foto/logistiek-2400.webp" srcset="assets/foto/logistiek-1200.webp 1200w, assets/foto/logistiek-2400.webp 2400w" sizes="100vw" width="2400" height="1350" alt="Vrachtwagen op een dijkweg langs het water" loading="eager" fetchpriority="high" decoding="async"></picture>
-      <!-- De film ligt over het stilstaande beeld heen en komt pas in beeld als
-           hij speelt. site.js hangt de bron er pas in op een breed scherm en
-           alleen als beweging aan staat: zonder script, op een telefoon of met
-           prefers-reduced-motion blijft het bij de foto hierboven, en dat is
-           het eerste beeldje van dezelfde film. -->
-      <video class="hero--video" data-herovideo="assets/video/hero-logistiek.mp4"
-             width="1600" height="900" muted loop playsinline preload="none"></video>
+      <picture><source type="image/avif" srcset="assets/foto/hero-tunnel-titan-480.avif 480w, assets/foto/hero-tunnel-titan-800.avif 800w, assets/foto/hero-tunnel-titan-1200.avif 1200w, assets/foto/hero-tunnel-titan-1800.avif 1800w, assets/foto/hero-tunnel-titan-2400.avif 2400w" sizes="100vw"><img src="assets/foto/hero-tunnel-titan-2400.webp" srcset="assets/foto/hero-tunnel-titan-480.webp 480w, assets/foto/hero-tunnel-titan-800.webp 800w, assets/foto/hero-tunnel-titan-1200.webp 1200w, assets/foto/hero-tunnel-titan-1800.webp 1800w, assets/foto/hero-tunnel-titan-2400.webp 2400w" sizes="100vw" width="2400" height="1476" alt="Onderdoorgang bij nacht met warmwit licht uit Titan-tunnelarmaturen, weerspiegeld in het water" loading="eager" fetchpriority="high" decoding="async"></picture>
       <span class="hero--sluier"></span>
     </div>
     <div class="container hero--container">
       <div class="hero--content">
-        <span class="subtitle" style="color:var(--color-white)">Veiligheidskunde en kwaliteit</span>
-        <h1 class="hero--title">Veiligheid die niet alleen op papier klopt</h1>
+        <span class="subtitle" style="color:var(--color-white)">LED-verlichting voor openbare ruimte, outdoor en solar</span>
+        <h1 class="hero--title">Licht dat past bij de plek</h1>
         <div class="hero--intro article-body">
-          <p>MADEGRO helpt productie-, bouw-, techniek- en logistiekbedrijven om het veiligheidsniveau echt omhoog te brengen. Niet met een map in de kast, maar met werkwijzen die op de vloer standhouden.</p>
-          <p>Veiligheid is geen kostenpost. Het is een verbeterdimensie naast kwaliteit, productiviteit en kosten. Meestal zie je het effect het eerst terug in minder stilstand en minder herstelwerk.</p>
+          <p>De Licht Fabriek ontwerpt, engineert en produceert LED-verlichting voor tunnels, bruggen, straten en pleinen: armaturen op maat, de offgrid Solarbolder en LED-geartrays om bestaande armaturen te verledden.</p>
+          <p>Gemaakt in Wormerveer, met vijf jaar garantie.</p>
         </div>
         <div class="hero--actions">
-          <a href="contact.html" class="button button--primary"><span class="button__inhoud">Contact opnemen<span class="button__spoor" aria-hidden="true"><svg class="arrow--animation is-1" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg><svg class="arrow--animation is-2" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg></span></span></a>
-          <a href="over-ons.html" class="button button--secondary"><span class="button__inhoud">Over ons<span class="button__spoor" aria-hidden="true"><svg class="arrow--animation is-1" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg><svg class="arrow--animation is-2" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg></span></span></a>
+          <a href="contact.html" class="button button--primary"><span class="button__inhoud">Bespreek je project<span class="button__spoor" aria-hidden="true"><svg class="arrow--animation is-1" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg><svg class="arrow--animation is-2" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg></span></span></a>
+          <a href="projecten.html" class="button button--secondary"><span class="button__inhoud">Bekijk de projecten<span class="button__spoor" aria-hidden="true"><svg class="arrow--animation is-1" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg><svg class="arrow--animation is-2" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg></span></span></a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ================= 02 WAT MADEGRO DOET ================= -->
+  <!-- ================= 02 WAT WE DOEN ================= -->
   <section class="content-text-side-cta" id="s02-wat-we-doen">
     <div class="container">
       <div class="content-text-side-cta--container background--grey">
         <div class="row gx-0">
           <div class="col-lg-8 col-12">
             <div class="content-text-side-cta--body">
-              <p>Veiligheid is geen papieren oefening. Met wisselende ploegen, nieuwe machines en een inspectie die zomaar langs kan komen, wil je weten waar je staat. MADEGRO brengt dat in beeld en zorgt dat het niveau omhoog gaat, van de werkvloer tot het plan van aanpak.</p>
+              <p>Een tunnel heeft andere maten dan de vorige, een brugleuning moet veilig op lage spanning, en een armatuur dat nog goed hangt hoeft niet weg omdat de lamp verouderd is. Daarom maken we verlichting op de vraag: ontwerp, engineering en productie in eigen huis, en de techniek erin die dimt, lang meegaat en tegen een stootje kan.</p>
             </div>
           </div>
         </div>
@@ -285,53 +261,55 @@
     </div>
   </section>
 
-  <section class="content-text-side-visual background--white" id="s03-hoe-we-werken">
+  <!-- ================= 03 EEN PARTIJ ================= -->
+  <section class="content-text-side-visual background--white" id="s03-eigen-huis">
     <div class="container">
       <div class="row gx-0">
         <article class="col-lg-4 col-12">
           <div class="content-text-side-visual--stack content-text-side-visual--article">
-            <h2>De regie over veiligheid op je eigen terrein</h2>
+            <h2>Van vraag tot armatuur, onder één dak</h2>
             <div class="content-text-side-visual--body content-fit--quarter">
-              <p>We lopen je terrein af zoals een inspecteur dat zou doen: bij de poort, op de laadkuil, in de hal en op kantoor. Wat we zien leggen we vast in taal die je voormannen begrijpen, met maatregelen die in de planning passen.</p>
-              <p>Daarna dragen we het over. Je eigen mensen houden de RI&amp;E bij, herkennen de risico&rsquo;s en spreken elkaar aan. Wij blijven bereikbaar, maar je hebt ons niet meer nodig om het draaiende te houden.</p>
+              <p>De klantwens wordt vertaald naar een passende oplossing. Onze interne engineering en productie waarborgen de kwaliteit: het ontwerp wordt in 3D uitgewerkt, de behuizing in RVS of polycarbonaat gemaakt, de LED-module en de driver gemonteerd en ingeregeld op het dimregime dat jij wilt.</p>
+              <p>Daarna plaatsen we het armatuur, of leveren we het aan je installateur. Komt er later een vraag, dan zit de kennis van het armatuur nog bij dezelfde mensen.</p>
             </div>
-            <a href="contact.html" class="button button--primary"><span class="button__inhoud">Plan een kennismaking<span class="button__spoor" aria-hidden="true"><svg class="arrow--animation is-1" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg><svg class="arrow--animation is-2" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg></span></span></a>
+            <a href="over-ons.html" class="button button--primary"><span class="button__inhoud">Lees over onze werkwijze<span class="button__spoor" aria-hidden="true"><svg class="arrow--animation is-1" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg><svg class="arrow--animation is-2" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg></span></span></a>
           </div>
         </article>
       </div>
     </div>
     <div class="content-text-side-visual--visual added-distance">
-      <picture><source type="image/avif" srcset="assets/illustratie/madegro-terrein-800.avif 800w, assets/illustratie/madegro-terrein-1520.avif 1520w" sizes="(max-width: 991px) calc(100vw - 32px), (max-width: 1199px) calc(100vw - 96px), (max-width: 1352px) 940px, 70vw"><img src="assets/illustratie/madegro-terrein-1520.webp" srcset="assets/illustratie/madegro-terrein-800.webp 800w, assets/illustratie/madegro-terrein-1520.webp 1520w" sizes="(max-width: 991px) calc(100vw - 32px), (max-width: 1199px) calc(100vw - 96px), (max-width: 1352px) 940px, 70vw" width="1520" height="993" alt="Bedrijfsterrein van boven: een vrachtwagen rijdt door de scanpoort naar de slagboom, bij de portiersloge en het tourniquet controleren medewerkers de toegang, en camera&rsquo;s houden het hek en de laadkuil in de gaten" loading="lazy" decoding="async"></picture>
+      <picture><source type="image/avif" srcset="assets/foto/citylight-2025-480.avif 480w, assets/foto/citylight-2025-800.avif 800w, assets/foto/citylight-2025-1200.avif 1200w, assets/foto/citylight-2025-1800.avif 1800w, assets/foto/citylight-2025-2400.avif 2400w" sizes="(max-width: 991px) calc(100vw - 32px), (max-width: 1199px) calc(100vw - 96px), (max-width: 1352px) 940px, 70vw"><img src="assets/foto/citylight-2025-2400.webp" srcset="assets/foto/citylight-2025-480.webp 480w, assets/foto/citylight-2025-800.webp 800w, assets/foto/citylight-2025-1200.webp 1200w, assets/foto/citylight-2025-1800.webp 1800w, assets/foto/citylight-2025-2400.webp 2400w" sizes="(max-width: 991px) calc(100vw - 32px), (max-width: 1199px) calc(100vw - 96px), (max-width: 1352px) 940px, 70vw" width="2400" height="1501" alt="Citylight-paaltoparmatuur op een mast tegen een blauwe lucht" loading="lazy" decoding="async"></picture>
     </div>
   </section>
 
-  <!-- ================= 04 DE DRIE DIENSTEN ================= -->
-  <section class="content-block" id="s04-diensten">
+  <!-- ================= 04 ARMATUREN ================= -->
+  <section class="content-block" id="s04-armaturen">
     <div class="container">
       <div class="content-block--container background--white" style="padding-bottom:var(--space-700)">
         <div class="row">
           <div class="col-md-8 col-12">
-            <span class="subtitle" style="margin-bottom:var(--space-500)">Wat we doen</span>
-            <h2 class="section-heading">Drie manieren om het veiligheidsniveau te verhogen</h2>
-            <p class="article-body" style="margin-top:var(--space-500); max-width:var(--content-max-half)">
-              De drie diensten grijpen op elkaar in: een safety check laat zien waar je staat, een RI&amp;E legt de risico&rsquo;s en de maatregelen vast, en een gedragstraject zorgt dat het ook zo blijft. Je kunt met elk van de drie beginnen.
-            </p>
+            <span class="subtitle" style="margin-bottom:var(--space-500)">Armaturen</span>
+            <h2 class="section-heading">Drie armaturen, elk voor een andere plek</h2>
+            <p class="article-body" style="margin-top:var(--space-500); max-width:var(--content-max-half)">Een offgrid bolder voor waar geen kabel ligt, een tunnelarmatuur dat we op jouw maten maken en een paaltoparmatuur voor straat en plein. Alle drie in 2200K, 3000K of 4000K en dimbaar met DALI, 1-10V of Dynadimmer.</p>
+          </div>
+          <div class="col-md-4 col-12 text-md-end">
+            <a href="armaturen.html" class="button button--primary"><span class="button__inhoud">Alle armaturen<span class="button__spoor" aria-hidden="true"><svg class="arrow--animation is-1" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg><svg class="arrow--animation is-2" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg></span></span></a>
           </div>
         </div>
       </div>
       <div class="row g-0">
         <div class="col-lg-4 col-12 kolom--vullend">
-          <a class="cta-blocks-advanced__card cta-blocks-advanced__card--linked hover--icon" href="veilig-gedrag.html"
-             aria-label="Veilig gedrag: Van papier naar werkvloer">
+          <a class="cta-blocks-advanced__card cta-blocks-advanced__card--linked hover--icon" href="solarbolder.html"
+             aria-label="Solarbolder: Offgrid licht, 365 dagen per jaar">
             <figure class="cta-blocks-advanced__banner cta-blocks-advanced__banner--verhouding">
-              <picture><source type="image/avif" srcset="assets/foto/dienst-gedrag-480.avif 480w, assets/foto/dienst-gedrag-800.avif 800w, assets/foto/dienst-gedrag-1024.avif 1024w" sizes="(max-width: 991px) 100vw, 33vw"><img src="assets/foto/dienst-gedrag-1024.webp" srcset="assets/foto/dienst-gedrag-480.webp 480w, assets/foto/dienst-gedrag-800.webp 800w, assets/foto/dienst-gedrag-1024.webp 1024w" sizes="(max-width: 991px) 100vw, 33vw" width="1024" height="683" alt="" loading="lazy" decoding="async"></picture>
+              <picture><source type="image/avif" srcset="assets/foto/schielandhuis-bolder-480.avif 480w, assets/foto/schielandhuis-bolder-800.avif 800w, assets/foto/schielandhuis-bolder-1200.avif 1200w, assets/foto/schielandhuis-bolder-1800.avif 1800w, assets/foto/schielandhuis-bolder-2400.avif 2400w" sizes="(max-width: 991px) 100vw, 33vw"><img src="assets/foto/schielandhuis-bolder-2400.webp" srcset="assets/foto/schielandhuis-bolder-480.webp 480w, assets/foto/schielandhuis-bolder-800.webp 800w, assets/foto/schielandhuis-bolder-1200.webp 1200w, assets/foto/schielandhuis-bolder-1800.webp 1800w, assets/foto/schielandhuis-bolder-2400.webp 2400w" sizes="(max-width: 991px) 100vw, 33vw" width="2400" height="1600" alt="" loading="lazy" decoding="async"></picture>
             </figure>
             <div class="cta-blocks-advanced__body cta-blocks-advanced__body--bg-grey">
-              <span class="subtitle">Dienst 01</span>
+              <span class="subtitle">Armatuur 01</span>
               <div class="cta-blocks-advanced__wrapper">
                 <div>
-                  <h3 class="cta-blocks-advanced__title" style="margin-bottom:var(--space-500)">Veilig gedrag</h3>
-                  <div class="cta-blocks-advanced__content"><p>Van papier naar werkvloer</p><p>Het gedrag op de werkvloer laten aansluiten op wat er op papier staat, met de Veiligheidsladder als meetlat.</p></div>
+                  <h3 class="cta-blocks-advanced__title" style="margin-bottom:var(--space-500)">Solarbolder</h3>
+                  <div class="cta-blocks-advanced__content"><p>Offgrid licht, 365 dagen per jaar</p><p>Een staand armatuur dat alleen zon en daglicht nodig heeft. Ontwerp van Atelier LEK, gemaakt in Nederland in RVS en terrazzo.</p></div>
                 </div>
                 <span class="button--icon button--icon--56" aria-hidden="true" inert><span class="button--circle"><span class="circle-container"><svg class="arrow--animation is-1" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg><svg class="arrow--animation is-2" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg></span></span></span>
               </div>
@@ -339,17 +317,17 @@
           </a>
         </div>
         <div class="col-lg-4 col-12 kolom--vullend">
-          <a class="cta-blocks-advanced__card cta-blocks-advanced__card--linked hover--icon" href="ehs-rie.html"
-             aria-label="EHS RIE: Risico&rsquo;s in kaart, met een plan dat werkt">
+          <a class="cta-blocks-advanced__card cta-blocks-advanced__card--linked hover--icon" href="tunnelarmaturen.html"
+             aria-label="Tunnelarmaturen: Titan: op maat, in RVS en polycarbonaat">
             <figure class="cta-blocks-advanced__banner cta-blocks-advanced__banner--verhouding">
-              <picture><source type="image/avif" srcset="assets/foto/dienst-rie-480.avif 480w, assets/foto/dienst-rie-800.avif 800w, assets/foto/dienst-rie-1024.avif 1024w" sizes="(max-width: 991px) 100vw, 33vw"><img src="assets/foto/dienst-rie-1024.webp" srcset="assets/foto/dienst-rie-480.webp 480w, assets/foto/dienst-rie-800.webp 800w, assets/foto/dienst-rie-1024.webp 1024w" sizes="(max-width: 991px) 100vw, 33vw" width="1024" height="565" alt="" loading="lazy" decoding="async"></picture>
+              <picture><source type="image/avif" srcset="assets/foto/tunnel-3000k-480.avif 480w, assets/foto/tunnel-3000k-800.avif 800w, assets/foto/tunnel-3000k-1200.avif 1200w, assets/foto/tunnel-3000k-1800.avif 1800w, assets/foto/tunnel-3000k-2400.avif 2400w" sizes="(max-width: 991px) 100vw, 33vw"><img src="assets/foto/tunnel-3000k-2400.webp" srcset="assets/foto/tunnel-3000k-480.webp 480w, assets/foto/tunnel-3000k-800.webp 800w, assets/foto/tunnel-3000k-1200.webp 1200w, assets/foto/tunnel-3000k-1800.webp 1800w, assets/foto/tunnel-3000k-2400.webp 2400w" sizes="(max-width: 991px) 100vw, 33vw" width="2400" height="1434" alt="" loading="lazy" decoding="async"></picture>
             </figure>
             <div class="cta-blocks-advanced__body cta-blocks-advanced__body--bg-white">
-              <span class="subtitle">Dienst 02</span>
+              <span class="subtitle">Armatuur 02</span>
               <div class="cta-blocks-advanced__wrapper">
                 <div>
-                  <h3 class="cta-blocks-advanced__title" style="margin-bottom:var(--space-500)">EHS RIE</h3>
-                  <div class="cta-blocks-advanced__content"><p>Risico&rsquo;s in kaart, met een plan dat werkt</p><p>De wettelijk verplichte risico-inventarisatie, vertaald naar een plan van aanpak dat je echt kunt uitvoeren.</p></div>
+                  <h3 class="cta-blocks-advanced__title" style="margin-bottom:var(--space-500)">Tunnelarmaturen</h3>
+                  <div class="cta-blocks-advanced__content"><p>Titan: op maat, in RVS en polycarbonaat</p><p>In eigen beheer ontworpen en geproduceerd op klantspecificatie. Slagvast tot IK10, optioneel met antigraffiticoating.</p></div>
                 </div>
                 <span class="button--icon button--icon--56" aria-hidden="true" inert><span class="button--circle"><span class="circle-container"><svg class="arrow--animation is-1" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg><svg class="arrow--animation is-2" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg></span></span></span>
               </div>
@@ -357,17 +335,17 @@
           </a>
         </div>
         <div class="col-lg-4 col-12 kolom--vullend">
-          <a class="cta-blocks-advanced__card cta-blocks-advanced__card--linked hover--icon" href="safety-checks.html"
-             aria-label="Safety Checks: Periodiek toetsen wat er echt gebeurt">
+          <a class="cta-blocks-advanced__card cta-blocks-advanced__card--linked hover--icon" href="paaltop-armaturen.html"
+             aria-label="Paaltop-armaturen: Citylight: slagvast en gelijkmatig licht">
             <figure class="cta-blocks-advanced__banner cta-blocks-advanced__banner--verhouding">
-              <picture><source type="image/avif" srcset="assets/foto/dienst-checks-480.avif 480w, assets/foto/dienst-checks-800.avif 800w, assets/foto/dienst-checks-1200.avif 1200w" sizes="(max-width: 991px) 100vw, 33vw"><img src="assets/foto/dienst-checks-1200.webp" srcset="assets/foto/dienst-checks-480.webp 480w, assets/foto/dienst-checks-800.webp 800w, assets/foto/dienst-checks-1200.webp 1200w" sizes="(max-width: 991px) 100vw, 33vw" width="1200" height="670" alt="" loading="lazy" decoding="async"></picture>
+              <picture><source type="image/avif" srcset="assets/foto/citylight-straat-480.avif 480w, assets/foto/citylight-straat-800.avif 800w, assets/foto/citylight-straat-1200.avif 1200w" sizes="(max-width: 991px) 100vw, 33vw"><img src="assets/foto/citylight-straat-1200.webp" srcset="assets/foto/citylight-straat-480.webp 480w, assets/foto/citylight-straat-800.webp 800w, assets/foto/citylight-straat-1200.webp 1200w" sizes="(max-width: 991px) 100vw, 33vw" width="1200" height="646" alt="" loading="lazy" decoding="async"></picture>
             </figure>
             <div class="cta-blocks-advanced__body cta-blocks-advanced__body--bg-grey">
-              <span class="subtitle">Dienst 03</span>
+              <span class="subtitle">Armatuur 03</span>
               <div class="cta-blocks-advanced__wrapper">
                 <div>
-                  <h3 class="cta-blocks-advanced__title" style="margin-bottom:var(--space-500)">Safety Checks</h3>
-                  <div class="cta-blocks-advanced__content"><p>Periodiek toetsen wat er echt gebeurt</p><p>Periodiek toetsen of de praktijk nog klopt met de eisen, met een rapportage waar concrete punten in staan.</p></div>
+                  <h3 class="cta-blocks-advanced__title" style="margin-bottom:var(--space-500)">Paaltop-armaturen</h3>
+                  <div class="cta-blocks-advanced__content"><p>Citylight: slagvast en gelijkmatig licht</p><p>Het Citylight-armatuur voor straat, plein en speelplaats: slagvast polycarbonaat en een optiek die het licht legt waar het hoort.</p></div>
                 </div>
                 <span class="button--icon button--icon--56" aria-hidden="true" inert><span class="button--circle"><span class="circle-container"><svg class="arrow--animation is-1" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg><svg class="arrow--animation is-2" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg></span></span></span>
               </div>
@@ -382,164 +360,148 @@
   <section class="cases-grid" id="s05-projecten">
     <div class="container">
       <div class="cases-grid__header">
-        <h2 class="cases-grid__heading">Recente trajecten</h2>
-        <a href="cases.html" class="button button--secundair"><span class="button__inhoud">Alle cases<span class="button__spoor" aria-hidden="true"><svg class="arrow--animation is-1" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg><svg class="arrow--animation is-2" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg></span></span></a>
+        <h2 class="cases-grid__heading">Gerealiseerde projecten</h2>
+        <a href="projecten.html" class="button button--secundair"><span class="button__inhoud">Alle projecten<span class="button__spoor" aria-hidden="true"><svg class="arrow--animation is-1" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg><svg class="arrow--animation is-2" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg></span></span></a>
       </div>
-      <!-- TODO-CONTENT: echte projecten, data en locaties aanleveren door Martin -->
       <div class="cases-grid__list">
       <a class="cases-grid__row cases-grid__row--grey hover--icon"
-         href="case.html?slug=case-van-deursen-metaal" aria-label="Van Deursen Metaal B.V.: Van reactief naar proactief in drie blokken">
+         href="project-brug-buikslotermeer-amsterdam.html" aria-label="Project: Brug met trapopgang in 48V, Buikslotermeer">
         <div class="cases-grid__body">
           <div class="cases-grid__meta">
-            <span class="cases-grid__meta-item">Veilig gedrag</span>
-            <span class="cases-grid__meta-item">Gorinchem</span>
+            <span class="cases-grid__meta-item">Maatwerk</span>
+            <span class="cases-grid__meta-item">Amsterdam</span>
           </div>
-          <h3 class="cases-grid__title">Van Deursen Metaal B.V.</h3>
+          <h3 class="cases-grid__title">Brug met trapopgang in 48V, Buikslotermeer</h3>
           <div class="cases-grid__wrapper">
-            <p class="cases-grid__text">Twee ploegen die na een reorganisatie anders werkten, teruggebracht naar één manier van doen. De voormannen trokken de kar.</p>
+            <p class="cases-grid__text">Leuningverlichting op een houten brug met trapopgang in Amsterdam-Noord, uitgevoerd op 48V extra lage spanning.</p>
             <span class="button--icon button--icon--54 button--secundair" aria-hidden="true" inert><span class="button--circle"><span class="circle-container"><svg class="arrow--animation is-1" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg><svg class="arrow--animation is-2" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg></span></span></span>
           </div>
         </div>
         <figure class="cases-grid__image">
-          <picture><source type="image/avif" srcset="assets/foto/lassen-640.avif 640w, assets/foto/lassen-1024.avif 1024w" sizes="(max-width: 991px) 100vw, 50vw"><img src="assets/foto/lassen-1024.webp" srcset="assets/foto/lassen-640.webp 640w, assets/foto/lassen-1024.webp 1024w" sizes="(max-width: 991px) 100vw, 50vw" width="1024" height="683" alt="Lasser aan het werk aan een constructie" loading="lazy" decoding="async"></picture>
+          <picture><source type="image/avif" srcset="assets/foto/brug-buikslotermeer-480.avif 480w, assets/foto/brug-buikslotermeer-800.avif 800w, assets/foto/brug-buikslotermeer-1200.avif 1200w, assets/foto/brug-buikslotermeer-1800.avif 1800w, assets/foto/brug-buikslotermeer-2400.avif 2400w" sizes="(max-width: 991px) 100vw, 50vw"><img src="assets/foto/brug-buikslotermeer-2400.webp" srcset="assets/foto/brug-buikslotermeer-480.webp 480w, assets/foto/brug-buikslotermeer-800.webp 800w, assets/foto/brug-buikslotermeer-1200.webp 1200w, assets/foto/brug-buikslotermeer-1800.webp 1800w, assets/foto/brug-buikslotermeer-2400.webp 2400w" sizes="(max-width: 991px) 100vw, 50vw" width="2400" height="1476" alt="Houten brug met trapopgang bij nacht, verlicht met 48V-leuningverlichting" loading="lazy" decoding="async"></picture>
         </figure>
       </a>
       <a class="cases-grid__row cases-grid__row--white hover--icon"
-         href="case.html?slug=case-rivierpoort-logistiek" aria-label="Rivierpoort Logistiek: RI&E en plan van aanpak voor een nieuwe hal">
+         href="project-solarbolder-schielandhuis-rotterdam.html" aria-label="Project: Solarbolders in de tuin van het Schielandhuis">
         <div class="cases-grid__body">
           <div class="cases-grid__meta">
-            <span class="cases-grid__meta-item">EHS RIE</span>
-            <span class="cases-grid__meta-item">Hardinxveld-Giessendam</span>
+            <span class="cases-grid__meta-item">Solarbolder</span>
+            <span class="cases-grid__meta-item">Rotterdam</span>
           </div>
-          <h3 class="cases-grid__title">Rivierpoort Logistiek</h3>
+          <h3 class="cases-grid__title">Solarbolders in de tuin van het Schielandhuis</h3>
           <div class="cases-grid__wrapper">
-            <p class="cases-grid__text">Bij de ingebruikname van een nieuwe hal de risico’s in kaart gebracht en vertaald naar maatregelen die binnen het bouwbudget pasten.</p>
+            <p class="cases-grid__text">Offgrid Solarbolders langs de paden in de tuin van het Schielandhuis in Rotterdam, met een witte terrazzo reflector.</p>
             <span class="button--icon button--icon--54 button--secundair" aria-hidden="true" inert><span class="button--circle"><span class="circle-container"><svg class="arrow--animation is-1" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg><svg class="arrow--animation is-2" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg></span></span></span>
           </div>
         </div>
         <figure class="cases-grid__image">
-          <picture><source type="image/avif" srcset="assets/foto/productiehal-640.avif 640w, assets/foto/productiehal-1024.avif 1024w" sizes="(max-width: 991px) 100vw, 50vw"><img src="assets/foto/productiehal-1024.webp" srcset="assets/foto/productiehal-640.webp 640w, assets/foto/productiehal-1024.webp 1024w" sizes="(max-width: 991px) 100vw, 50vw" width="1024" height="309" alt="Productiehal met medewerkers aan de lijn" loading="lazy" decoding="async"></picture>
+          <picture><source type="image/avif" srcset="assets/foto/schielandhuis-entree-480.avif 480w, assets/foto/schielandhuis-entree-800.avif 800w, assets/foto/schielandhuis-entree-1200.avif 1200w, assets/foto/schielandhuis-entree-1800.avif 1800w, assets/foto/schielandhuis-entree-2400.avif 2400w" sizes="(max-width: 991px) 100vw, 50vw"><img src="assets/foto/schielandhuis-entree-2400.webp" srcset="assets/foto/schielandhuis-entree-480.webp 480w, assets/foto/schielandhuis-entree-800.webp 800w, assets/foto/schielandhuis-entree-1200.webp 1200w, assets/foto/schielandhuis-entree-1800.webp 1800w, assets/foto/schielandhuis-entree-2400.webp 2400w" sizes="(max-width: 991px) 100vw, 50vw" width="2400" height="1600" alt="Entree van het Schielandhuis in Rotterdam met Solarbolders langs het pad" loading="lazy" decoding="async"></picture>
         </figure>
       </a>
       <a class="cases-grid__row cases-grid__row--grey hover--icon"
-         href="case.html?slug=case-merwede-bouwgroep" aria-label="Merwede Bouwgroep: Safety checks op vier locaties langs dezelfde meetlat">
+         href="project-verledden-tunnel-geartray-22w.html" aria-label="Project: Tunnelarmaturen verled met een geartray van 22W">
         <div class="cases-grid__body">
           <div class="cases-grid__meta">
-            <span class="cases-grid__meta-item">Safety Checks</span>
-            <span class="cases-grid__meta-item">Regio Rotterdam</span>
+            <span class="cases-grid__meta-item">LED-geartray / retrofit</span>
+            <span class="cases-grid__meta-item">Retrofit</span>
           </div>
-          <h3 class="cases-grid__title">Merwede Bouwgroep</h3>
+          <h3 class="cases-grid__title">Tunnelarmaturen verled met een geartray van 22W</h3>
           <div class="cases-grid__wrapper">
-            <p class="cases-grid__text">Vier vestigingen op dezelfde manier getoetst, zodat het management voor het eerst kon vergelijken waar het echt schuurde.</p>
+            <p class="cases-grid__text">Bestaande tunnelarmaturen omgebouwd naar LED met een high-efficiency geartray van 22W en een nieuw polycarbonaat venster.</p>
             <span class="button--icon button--icon--54 button--secundair" aria-hidden="true" inert><span class="button--circle"><span class="circle-container"><svg class="arrow--animation is-1" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg><svg class="arrow--animation is-2" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg></span></span></span>
           </div>
         </div>
         <figure class="cases-grid__image">
-          <picture><source type="image/avif" srcset="assets/foto/bouwplaats-1200.avif 1200w, assets/foto/bouwplaats-2400.avif 2400w" sizes="(max-width: 991px) 100vw, 50vw"><img src="assets/foto/bouwplaats-2400.webp" srcset="assets/foto/bouwplaats-1200.webp 1200w, assets/foto/bouwplaats-2400.webp 2400w" sizes="(max-width: 991px) 100vw, 50vw" width="2400" height="1350" alt="Bouwplaats met torenkraan" loading="lazy" decoding="async"></picture>
+          <picture><source type="image/avif" srcset="assets/foto/verledden-tunnel-480.avif 480w, assets/foto/verledden-tunnel-800.avif 800w, assets/foto/verledden-tunnel-1200.avif 1200w, assets/foto/verledden-tunnel-1800.avif 1800w, assets/foto/verledden-tunnel-2400.avif 2400w" sizes="(max-width: 991px) 100vw, 50vw"><img src="assets/foto/verledden-tunnel-2400.webp" srcset="assets/foto/verledden-tunnel-480.webp 480w, assets/foto/verledden-tunnel-800.webp 800w, assets/foto/verledden-tunnel-1200.webp 1200w, assets/foto/verledden-tunnel-1800.webp 1800w, assets/foto/verledden-tunnel-2400.webp 2400w" sizes="(max-width: 991px) 100vw, 50vw" width="2400" height="1476" alt="Tunnel met naar LED omgebouwde armaturen en nieuw polycarbonaat venster, 3000K" loading="lazy" decoding="async"></picture>
         </figure>
       </a>
       </div>
     </div>
   </section>
 
-  <!-- ================= 06 USP'S ================= -->
-  <section class="content-block" id="s06-usps">
+  <!-- ================= 06 CIJFERS ================= -->
+  <section class="content-block" id="s06-cijfers">
     <div class="container">
       <div class="content-block--container background--white" style="padding-bottom:var(--space-700)">
         <div class="row">
           <div class="col-md-8 col-12">
             <span class="subtitle" style="margin-bottom:var(--space-500)">In cijfers</span>
-            <h2 class="section-heading">Waar we vandaan komen</h2>
+            <h2 class="section-heading">Waar je op kunt rekenen</h2>
           </div>
         </div>
       </div>
-      <!-- TODO-CONTENT: de drie getallen aanleveren door Martin -->
       <div class="panel-row panel-row--3">
         <div>
           <div class="panel panel--grey">
-            <p class="usp__getal" data-telop="24">24</p>
-            <p class="usp__label">jaar zelfstandig</p>
-            <p class="panel__body">MADEGRO bestaat sinds 2002. De adviezen komen uit ervaring op de vloer, niet uit een handboek.</p>
+            <p class="usp__getal" data-telop="5">5</p>
+            <p class="usp__label">jaar garantie</p>
+            <p class="panel__body">Op onze armaturen, ontworpen en gemaakt in Nederland.</p>
           </div>
         </div>
         <div>
           <div class="panel panel--wit">
-            <p class="usp__getal" data-telop="18">18</p>
-            <p class="usp__label">opdrachtgevers</p>
-            <p class="panel__body">Van constructiebedrijf tot energiecentrale, van verpakkingsfabriek tot afvalverwerker.</p>
+            <p class="usp__getal" data-telop="200">200</p>
+            <p class="usp__label">lumen per watt</p>
+            <p class="panel__body">Het rendement van onze efficiëntste LED-geartray voor bestaande armaturen.</p>
           </div>
         </div>
         <div>
           <div class="panel panel--grey">
-            <p class="usp__getal" data-telop="6">6</p>
-            <p class="usp__label">branches</p>
-            <p class="panel__body">Industrie, energie, bouw en infra, voedingsmiddelen, verpakking en afvalverwerking.</p>
+            <p class="usp__getal" data-telop="365">365</p>
+            <p class="usp__label">dagen per jaar licht</p>
+            <p class="panel__body">De Solarbolder werkt op zon en daglicht, zonder aansluiting op het net.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ================= 07 CURSUSAANBOD ================= -->
-  <section class="content-block" id="s07-cursusaanbod">
+  <!-- ================= 07 DIENSTEN ================= -->
+  <section class="content-block" id="s07-diensten">
     <div class="container">
       <div class="content-block--container background--white" style="padding-bottom:var(--space-700)">
         <div class="row">
           <div class="col-md-8 col-12">
-            <span class="subtitle" style="margin-bottom:var(--space-500)">Cursussen</span>
-            <h2 class="section-heading">Kennis die op de vloer blijft</h2>
-            <p class="article-body" style="margin-top:var(--space-500); max-width:var(--content-max-half)">
-              De cursussen zijn kort en praktisch. Deelnemers werken met situaties uit hun eigen bedrijf, zodat wat ze leren de volgende dag al bruikbaar is.
-            </p>
+            <span class="subtitle" style="margin-bottom:var(--space-500)">Diensten</span>
+            <h2 class="section-heading">Ook als er al iets hangt</h2>
+            <p class="article-body" style="margin-top:var(--space-500); max-width:var(--content-max-half)">Bestaande armaturen verledden met een geartray, verlichting op maat voor een object waar geen standaardarmatuur past, of een warmtebeeld van een installatie die kuren vertoont.</p>
           </div>
           <div class="col-md-4 col-12 text-md-end">
-            <a href="cursusaanbod.html" class="button button--primary"><span class="button__inhoud">Hele aanbod<span class="button__spoor" aria-hidden="true"><svg class="arrow--animation is-1" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg><svg class="arrow--animation is-2" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg></span></span></a>
+            <a href="diensten.html" class="button button--primary"><span class="button__inhoud">Alle diensten<span class="button__spoor" aria-hidden="true"><svg class="arrow--animation is-1" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg><svg class="arrow--animation is-2" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg></span></span></a>
           </div>
         </div>
       </div>
-      <!-- TODO-CONTENT: cursusnamen, doelgroepen, duur en prijzen bevestigen -->
-      <div class="panel-row panel-row--4">
+      <div class="panel-row panel-row--3">
         <div>
-          <a class="panel panel--wit panel--beeld panel--link hover--icon" href="cursus-veiligheidsbewustzijn.html">
+          <a class="panel panel--wit panel--beeld panel--link hover--icon" href="retrofit.html">
             <figure class="panel__beeld">
-              <picture><source type="image/avif" srcset="assets/foto/cursus-bewustzijn-bouw-480.avif 480w, assets/foto/cursus-bewustzijn-bouw-800.avif 800w, assets/foto/cursus-bewustzijn-bouw-1200.avif 1200w, assets/foto/cursus-bewustzijn-bouw-1800.avif 1800w, assets/foto/cursus-bewustzijn-bouw-1920.avif 1920w" sizes="(max-width: 767px) 100vw, (max-width: 991px) 50vw, 25vw"><img src="assets/foto/cursus-bewustzijn-bouw-1920.webp" srcset="assets/foto/cursus-bewustzijn-bouw-480.webp 480w, assets/foto/cursus-bewustzijn-bouw-800.webp 800w, assets/foto/cursus-bewustzijn-bouw-1200.webp 1200w, assets/foto/cursus-bewustzijn-bouw-1800.webp 1800w, assets/foto/cursus-bewustzijn-bouw-1920.webp 1920w" sizes="(max-width: 767px) 100vw, (max-width: 991px) 50vw, 25vw" width="1920" height="1280" alt="" loading="lazy" decoding="async"></picture>
+              <picture><source type="image/avif" srcset="assets/foto/tl-vs-led-480.avif 480w, assets/foto/tl-vs-led-800.avif 800w" sizes="(max-width: 991px) 100vw, 33vw"><img src="assets/foto/tl-vs-led-800.webp" srcset="assets/foto/tl-vs-led-480.webp 480w, assets/foto/tl-vs-led-800.webp 800w" sizes="(max-width: 991px) 100vw, 33vw" width="800" height="802" alt="" loading="lazy" decoding="async"></picture>
             </figure>
-            <span class="panel__meta">Voor operators en uitvoerenden</span>
-            <h3 class="panel__title">Veiligheidsbewustzijn op de werkvloer</h3>
-            <p class="panel__body">1 dagdeel</p>
+            <span class="panel__meta">Bestaande armaturen verledden</span>
+            <h3 class="panel__title">Retrofit en LED-geartrays</h3>
+            <p class="panel__body">Bestaande armaturen verledden</p>
             <span class="panel__actie"><span class="button--icon" aria-hidden="true" inert><span class="button--circle"><span class="circle-container"><svg class="arrow--animation is-1" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg><svg class="arrow--animation is-2" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg></span></span></span></span>
           </a>
         </div>
         <div>
-          <a class="panel panel--grey panel--beeld panel--link hover--icon" href="cursus-risicobeoordeling.html">
+          <a class="panel panel--grey panel--beeld panel--link hover--icon" href="maatwerk.html">
             <figure class="panel__beeld">
-              <picture><source type="image/avif" srcset="assets/foto/cursus-risico-lijn-480.avif 480w, assets/foto/cursus-risico-lijn-800.avif 800w, assets/foto/cursus-risico-lijn-1200.avif 1200w, assets/foto/cursus-risico-lijn-1800.avif 1800w, assets/foto/cursus-risico-lijn-2400.avif 2400w" sizes="(max-width: 767px) 100vw, (max-width: 991px) 50vw, 25vw"><img src="assets/foto/cursus-risico-lijn-2400.webp" srcset="assets/foto/cursus-risico-lijn-480.webp 480w, assets/foto/cursus-risico-lijn-800.webp 800w, assets/foto/cursus-risico-lijn-1200.webp 1200w, assets/foto/cursus-risico-lijn-1800.webp 1800w, assets/foto/cursus-risico-lijn-2400.webp 2400w" sizes="(max-width: 767px) 100vw, (max-width: 991px) 50vw, 25vw" width="2400" height="1600" alt="" loading="lazy" decoding="async"></picture>
+              <picture><source type="image/avif" srcset="assets/foto/trapopgang-grondspots-480.avif 480w, assets/foto/trapopgang-grondspots-800.avif 800w, assets/foto/trapopgang-grondspots-1200.avif 1200w, assets/foto/trapopgang-grondspots-1800.avif 1800w, assets/foto/trapopgang-grondspots-2400.avif 2400w" sizes="(max-width: 991px) 100vw, 33vw"><img src="assets/foto/trapopgang-grondspots-2400.webp" srcset="assets/foto/trapopgang-grondspots-480.webp 480w, assets/foto/trapopgang-grondspots-800.webp 800w, assets/foto/trapopgang-grondspots-1200.webp 1200w, assets/foto/trapopgang-grondspots-1800.webp 1800w, assets/foto/trapopgang-grondspots-2400.webp 2400w" sizes="(max-width: 991px) 100vw, 33vw" width="2400" height="1476" alt="" loading="lazy" decoding="async"></picture>
             </figure>
-            <span class="panel__meta">Voor voormannen en teamleiders</span>
-            <h3 class="panel__title">Risico&rsquo;s herkennen en beoordelen</h3>
-            <p class="panel__body">2 dagdelen</p>
+            <span class="panel__meta">Van vraag tot armatuur, in eigen huis</span>
+            <h3 class="panel__title">Maatwerk en engineering</h3>
+            <p class="panel__body">Van vraag tot armatuur, in eigen huis</p>
             <span class="panel__actie"><span class="button--icon" aria-hidden="true" inert><span class="button--circle"><span class="circle-container"><svg class="arrow--animation is-1" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg><svg class="arrow--animation is-2" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg></span></span></span></span>
           </a>
         </div>
         <div>
-          <a class="panel panel--wit panel--beeld panel--link hover--icon" href="cursus-veiligheidsladder.html">
+          <a class="panel panel--wit panel--beeld panel--link hover--icon" href="thermolight.html">
             <figure class="panel__beeld">
-              <picture><source type="image/avif" srcset="assets/foto/cursus-ladder-helmen-480.avif 480w, assets/foto/cursus-ladder-helmen-800.avif 800w, assets/foto/cursus-ladder-helmen-1200.avif 1200w, assets/foto/cursus-ladder-helmen-1800.avif 1800w, assets/foto/cursus-ladder-helmen-2400.avif 2400w" sizes="(max-width: 767px) 100vw, (max-width: 991px) 50vw, 25vw"><img src="assets/foto/cursus-ladder-helmen-2400.webp" srcset="assets/foto/cursus-ladder-helmen-480.webp 480w, assets/foto/cursus-ladder-helmen-800.webp 800w, assets/foto/cursus-ladder-helmen-1200.webp 1200w, assets/foto/cursus-ladder-helmen-1800.webp 1800w, assets/foto/cursus-ladder-helmen-2400.webp 2400w" sizes="(max-width: 767px) 100vw, (max-width: 991px) 50vw, 25vw" width="2400" height="1347" alt="" loading="lazy" decoding="async"></picture>
+              <picture><source type="image/avif" srcset="assets/foto/thermo-radiator-480.avif 480w, assets/foto/thermo-radiator-800.avif 800w, assets/foto/thermo-radiator-1232.avif 1232w" sizes="(max-width: 991px) 100vw, 33vw"><img src="assets/foto/thermo-radiator-1232.webp" srcset="assets/foto/thermo-radiator-480.webp 480w, assets/foto/thermo-radiator-800.webp 800w, assets/foto/thermo-radiator-1232.webp 1232w" sizes="(max-width: 991px) 100vw, 33vw" width="1232" height="924" alt="" loading="lazy" decoding="async"></picture>
             </figure>
-            <span class="panel__meta">Voor KAM- en HSE-co&ouml;rdinatoren</span>
-            <h3 class="panel__title">Werken met de Veiligheidsladder</h3>
-            <p class="panel__body">3 dagdelen</p>
-            <span class="panel__actie"><span class="button--icon" aria-hidden="true" inert><span class="button--circle"><span class="circle-container"><svg class="arrow--animation is-1" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg><svg class="arrow--animation is-2" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg></span></span></span></span>
-          </a>
-        </div>
-        <div>
-          <a class="panel panel--grey panel--beeld panel--link hover--icon" href="cursus-rie-praktijk.html">
-            <figure class="panel__beeld">
-              <picture><source type="image/avif" srcset="assets/foto/cursus-rie-tablet-480.avif 480w, assets/foto/cursus-rie-tablet-700.avif 700w" sizes="(max-width: 767px) 100vw, (max-width: 991px) 50vw, 25vw"><img src="assets/foto/cursus-rie-tablet-700.webp" srcset="assets/foto/cursus-rie-tablet-480.webp 480w, assets/foto/cursus-rie-tablet-700.webp 700w" sizes="(max-width: 767px) 100vw, (max-width: 991px) 50vw, 25vw" width="700" height="525" alt="" loading="lazy" decoding="async"></picture>
-            </figure>
-            <span class="panel__meta">Voor preventiemedewerkers</span>
-            <h3 class="panel__title">RI&amp;E in de praktijk</h3>
-            <p class="panel__body">2 dagdelen</p>
+            <span class="panel__meta">Afwijkingen snel in beeld</span>
+            <h3 class="panel__title">Thermografisch onderzoek</h3>
+            <p class="panel__body">Afwijkingen snel in beeld</p>
             <span class="panel__actie"><span class="button--icon" aria-hidden="true" inert><span class="button--circle"><span class="circle-container"><svg class="arrow--animation is-1" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg><svg class="arrow--animation is-2" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg></span></span></span></span>
           </a>
         </div>
@@ -547,90 +509,51 @@
     </div>
   </section>
 
-  <section class="quotes" id="s08-testimonials">
+  <section class="quotes" id="s08-reviews">
     <div class="container">
       <div class="quotes__kop">
-        <span class="subtitle">Wat klanten zeggen</span>
-        <h2 class="section-heading">Uit de praktijk</h2>
+        <span class="subtitle">Wat opdrachtgevers zeggen</span>
+        <h2 class="section-heading">Uit de samenwerking</h2>
       </div>
-      <!-- TODO-CONTENT: echte getuigenissen met naam en toestemming; deze zijn fictief -->
+      <!-- TODO-CONTENT: placeholder-reviews zonder naam; vervangen door echte reviews met toestemming -->
       <div class="quotes__venster" data-quoteslider aria-live="polite">
         <figure class="quote" role="group" aria-roledescription="citaat"
-               aria-label="Citaat 1 van 6">
+               aria-label="Citaat 1 van 3">
           <div class="quote__beeld">
-            <picture><source type="image/avif" srcset="assets/foto/productiehal-640.avif 640w, assets/foto/productiehal-1024.avif 1024w" sizes="(max-width: 767px) 100vw, 40vw"><img src="assets/foto/productiehal-1024.webp" srcset="assets/foto/productiehal-640.webp 640w, assets/foto/productiehal-1024.webp 1024w" sizes="(max-width: 767px) 100vw, 40vw" width="1024" height="309" alt="Productiehal met medewerkers aan de lijn" loading="lazy" decoding="async"></picture>
+            <picture><source type="image/avif" srcset="assets/foto/tuin-schielandhuis-3-480.avif 480w, assets/foto/tuin-schielandhuis-3-800.avif 800w, assets/foto/tuin-schielandhuis-3-1024.avif 1024w" sizes="(max-width: 767px) 100vw, 40vw"><img src="assets/foto/tuin-schielandhuis-3-1024.webp" srcset="assets/foto/tuin-schielandhuis-3-480.webp 480w, assets/foto/tuin-schielandhuis-3-800.webp 800w, assets/foto/tuin-schielandhuis-3-1024.webp 1024w" sizes="(max-width: 767px) 100vw, 40vw" width="1024" height="683" alt="Solarbolders langs het pad naar het Schielandhuis" loading="lazy" decoding="async"></picture>
           </div>
           <div class="quote__body">
-            <blockquote class="quote__tekst"><p>De rapportage was de eerste die onze ploegleiders uit zichzelf hebben doorgelezen. Geen lijst met tekortkomingen, maar een paar dingen die je maandag kunt aanpakken.</p></blockquote>
+            <blockquote class="quote__tekst"><p>Het armatuur is precies gemaakt op de maten van onze onderdoorgang. Tekening, proefmontage en plaatsing liepen via één aanspreekpunt.</p></blockquote>
             <hr class="quote__streep">
-            <figcaption class="quote__naam">Karin Vermeer, KAM-co&ouml;rdinator, Van Deursen Metaal B.V.</figcaption>
-            <p class="quote__logo quote__logo--plaatshouder"><img src="assets/partners/van-deursen-metaal.svg" alt="Van Deursen Metaal" width="317" height="80" loading="lazy" decoding="async"></p>
+            <figcaption class="quote__naam">Beheerder openbare verlichting, gemeente</figcaption>
+            <p class="quote__logo quote__logo--leeg"><span class="invulveld">Logo opdrachtgever</span></p>
           </div>
         </figure>
         <figure class="quote" role="group" aria-roledescription="citaat"
-               aria-label="Citaat 2 van 6">
+               aria-label="Citaat 2 van 3">
           <div class="quote__beeld">
-            <picture><source type="image/avif" srcset="assets/foto/transport-640.avif 640w, assets/foto/transport-1024.avif 1024w" sizes="(max-width: 767px) 100vw, 40vw"><img src="assets/foto/transport-1024.webp" srcset="assets/foto/transport-640.webp 640w, assets/foto/transport-1024.webp 1024w" sizes="(max-width: 767px) 100vw, 40vw" width="1024" height="683" alt="Industriële transportbrug en constructie" loading="lazy" decoding="async"></picture>
+            <picture><source type="image/avif" srcset="assets/foto/titan-tuscan-3000k-480.avif 480w, assets/foto/titan-tuscan-3000k-800.avif 800w, assets/foto/titan-tuscan-3000k-1200.avif 1200w" sizes="(max-width: 767px) 100vw, 40vw"><img src="assets/foto/titan-tuscan-3000k-1200.webp" srcset="assets/foto/titan-tuscan-3000k-480.webp 480w, assets/foto/titan-tuscan-3000k-800.webp 800w, assets/foto/titan-tuscan-3000k-1200.webp 1200w" sizes="(max-width: 767px) 100vw, 40vw" width="1200" height="739" alt="Tunnel met Titan-armaturen in polycarbonaat, lichtkleur 2200K en 3000K naast elkaar" loading="lazy" decoding="async"></picture>
           </div>
           <div class="quote__body">
-            <blockquote class="quote__tekst"><p>We dachten dat we op trede vier zaten. Na de nulmeting bleek het drie te zijn, en dat gesprek was precies wat we nodig hadden.</p></blockquote>
+            <blockquote class="quote__tekst"><p>Voor het verledden van bestaande armaturen kregen we een geartray die zonder aanpassingen paste. Dat scheelde een complete vervanging.</p></blockquote>
             <hr class="quote__streep">
-            <figcaption class="quote__naam">Stefan de Bruin, Operationeel manager, Rivierpoort Logistiek</figcaption>
-            <p class="quote__logo quote__logo--plaatshouder"><img src="assets/partners/rivierpoort-logistiek.svg" alt="Rivierpoort Logistiek" width="317" height="80" loading="lazy" decoding="async"></p>
+            <figcaption class="quote__naam">Projectleider, installatiebedrijf</figcaption>
+            <p class="quote__logo quote__logo--leeg"><span class="invulveld">Logo opdrachtgever</span></p>
           </div>
         </figure>
         <figure class="quote" role="group" aria-roledescription="citaat"
-               aria-label="Citaat 3 van 6">
+               aria-label="Citaat 3 van 3">
           <div class="quote__beeld">
-            <picture><source type="image/avif" srcset="assets/foto/bouwplaats-1200.avif 1200w, assets/foto/bouwplaats-2400.avif 2400w" sizes="(max-width: 767px) 100vw, 40vw"><img src="assets/foto/bouwplaats-2400.webp" srcset="assets/foto/bouwplaats-1200.webp 1200w, assets/foto/bouwplaats-2400.webp 2400w" sizes="(max-width: 767px) 100vw, 40vw" width="2400" height="1350" alt="Bouwplaats met torenkraan" loading="lazy" decoding="async"></picture>
+            <picture><source type="image/avif" srcset="assets/foto/citylight-plein-480.avif 480w, assets/foto/citylight-plein-768.avif 768w" sizes="(max-width: 767px) 100vw, 40vw"><img src="assets/foto/citylight-plein-768.webp" srcset="assets/foto/citylight-plein-480.webp 480w, assets/foto/citylight-plein-768.webp 768w" sizes="(max-width: 767px) 100vw, 40vw" width="768" height="1024" alt="Citylight-armatuur op een plein bij een school, overdag" loading="lazy" decoding="async"></picture>
           </div>
           <div class="quote__body">
-            <blockquote class="quote__tekst"><p>MADEGRO praat met de mensen op de vloer, niet alleen met de directie. Dat merk je aan wat er daarna verandert.</p></blockquote>
+            <blockquote class="quote__tekst"><p>De Solarbolder staat waar geen kabel ligt. Ontwerp en uitvoering sloten goed op elkaar aan.</p></blockquote>
             <hr class="quote__streep">
-            <figcaption class="quote__naam">Hans Molenaar, Directeur, Merwede Bouwgroep</figcaption>
-            <p class="quote__logo quote__logo--plaatshouder"><img src="assets/partners/merwede-bouwgroep.svg" alt="Merwede Bouwgroep" width="275" height="80" loading="lazy" decoding="async"></p>
-          </div>
-        </figure>
-        <figure class="quote" role="group" aria-roledescription="citaat"
-               aria-label="Citaat 4 van 6">
-          <div class="quote__beeld">
-            <picture><source type="image/avif" srcset="assets/foto/overleg-640.avif 640w, assets/foto/overleg-960.avif 960w" sizes="(max-width: 767px) 100vw, 40vw"><img src="assets/foto/overleg-960.webp" srcset="assets/foto/overleg-640.webp 640w, assets/foto/overleg-960.webp 960w" sizes="(max-width: 767px) 100vw, 40vw" width="960" height="640" alt="Werkoverleg met een klein team" loading="lazy" decoding="async"></picture>
-          </div>
-          <div class="quote__body">
-            <blockquote class="quote__tekst"><p>Het gekke is: we hebben niets nieuws bedacht. We hebben opgeschreven wat de beste ploeg al deed.</p></blockquote>
-            <hr class="quote__streep">
-            <figcaption class="quote__naam">Ellen Rietveld, Planner, Hollands Diep Transport</figcaption>
-            <p class="quote__logo quote__logo--plaatshouder"><img src="assets/partners/hollands-diep-transport.svg" alt="Hollands Diep Transport" width="300" height="80" loading="lazy" decoding="async"></p>
-          </div>
-        </figure>
-        <figure class="quote" role="group" aria-roledescription="citaat"
-               aria-label="Citaat 5 van 6">
-          <div class="quote__beeld">
-            <picture><source type="image/avif" srcset="assets/foto/haven-640.avif 640w, assets/foto/haven-960.avif 960w" sizes="(max-width: 767px) 100vw, 40vw"><img src="assets/foto/haven-960.webp" srcset="assets/foto/haven-640.webp 640w, assets/foto/haven-960.webp 960w" sizes="(max-width: 767px) 100vw, 40vw" width="960" height="540" alt="Zeeschip aan de kade van een containerterminal" loading="lazy" decoding="async"></picture>
-          </div>
-          <div class="quote__body">
-            <blockquote class="quote__tekst"><p>Twee dagen meelopen was genoeg. Ze zagen dingen die wij al jaren niet meer zien.</p></blockquote>
-            <hr class="quote__streep">
-            <figcaption class="quote__naam">Peter Vonk, Terminalmanager, Waalhaven Terminal</figcaption>
-            <p class="quote__logo quote__logo--plaatshouder"><img src="assets/partners/waalhaven-terminal.svg" alt="Waalhaven Terminal" width="220" height="80" loading="lazy" decoding="async"></p>
-          </div>
-        </figure>
-        <figure class="quote" role="group" aria-roledescription="citaat"
-               aria-label="Citaat 6 van 6">
-          <div class="quote__beeld">
-            <picture><source type="image/avif" srcset="assets/foto/lassen-640.avif 640w, assets/foto/lassen-1024.avif 1024w" sizes="(max-width: 767px) 100vw, 40vw"><img src="assets/foto/lassen-1024.webp" srcset="assets/foto/lassen-640.webp 640w, assets/foto/lassen-1024.webp 1024w" sizes="(max-width: 767px) 100vw, 40vw" width="1024" height="683" alt="Lasser aan het werk aan een constructie" loading="lazy" decoding="async"></picture>
-          </div>
-          <div class="quote__body">
-            <blockquote class="quote__tekst"><p>We hadden een RI&amp;E om te hebben. Nu hebben we er een om mee te werken.</p></blockquote>
-            <hr class="quote__streep">
-            <figcaption class="quote__naam">Joke van Wijk, Preventiemedewerker, De Groot Bouwstoffen</figcaption>
-            <p class="quote__logo quote__logo--plaatshouder"><img src="assets/partners/de-groot-bouwstoffen.svg" alt="De Groot Bouwstoffen" width="200" height="80" loading="lazy" decoding="async"></p>
+            <figcaption class="quote__naam">Lichtontwerper, ontwerpbureau</figcaption>
+            <p class="quote__logo quote__logo--leeg"><span class="invulveld">Logo opdrachtgever</span></p>
           </div>
         </figure>
       </div>
-      <!-- De pijlen staan hidden en worden door site.js zichtbaar gemaakt.
-           Zonder JavaScript staan alle citaten gewoon onder elkaar en zou je
-           op knoppen klikken die niets doen. -->
       <div class="quotes__nav" hidden>
         <button type="button" class="button--icon button--icon--56 button--grijs quotes__pijl" data-quote="vorige" aria-label="Vorige quote">
           <span class="button--circle"><span class="circle-container"><svg class="arrow--animation is-1" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 12H3H3.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M10 19L3 12L10 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg><svg class="arrow--animation is-2" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 12H3H3.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M10 19L3 12L10 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg></span></span>
@@ -638,7 +561,7 @@
         <button type="button" class="button--icon button--icon--56 button--grijs quotes__pijl" data-quote="volgende" aria-label="Volgende quote">
           <span class="button--circle"><span class="circle-container"><svg class="arrow--animation is-1" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg><svg class="arrow--animation is-2" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg></span></span>
         </button>
-        <p class="quotes__teller" data-quote-teller>1 / 6</p>
+        <p class="quotes__teller" data-quote-teller>1 / 3</p>
         <span class="quotes__timer" aria-hidden="true"><span class="quotes__timer-balk"></span></span>
       </div>
     </div>
@@ -649,38 +572,38 @@
       <div class="row">
         <div class="col-md-4 col-12">
           <span class="subtitle">FAQ</span>
-          <h2 class="font-size--lg" style="margin-top:var(--space-500)">Wat mensen meestal eerst vragen</h2>
+          <h2 class="font-size--lg" style="margin-top:var(--space-500)">Wat men meestal eerst vraagt</h2>
         </div>
         <div class="col-md-8 col-12">
           <div class="accordion">
           <div class="accordion__item">
             <button type="button" class="accordion__header" aria-expanded="false" aria-controls="faq-09-0">
               <span class="accordion__number">01</span>
-              <span class="accordion__title">Werken jullie ook voor kleinere bedrijven?</span>
+              <span class="accordion__title">Maken jullie ook armaturen op maat?</span>
               <span class="accordion__suffix" aria-hidden="true"><span class="accordion__icon"></span></span>
             </button>
             <div class="accordion__details" id="faq-09-0">
-              <div class="accordion__details-inner article-body"><p>Ja. De aanpak schaalt mee: bij een bedrijf van vijftien man ziet een traject er anders uit dan bij een fabriek met tweehonderd medewerkers, maar de vragen zijn dezelfde.</p><p>Bij minder dan 25 medewerkers hoeft een RI&amp;E in veel gevallen niet getoetst te worden door een kerndeskundige. Dat scheelt tijd en geld; we kijken samen wat er in jouw situatie wel en niet moet.</p></div>
+              <div class="accordion__details-inner article-body"><p>Ja. Tunnelarmaturen ontwerpen en produceren we in eigen beheer op klantspecificatie, en voor bruggen, trappen en bijzondere objecten maken we verlichting die er niet uit de catalogus is: leuningverlichting op 48V, grondspots in een trap, een UV-A lichtbak voor een restauratieatelier.</p><p>Alles gebeurt in eigen huis in Wormerveer: ontwerp, engineering, productie en installatie.</p></div>
             </div>
           </div>
           <div class="accordion__item">
             <button type="button" class="accordion__header" aria-expanded="false" aria-controls="faq-09-1">
               <span class="accordion__number">02</span>
-              <span class="accordion__title">Hoe lang duurt een traject?</span>
+              <span class="accordion__title">Kunnen bestaande armaturen worden omgebouwd naar LED?</span>
               <span class="accordion__suffix" aria-hidden="true"><span class="accordion__icon"></span></span>
             </button>
             <div class="accordion__details" id="faq-09-1">
-              <div class="accordion__details-inner article-body"><p>Een safety check is meestal binnen een week rond, inclusief rapportage. Een RI&amp;E met plan van aanpak kost twee tot zes weken, afhankelijk van de omvang en het aantal locaties.</p><p>Een gedragstraject loopt langer: cultuur verandert niet in een maand. We werken daar in blokken, met vaste meetmomenten.</p></div>
+              <div class="accordion__details-inner article-body"><p>Ja. Met een LED-geartray vervangen we alleen de binnenkant: module, driver en waar nodig optiek en venster. De behuizing blijft hangen. Er zijn geartrays voor tunnelarmaturen en voor de Schréder Valentino en Albany, en we bouwen TL en CDO om naar LED.</p></div>
             </div>
           </div>
           <div class="accordion__item">
             <button type="button" class="accordion__header" aria-expanded="false" aria-controls="faq-09-2">
               <span class="accordion__number">03</span>
-              <span class="accordion__title">Blijven jullie betrokken na afloop?</span>
+              <span class="accordion__title">Welke lichtkleuren en sturingen leveren jullie?</span>
               <span class="accordion__suffix" aria-hidden="true"><span class="accordion__icon"></span></span>
             </button>
             <div class="accordion__details" id="faq-09-2">
-              <div class="accordion__details-inner article-body"><p>Ja. Het doel is dat je het zelf kunt, niet dat je ons nodig blijft hebben. Daarom dragen we werkwijzen over aan je eigen mensen en blijven we daarna bereikbaar voor vragen.</p><p>Veel klanten kiezen voor een periodieke check om scherp te blijven.</p></div>
+              <div class="accordion__details-inner article-body"><p>Standaard 2200K, 3000K en 4000K; afwijkende kleuren op aanvraag. Voor de sturing: Aan/Uit, DALI of DALI SR, 1-10V, of een Dynadimmer met het standaard 3A-dimregime of een klantspecifiek regime.</p></div>
             </div>
           </div>
           </div>
@@ -689,62 +612,56 @@
     </div>
   </section>
 
-  <!-- ================= 10 OVER MADEGRO ================= -->
-  <section class="streamer streamer--employee background--groen" id="s10-madegro">
+  <!-- ================= 10 OVER DE LICHT FABRIEK ================= -->
+  <section class="streamer streamer--employee background--donker" id="s10-over">
     <div class="container">
       <div class="streamer--employee-row">
         <figure class="streamer--employee-portrait">
-          <picture><source type="image/avif" srcset="assets/foto/inspecteur-haven-640.avif 640w, assets/foto/inspecteur-haven-1000.avif 1000w" sizes="(max-width: 991px) 100vw, 40vw"><img src="assets/foto/inspecteur-haven-1000.webp" srcset="assets/foto/inspecteur-haven-640.webp 640w, assets/foto/inspecteur-haven-1000.webp 1000w" sizes="(max-width: 991px) 100vw, 40vw" width="1000" height="667" alt="Veiligheidskundige met witte helm, geel hesje, portofoon en klembord kijkt toe terwijl een reachstacker een rode container optilt op een containerterminal" loading="lazy" decoding="async"></picture>
+          <picture><source type="image/avif" srcset="assets/foto/citylight-mini-480.avif 480w, assets/foto/citylight-mini-800.avif 800w, assets/foto/citylight-mini-1200.avif 1200w" sizes="(max-width: 991px) 100vw, 40vw"><img src="assets/foto/citylight-mini-1200.webp" srcset="assets/foto/citylight-mini-480.webp 480w, assets/foto/citylight-mini-800.webp 800w, assets/foto/citylight-mini-1200.webp 1200w" sizes="(max-width: 991px) 100vw, 40vw" width="1200" height="1439" alt="Citylight mini paaltoparmatuur, brandend, in de werkplaats" loading="lazy" decoding="async"></picture>
         </figure>
         <div class="streamer--employee-panel band">
-          <span class="subtitle" style="color:var(--color-white)">Over MADEGRO</span>
-          <h2 class="streamer--employee-name">Veiligheidskunde sinds 2002</h2>
+          <span class="subtitle" style="color:var(--color-white)">Over De Licht Fabriek</span>
+          <h2 class="streamer--employee-name">Gemaakt in Wormerveer</h2>
           <div class="article-body content-fit--half">
-            <p>MADEGRO is een adviesbureau voor veiligheid, kwaliteit en milieu en bestaat sinds 2002. In die ruim twintig jaar werkten we voor onder meer Cosun Beet Company, Huhtamaki, Stork, Ballast Nedam en GE Vernova: in de industrie, de energiesector en de bouw.</p>
-            <p>We komen de vloer op, kijken hoe het werk echt gaat en vertalen dat naar een paar dingen die je maandag kunt aanpakken. Een veiligheidscultuur haal je niet met een goed plan alleen, maar met gewoontes die het houden als het tegenzit. Daar werken we aan, samen met je eigen mensen.</p>
+            <p>De Licht Fabriek is een Nederlandse maker van LED-verlichting voor de openbare ruimte, outdoor en solar. Vanuit de werkplaats aan de Rosbayerweg in Wormerveer ontwerpen, engineeren en produceren we armaturen, en bouwen we bestaande armaturen om naar LED.</p>
+            <p>We denken in maatwerk, duurzaamheid en slim licht: een armatuur dat past bij het project, lang meegaat en vanzelf terugregelt als er niemand is. Op wat we maken geven we vijf jaar garantie.</p>
           </div>
           <div>
-            <a href="over-ons.html" class="button button--primary"><span class="button__inhoud">Meer over MADEGRO<span class="button__spoor" aria-hidden="true"><svg class="arrow--animation is-1" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg><svg class="arrow--animation is-2" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg></span></span></a>
+            <a href="over-ons.html" class="button button--primary"><span class="button__inhoud">Meer over ons<span class="button__spoor" aria-hidden="true"><svg class="arrow--animation is-1" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg><svg class="arrow--animation is-2" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg></span></span></a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="logo-slider" id="s11-partners" aria-label="Opdrachtgevers" data-logoband>
+  <section class="logo-slider" id="s11-kenmerken" aria-label="Kenmerken van ons aanbod" data-logoband>
     <div class="logo-slider__venster">
       <div class="logo-slider__spoor">
         <ul class="logo-slider__set">
-          <li class="logo-slider__logo"><img data-src="assets/partners/alstom.webp" alt="Alstom" width="408" height="80" decoding="async"></li>
-          <li class="logo-slider__logo"><img data-src="assets/partners/ballast-nedam.webp" alt="Ballast Nedam" width="452" height="80" decoding="async"></li>
-          <li class="logo-slider__logo"><img data-src="assets/partners/bilfinger.webp" alt="Bilfinger" width="210" height="80" decoding="async"></li>
-          <li class="logo-slider__logo"><img data-src="assets/partners/cosun.webp" alt="Cosun Beet Company" width="345" height="80" decoding="async"></li>
-          <li class="logo-slider__logo"><img data-src="assets/partners/ebert-hera.webp" alt="Ebert Hera" width="389" height="80" decoding="async"></li>
-          <li class="logo-slider__logo"><img data-src="assets/partners/electrabel.webp" alt="Electrabel / GDF Suez" width="203" height="80" decoding="async"></li>
-          <li class="logo-slider__logo"><img data-src="assets/partners/freesmij.webp" alt="Freesmij" width="309" height="80" decoding="async"></li>
-          <li class="logo-slider__logo"><img data-src="assets/partners/ge-vernova.webp" alt="GE Vernova" width="362" height="80" decoding="async"></li>
-          <li class="logo-slider__logo"><img data-src="assets/partners/huhtamaki.webp" alt="Huhtamaki" width="478" height="80" decoding="async"></li>
-          <li class="logo-slider__logo"><img data-src="assets/partners/ivens.webp" alt="Ivens" width="237" height="80" decoding="async"></li>
-          <li class="logo-slider__logo"><img data-src="assets/partners/ooms.webp" alt="Ooms Bouw &amp; Ontwikkeling" width="248" height="80" decoding="async"></li>
-          <li class="logo-slider__logo"><img data-src="assets/partners/stork.webp" alt="Stork" width="197" height="80" decoding="async"></li>
-          <li class="logo-slider__logo"><img data-src="assets/partners/tes.webp" alt="TES Industrial Systems" width="160" height="80" decoding="async"></li>
-          <li class="logo-slider__logo"><img data-src="assets/partners/thialf.webp" alt="Thialf" width="270" height="80" decoding="async"></li>
+          <li class="logo-slider__logo"><img data-src="assets/foto/badge-made-in-holland.webp" alt="Made in Holland" width="120" height="80" decoding="async"></li>
+          <li class="logo-slider__logo logo-slider__tekst">2200K · 3000K · 4000K</li>
+          <li class="logo-slider__logo"><img data-src="assets/foto/badge-garantie.png" alt="Made in Holland, vijf jaar garantie" width="183" height="80" decoding="async"></li>
+          <li class="logo-slider__logo logo-slider__tekst">DALI / DALI SR · 1-10V</li>
+          <li class="logo-slider__logo"><img data-src="assets/foto/badge-ik10.webp" alt="IK10 rated" width="80" height="80" decoding="async"></li>
+          <li class="logo-slider__logo logo-slider__tekst">Dynadimmer, dimregime 3A</li>
+          <li class="logo-slider__logo logo-slider__tekst">RVS en polycarbonaat</li>
+          <li class="logo-slider__logo logo-slider__tekst">Antigraffiticoating</li>
+          <li class="logo-slider__logo logo-slider__tekst">ELV 48V / 54V DC</li>
+          <li class="logo-slider__logo logo-slider__tekst">Offgrid solar</li>
+          <li class="logo-slider__logo logo-slider__tekst">Ontwerp en productie in Wormerveer</li>
         </ul>
         <ul class="logo-slider__set" aria-hidden="true">
-          <li class="logo-slider__logo"><img data-src="assets/partners/alstom.webp" alt="Alstom" width="408" height="80" decoding="async"></li>
-          <li class="logo-slider__logo"><img data-src="assets/partners/ballast-nedam.webp" alt="Ballast Nedam" width="452" height="80" decoding="async"></li>
-          <li class="logo-slider__logo"><img data-src="assets/partners/bilfinger.webp" alt="Bilfinger" width="210" height="80" decoding="async"></li>
-          <li class="logo-slider__logo"><img data-src="assets/partners/cosun.webp" alt="Cosun Beet Company" width="345" height="80" decoding="async"></li>
-          <li class="logo-slider__logo"><img data-src="assets/partners/ebert-hera.webp" alt="Ebert Hera" width="389" height="80" decoding="async"></li>
-          <li class="logo-slider__logo"><img data-src="assets/partners/electrabel.webp" alt="Electrabel / GDF Suez" width="203" height="80" decoding="async"></li>
-          <li class="logo-slider__logo"><img data-src="assets/partners/freesmij.webp" alt="Freesmij" width="309" height="80" decoding="async"></li>
-          <li class="logo-slider__logo"><img data-src="assets/partners/ge-vernova.webp" alt="GE Vernova" width="362" height="80" decoding="async"></li>
-          <li class="logo-slider__logo"><img data-src="assets/partners/huhtamaki.webp" alt="Huhtamaki" width="478" height="80" decoding="async"></li>
-          <li class="logo-slider__logo"><img data-src="assets/partners/ivens.webp" alt="Ivens" width="237" height="80" decoding="async"></li>
-          <li class="logo-slider__logo"><img data-src="assets/partners/ooms.webp" alt="Ooms Bouw &amp; Ontwikkeling" width="248" height="80" decoding="async"></li>
-          <li class="logo-slider__logo"><img data-src="assets/partners/stork.webp" alt="Stork" width="197" height="80" decoding="async"></li>
-          <li class="logo-slider__logo"><img data-src="assets/partners/tes.webp" alt="TES Industrial Systems" width="160" height="80" decoding="async"></li>
-          <li class="logo-slider__logo"><img data-src="assets/partners/thialf.webp" alt="Thialf" width="270" height="80" decoding="async"></li>
+          <li class="logo-slider__logo"><img data-src="assets/foto/badge-made-in-holland.webp" alt="Made in Holland" width="120" height="80" decoding="async"></li>
+          <li class="logo-slider__logo logo-slider__tekst">2200K · 3000K · 4000K</li>
+          <li class="logo-slider__logo"><img data-src="assets/foto/badge-garantie.png" alt="Made in Holland, vijf jaar garantie" width="183" height="80" decoding="async"></li>
+          <li class="logo-slider__logo logo-slider__tekst">DALI / DALI SR · 1-10V</li>
+          <li class="logo-slider__logo"><img data-src="assets/foto/badge-ik10.webp" alt="IK10 rated" width="80" height="80" decoding="async"></li>
+          <li class="logo-slider__logo logo-slider__tekst">Dynadimmer, dimregime 3A</li>
+          <li class="logo-slider__logo logo-slider__tekst">RVS en polycarbonaat</li>
+          <li class="logo-slider__logo logo-slider__tekst">Antigraffiticoating</li>
+          <li class="logo-slider__logo logo-slider__tekst">ELV 48V / 54V DC</li>
+          <li class="logo-slider__logo logo-slider__tekst">Offgrid solar</li>
+          <li class="logo-slider__logo logo-slider__tekst">Ontwerp en productie in Wormerveer</li>
         </ul>
       </div>
     </div>
@@ -752,36 +669,30 @@
       <div class="logo-slider__venster">
         <div class="logo-slider__spoor">
         <ul class="logo-slider__set">
-          <li class="logo-slider__logo"><img src="assets/partners/alstom.webp" alt="Alstom" width="408" height="80" decoding="async"></li>
-          <li class="logo-slider__logo"><img src="assets/partners/ballast-nedam.webp" alt="Ballast Nedam" width="452" height="80" decoding="async"></li>
-          <li class="logo-slider__logo"><img src="assets/partners/bilfinger.webp" alt="Bilfinger" width="210" height="80" decoding="async"></li>
-          <li class="logo-slider__logo"><img src="assets/partners/cosun.webp" alt="Cosun Beet Company" width="345" height="80" decoding="async"></li>
-          <li class="logo-slider__logo"><img src="assets/partners/ebert-hera.webp" alt="Ebert Hera" width="389" height="80" decoding="async"></li>
-          <li class="logo-slider__logo"><img src="assets/partners/electrabel.webp" alt="Electrabel / GDF Suez" width="203" height="80" decoding="async"></li>
-          <li class="logo-slider__logo"><img src="assets/partners/freesmij.webp" alt="Freesmij" width="309" height="80" decoding="async"></li>
-          <li class="logo-slider__logo"><img src="assets/partners/ge-vernova.webp" alt="GE Vernova" width="362" height="80" decoding="async"></li>
-          <li class="logo-slider__logo"><img src="assets/partners/huhtamaki.webp" alt="Huhtamaki" width="478" height="80" decoding="async"></li>
-          <li class="logo-slider__logo"><img src="assets/partners/ivens.webp" alt="Ivens" width="237" height="80" decoding="async"></li>
-          <li class="logo-slider__logo"><img src="assets/partners/ooms.webp" alt="Ooms Bouw &amp; Ontwikkeling" width="248" height="80" decoding="async"></li>
-          <li class="logo-slider__logo"><img src="assets/partners/stork.webp" alt="Stork" width="197" height="80" decoding="async"></li>
-          <li class="logo-slider__logo"><img src="assets/partners/tes.webp" alt="TES Industrial Systems" width="160" height="80" decoding="async"></li>
-          <li class="logo-slider__logo"><img src="assets/partners/thialf.webp" alt="Thialf" width="270" height="80" decoding="async"></li>
+          <li class="logo-slider__logo"><img src="assets/foto/badge-made-in-holland.webp" alt="Made in Holland" width="120" height="80" decoding="async"></li>
+          <li class="logo-slider__logo logo-slider__tekst">2200K · 3000K · 4000K</li>
+          <li class="logo-slider__logo"><img src="assets/foto/badge-garantie.png" alt="Made in Holland, vijf jaar garantie" width="183" height="80" decoding="async"></li>
+          <li class="logo-slider__logo logo-slider__tekst">DALI / DALI SR · 1-10V</li>
+          <li class="logo-slider__logo"><img src="assets/foto/badge-ik10.webp" alt="IK10 rated" width="80" height="80" decoding="async"></li>
+          <li class="logo-slider__logo logo-slider__tekst">Dynadimmer, dimregime 3A</li>
+          <li class="logo-slider__logo logo-slider__tekst">RVS en polycarbonaat</li>
+          <li class="logo-slider__logo logo-slider__tekst">Antigraffiticoating</li>
+          <li class="logo-slider__logo logo-slider__tekst">ELV 48V / 54V DC</li>
+          <li class="logo-slider__logo logo-slider__tekst">Offgrid solar</li>
+          <li class="logo-slider__logo logo-slider__tekst">Ontwerp en productie in Wormerveer</li>
         </ul>
         <ul class="logo-slider__set" aria-hidden="true">
-          <li class="logo-slider__logo"><img src="assets/partners/alstom.webp" alt="Alstom" width="408" height="80" decoding="async"></li>
-          <li class="logo-slider__logo"><img src="assets/partners/ballast-nedam.webp" alt="Ballast Nedam" width="452" height="80" decoding="async"></li>
-          <li class="logo-slider__logo"><img src="assets/partners/bilfinger.webp" alt="Bilfinger" width="210" height="80" decoding="async"></li>
-          <li class="logo-slider__logo"><img src="assets/partners/cosun.webp" alt="Cosun Beet Company" width="345" height="80" decoding="async"></li>
-          <li class="logo-slider__logo"><img src="assets/partners/ebert-hera.webp" alt="Ebert Hera" width="389" height="80" decoding="async"></li>
-          <li class="logo-slider__logo"><img src="assets/partners/electrabel.webp" alt="Electrabel / GDF Suez" width="203" height="80" decoding="async"></li>
-          <li class="logo-slider__logo"><img src="assets/partners/freesmij.webp" alt="Freesmij" width="309" height="80" decoding="async"></li>
-          <li class="logo-slider__logo"><img src="assets/partners/ge-vernova.webp" alt="GE Vernova" width="362" height="80" decoding="async"></li>
-          <li class="logo-slider__logo"><img src="assets/partners/huhtamaki.webp" alt="Huhtamaki" width="478" height="80" decoding="async"></li>
-          <li class="logo-slider__logo"><img src="assets/partners/ivens.webp" alt="Ivens" width="237" height="80" decoding="async"></li>
-          <li class="logo-slider__logo"><img src="assets/partners/ooms.webp" alt="Ooms Bouw &amp; Ontwikkeling" width="248" height="80" decoding="async"></li>
-          <li class="logo-slider__logo"><img src="assets/partners/stork.webp" alt="Stork" width="197" height="80" decoding="async"></li>
-          <li class="logo-slider__logo"><img src="assets/partners/tes.webp" alt="TES Industrial Systems" width="160" height="80" decoding="async"></li>
-          <li class="logo-slider__logo"><img src="assets/partners/thialf.webp" alt="Thialf" width="270" height="80" decoding="async"></li>
+          <li class="logo-slider__logo"><img src="assets/foto/badge-made-in-holland.webp" alt="Made in Holland" width="120" height="80" decoding="async"></li>
+          <li class="logo-slider__logo logo-slider__tekst">2200K · 3000K · 4000K</li>
+          <li class="logo-slider__logo"><img src="assets/foto/badge-garantie.png" alt="Made in Holland, vijf jaar garantie" width="183" height="80" decoding="async"></li>
+          <li class="logo-slider__logo logo-slider__tekst">DALI / DALI SR · 1-10V</li>
+          <li class="logo-slider__logo"><img src="assets/foto/badge-ik10.webp" alt="IK10 rated" width="80" height="80" decoding="async"></li>
+          <li class="logo-slider__logo logo-slider__tekst">Dynadimmer, dimregime 3A</li>
+          <li class="logo-slider__logo logo-slider__tekst">RVS en polycarbonaat</li>
+          <li class="logo-slider__logo logo-slider__tekst">Antigraffiticoating</li>
+          <li class="logo-slider__logo logo-slider__tekst">ELV 48V / 54V DC</li>
+          <li class="logo-slider__logo logo-slider__tekst">Offgrid solar</li>
+          <li class="logo-slider__logo logo-slider__tekst">Ontwerp en productie in Wormerveer</li>
         </ul>
         </div>
       </div>
@@ -792,10 +703,11 @@
     <div class="container">
       <div class="cta-slot__hoofd">
         <span class="subtitle cta-slot__label">Contact</span>
-        <h2 class="cta-slot__kop">Even sparren over waar je staat?</h2>
-        <p class="cta-slot__tekst">Vertel kort waar je tegenaan loopt. We reageren binnen twee werkdagen.</p>
+        <h2 class="cta-slot__kop">Een plek die licht nodig heeft?</h2>
+        <p class="cta-slot__tekst">Stuur je maten, tekening of vraag. We denken mee over wat er past en maken een prijsopgave.</p>
         <div class="cta-slot__actie">
-          <a href="contact.html" class="button button--primary"><span class="button__inhoud">Neem contact op<span class="button__spoor" aria-hidden="true"><svg class="arrow--animation is-1" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg><svg class="arrow--animation is-2" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg></span></span></a>
+          <a href="contact.html" class="button button--primary"><span class="button__inhoud">Bespreek je project<span class="button__spoor" aria-hidden="true"><svg class="arrow--animation is-1" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg><svg class="arrow--animation is-2" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg></span></span></a>
+          <a class="cta-slot__bel" href="tel:+31628553641">of bel 06 28553641</a>
         </div>
       </div>
     </div>
@@ -809,42 +721,43 @@
     <div class="footer--widgets">
       <div class="row footer--gap">
         <div class="col-lg-3 col-md-4 col-12 widget">
-          <img src="assets/logo/madegro-logo.svg" alt="MADEGRO" width="227" height="40" style="margin-bottom:var(--space-500)">
-          <p class="footer--intro">Advies en begeleiding op het gebied van veiligheid en kwaliteit, voor bedrijven die verder willen dan het vinkje.</p>
+          <img src="assets/logo/logo-donker.png" srcset="assets/logo/logo-donker.png 1x, assets/logo/logo-donker@2x.png 2x" alt="De Licht Fabriek" width="228" height="40" style="margin-bottom:var(--space-500)">
+          <p class="footer--intro">LED-verlichting voor openbare ruimte, outdoor en solar. Ontwerp, engineering en productie in Wormerveer, met 5 jaar garantie.</p>
+        </div>
+        <div class="col-lg-3 col-md-4 col-12 widget">
+          <h4>Armaturen</h4>
+          <ul role="list">
+            <li><a href="armaturen.html">Alle armaturen</a></li>
+            <li><a href="solarbolder.html">Solarbolder</a></li>
+            <li><a href="tunnelarmaturen.html">Tunnelarmaturen</a></li>
+            <li><a href="paaltop-armaturen.html">Paaltop-armaturen</a></li>
+          </ul>
         </div>
         <div class="col-lg-3 col-md-4 col-12 widget">
           <h4>Diensten</h4>
           <ul role="list">
-            <li><a href="veilig-gedrag.html">Veilig gedrag</a></li>
-            <li><a href="ehs-rie.html">EHS RIE</a></li>
-            <li><a href="safety-checks.html">Safety Checks</a></li>
-          </ul>
-        </div>
-        <div class="col-lg-3 col-md-4 col-12 widget">
-          <h4>Cursussen</h4>
-          <ul role="list">
-            <li><a href="cursus-veiligheidsbewustzijn.html">Veiligheidsbewustzijn op de werkvloer</a></li>
-            <li><a href="cursus-risicobeoordeling.html">Risico&rsquo;s herkennen en beoordelen</a></li>
-            <li><a href="cursus-veiligheidsladder.html">Werken met de Veiligheidsladder</a></li>
-            <li><a href="cursus-rie-praktijk.html">RI&amp;E in de praktijk</a></li>
+            <li><a href="diensten.html">Alle diensten</a></li>
+            <li><a href="retrofit.html">Retrofit en LED-geartrays</a></li>
+            <li><a href="maatwerk.html">Maatwerk en engineering</a></li>
+            <li><a href="thermolight.html">Thermografisch onderzoek</a></li>
+            <li><a href="projecten.html">Projecten</a></li>
           </ul>
         </div>
         <div class="col-lg-3 col-md-4 col-12 widget">
           <h4>Contact</h4>
           <ul role="list">
-            <li><a href="tel:+31654243822">06 54243822</a></li>
-            <li><a href="mailto:info@madegro.nl">info@madegro.nl</a></li>
+            <li><a href="tel:+31628553641">06 28553641</a></li>
+            <li><a href="mailto:info@delichtfabriekbv.nl">info@delichtfabriekbv.nl</a></li>
           </ul>
-          <p class="footer--adres">Wieling 39, 3371 PB Hardinxveld-Giessendam<br>KvK 81812892</p>
+          <p class="footer--adres">Rosbayerweg 19<br>1522 RW Wormerveer<br>KvK 72963204</p>
         </div>
       </div>
     </div>
     <div class="footer--line"></div>
     <div class="footer--copyright">
-      <span>&copy; 2026 Madegro Advies B.V.</span>
+      <span>&copy; 2026 De Licht Fabriek B.V.</span>
       <a href="privacybeleid.html">Privacybeleid</a>
       <a href="cookies.html">Cookies</a>
-      <a href="admin.html">Admin</a>
     </div>
   </div>
 </footer>
@@ -904,11 +817,6 @@
   </div>
 </aside>
 
-<!-- ================= PAGINA-OVERGANGEN =================
-     Barba wisselt alleen de container hierboven om, GSAP animeert de wissel. -->
-<!-- defer: de browser haalt ze op terwijl hij de pagina nog aan het ontleden is
-     en voert ze daarna uit, in deze volgorde. Die volgorde is nodig, want
-     ScrollTrigger heeft gsap nodig en page-transitions.js heeft Barba nodig. -->
 <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>

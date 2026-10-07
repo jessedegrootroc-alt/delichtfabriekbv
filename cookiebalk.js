@@ -6,12 +6,12 @@
    Deze balk legt de toestemming alvast vast en stelt die beschikbaar, zodat
    zo'n script later alleen hoeft te laden als de bezoeker ja heeft gezegd:
 
-     window.madegroToestemming            -> { analytisch, marketing }
-     window.madegroCookies.open()         -> balk opnieuw tonen
-     document.addEventListener('madegro:toestemming', e => e.detail)
+     window.dlfToestemming            -> { analytisch, marketing }
+     window.dlfCookies.open()         -> balk opnieuw tonen
+     document.addEventListener('dlf:toestemming', e => e.detail)
 */
 (() => {
-  const SLEUTEL = 'madegro-cookies-v1';
+  const SLEUTEL = 'dlf-cookies-v1';
   const balk = document.getElementById('cookiebalk');
   if (!balk) return;
 
@@ -29,8 +29,8 @@
   };
 
   const toepassen = (keuze) => {
-    window.madegroToestemming = keuze;
-    document.dispatchEvent(new CustomEvent('madegro:toestemming', { detail: keuze }));
+    window.dlfToestemming = keuze;
+    document.dispatchEvent(new CustomEvent('dlf:toestemming', { detail: keuze }));
   };
 
   const sluit = (keuze) => {
@@ -77,7 +77,7 @@
     keuzes.hidden = false;
   });
 
-  window.madegroCookies = { open: toon, keuze: () => lees() };
+  window.dlfCookies = { open: toon, keuze: () => lees() };
 
   const bestaand = lees();
   if (bestaand) {

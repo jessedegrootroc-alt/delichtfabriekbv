@@ -3,34 +3,19 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Contact | MADEGRO</title>
-<meta name="description" content="Neem contact op met MADEGRO over veilig gedrag, een EHS RI&E, een safety check of een cursus. We reageren binnen twee werkdagen." />
-<!-- De homepage is bereikbaar als / en als /index.html; de sitemap noemt /, dus
-     canonical en og:url ook, anders ziet Google twee adressen voor één pagina. -->
-<link rel="canonical" href="https://madegro.vercel.app/contact.html" />
+<title>Contact | De Licht Fabriek</title>
+<meta name="description" content="Neem contact op met De Licht Fabriek in Wormerveer over tunnelarmaturen, de Solarbolder, Citylight, retrofit of maatwerk. Bel 06 28553641 of mail info@delichtfabriekbv.nl." />
+<link rel="canonical" href="https://www.delichtfabriekbv.nl/contact.html" />
 <meta name="robots" content="index, follow, max-image-preview:large" />
-<meta name="author" content="Madegro Advies B.V." />
-<meta name="theme-color" content="#FFFFFF" />
+<meta name="author" content="De Licht Fabriek B.V." />
+<meta name="theme-color" content="#111518" />
 <meta name="color-scheme" content="light" />
 
-<!-- GSAP en Barba komen van jsDelivr. Het opzetten van die verbinding (dns,
-     tcp, tls) kost op een telefoon een paar honderd ms en begint nu al terwijl
-     de HTML nog binnenkomt, in plaats van pas onderaan de pagina. -->
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
-
-<!-- Het lettertype staat in de kop van de pagina en is dus onderdeel van de
-     LCP. Zonder preload vindt de browser het pas nadat styleguide.css binnen is
-     en ontleed is. crossorigin moet erbij, ook al staat het bestand op dezelfde
-     server: een font wordt altijd in CORS-modus opgehaald, en zonder dat woord
-     haalt de browser het twee keer op. -->
 <link rel="preload" href="assets/fonts/inter-tight-latin.woff2" as="font" type="font/woff2" crossorigin />
 
 <link rel="stylesheet" href="styleguide.css" />
 <link rel="stylesheet" href="transitions.css" />
-<!-- De cookiebalk verschijnt pas als cookiebalk.js hem opbouwt, dus zijn stijl
-     hoeft de eerste weergave niet op te houden. media="print" laat de browser
-     hem buiten het kritieke pad ophalen; onload zet hem daarna alsnog aan. De
-     noscript-regel vangt op dat zonder JavaScript ook die onload niet afgaat. -->
 <link rel="stylesheet" href="cookiebalk.css" media="print" onload="this.media='all'" />
 <noscript><link rel="stylesheet" href="cookiebalk.css" /></noscript>
 <link rel="stylesheet" href="contact.css" data-page-css="contact" />
@@ -41,39 +26,38 @@
 <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png" />
 
 <meta property="og:type" content="website" />
-<meta property="og:site_name" content="MADEGRO" />
+<meta property="og:site_name" content="De Licht Fabriek" />
 <meta property="og:locale" content="nl_NL" />
-<meta property="og:url" content="https://madegro.vercel.app/contact.html" />
-<meta property="og:title" content="Contact | MADEGRO" />
-<meta property="og:description" content="Neem contact op met MADEGRO over veilig gedrag, een EHS RI&E, een safety check of een cursus. We reageren binnen twee werkdagen." />
-<meta property="og:image" content="https://madegro.vercel.app/assets/social/madegro-deelafbeelding.png" />
+<meta property="og:url" content="https://www.delichtfabriekbv.nl/contact.html" />
+<meta property="og:title" content="Contact | De Licht Fabriek" />
+<meta property="og:description" content="Neem contact op met De Licht Fabriek in Wormerveer over tunnelarmaturen, de Solarbolder, Citylight, retrofit of maatwerk. Bel 06 28553641 of mail info@delichtfabriekbv.nl." />
+<meta property="og:image" content="https://www.delichtfabriekbv.nl/assets/social/lichtfabriek-deelafbeelding.png" />
 <meta property="og:image:type" content="image/png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content="MADEGRO: van risico naar grip op de werkvloer" />
+<meta property="og:image:alt" content="De Licht Fabriek: LED-verlichting voor openbare ruimte, tunnels en solar" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://madegro.vercel.app/assets/social/madegro-deelafbeelding.png" />
-<meta name="twitter:title" content="Contact | MADEGRO" />
-<meta name="twitter:description" content="Neem contact op met MADEGRO over veilig gedrag, een EHS RI&E, een safety check of een cursus. We reageren binnen twee werkdagen." />
+<meta name="twitter:image" content="https://www.delichtfabriekbv.nl/assets/social/lichtfabriek-deelafbeelding.png" />
+<meta name="twitter:title" content="Contact | De Licht Fabriek" />
+<meta name="twitter:description" content="Neem contact op met De Licht Fabriek in Wormerveer over tunnelarmaturen, de Solarbolder, Citylight, retrofit of maatwerk. Bel 06 28553641 of mail info@delichtfabriekbv.nl." />
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "Madegro Advies B.V.",
-  "alternateName": "MADEGRO",
-  "foundingDate": "2002-07",
-  "url": "https://madegro.vercel.app/",
-  "logo": "https://madegro.vercel.app/assets/logo/madegro-logo.svg",
-  "email": "info@madegro.nl",
-  "telephone": "+31654243822",
-  "vatID": null,
-  "identifier": { "@type": "PropertyValue", "name": "KvK", "value": "81812892" },
+  "name": "De Licht Fabriek B.V.",
+  "alternateName": "De Licht Fabriek",
+  "url": "https://www.delichtfabriekbv.nl/",
+  "logo": "https://www.delichtfabriekbv.nl/assets/logo/logo-donker@2x.png",
+  "email": "info@delichtfabriekbv.nl",
+  "telephone": "+31628553641",
+  "vatID": "NL859301655B01",
+  "identifier": { "@type": "PropertyValue", "name": "KvK", "value": "72963204" },
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Wieling 39",
-    "postalCode": "3371 PB",
-    "addressLocality": "Hardinxveld-Giessendam",
+    "streetAddress": "Rosbayerweg 19",
+    "postalCode": "1522 RW",
+    "addressLocality": "Wormerveer",
     "addressCountry": "NL"
   }
 }
@@ -86,20 +70,19 @@
 <!-- De header en het mobiele paneel staan bewust BUITEN #smooth-wrapper.
      ScrollSmoother verschuift de inhoud met een transform, en onder een
      transform hangt position:fixed aan dat element in plaats van aan het
-     scherm. Ze blijven daardoor ook staan bij een pagina-overgang; welke
-     menulink actief is wordt in page-transitions.js bijgewerkt. -->
+     scherm. -->
 <header class="header header--scrolled" id="siteHeader">
   <div class="header--container">
-    <a href="index.html" class="header--logo" aria-label="MADEGRO, naar de homepage">
-      <img class="header--logo-kleur" src="assets/logo/madegro-logo.svg" alt="MADEGRO" width="227" height="40">
-      <img class="header--logo-wit" src="assets/logo/madegro-logo-wit.svg" alt="" aria-hidden="true" width="227" height="40">
+    <a href="index.html" class="header--logo" aria-label="De Licht Fabriek, naar de homepage">
+      <img class="header--logo-kleur" src="assets/logo/logo-donker.png" srcset="assets/logo/logo-donker.png 1x, assets/logo/logo-donker@2x.png 2x" alt="De Licht Fabriek" width="228" height="40">
+      <img class="header--logo-wit" src="assets/logo/logo-wit.png" srcset="assets/logo/logo-wit.png 1x, assets/logo/logo-wit@2x.png 2x" alt="" aria-hidden="true" width="228" height="40">
     </a>
 
     <nav class="submenu" aria-label="Hoofdmenu">
       <a class="submenu--link" href="index.html">Home</a>
+      <button type="button" class="submenu--link submenu--trigger" data-uitklap="armaturen" aria-expanded="false" aria-controls="uitklap-armaturen">Armaturen<svg class="submenu--chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 8L12 17L3 8" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg></button>
       <button type="button" class="submenu--link submenu--trigger" data-uitklap="diensten" aria-expanded="false" aria-controls="uitklap-diensten">Diensten<svg class="submenu--chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 8L12 17L3 8" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg></button>
-      <button type="button" class="submenu--link submenu--trigger" data-uitklap="cursussen" aria-expanded="false" aria-controls="uitklap-cursussen">Cursussen<svg class="submenu--chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 8L12 17L3 8" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg></button>
-      <a class="submenu--link" href="cases.html">Cases</a>
+      <a class="submenu--link" href="projecten.html">Projecten</a>
       <a class="submenu--link" href="over-ons.html">Over ons</a>
       <a class="submenu--link highlight" href="contact.html">Contact</a>
     </nav>
@@ -110,46 +93,46 @@
     </button>
   </div>
 
+  <div class="uitklap" id="uitklap-armaturen" data-uitklap-paneel="armaturen" inert>
+    <div class="uitklap__inner">
+      <div class="uitklap__kolom">
+        <span class="subtitle">Armaturen</span>
+        <ul class="uitklap__lijst" role="list">
+          <li><a class="uitklap__link" href="armaturen.html"><span class="uitklap__naam">Alle armaturen</span><span class="uitklap__uitleg">Welk armatuur past waar</span></a></li>
+          <li><a class="uitklap__link" href="solarbolder.html"><span class="uitklap__naam">Solarbolder</span><span class="uitklap__uitleg">Offgrid licht, 365 dagen per jaar</span></a></li>
+          <li><a class="uitklap__link" href="tunnelarmaturen.html"><span class="uitklap__naam">Tunnelarmaturen</span><span class="uitklap__uitleg">Titan: op maat, in RVS en polycarbonaat</span></a></li>
+          <li><a class="uitklap__link" href="paaltop-armaturen.html"><span class="uitklap__naam">Paaltop-armaturen</span><span class="uitklap__uitleg">Citylight: slagvast en gelijkmatig licht</span></a></li>
+        </ul>
+      </div>
+      <div class="uitklap__kaart">
+        <picture><source type="image/avif" srcset="assets/foto/citylight-lens-480.avif 480w, assets/foto/citylight-lens-800.avif 800w, assets/foto/citylight-lens-1200.avif 1200w" sizes="(max-width: 1199px) 0px, 40vw"><img src="assets/foto/citylight-lens-1200.webp" srcset="assets/foto/citylight-lens-480.webp 480w, assets/foto/citylight-lens-800.webp 800w, assets/foto/citylight-lens-1200.webp 1200w" sizes="(max-width: 1199px) 0px, 40vw" width="1200" height="810" alt="" loading="lazy" decoding="async"></picture>
+        <span class="uitklap__sluier" aria-hidden="true"></span>
+        <div class="uitklap__kaart-tekst">
+          <p class="uitklap__kaart-kop">Past geen standaardarmatuur?</p>
+          <p class="uitklap__kaart-body">Tunnelarmaturen maken we op klantspecificatie. Stuur je maten of tekening, dan denken we mee.</p>
+          <a href="contact.html" class="button button--primary"><span class="button__inhoud">Bespreek je project<span class="button__spoor" aria-hidden="true"><svg class="arrow--animation is-1" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg><svg class="arrow--animation is-2" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg></span></span></a>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="uitklap" id="uitklap-diensten" data-uitklap-paneel="diensten" inert>
     <div class="uitklap__inner">
       <div class="uitklap__kolom">
         <span class="subtitle">Diensten</span>
         <ul class="uitklap__lijst" role="list">
-          <li><a class="uitklap__link" href="veilig-gedrag.html"><span class="uitklap__naam">Veilig gedrag</span><span class="uitklap__uitleg">Van papier naar werkvloer</span></a></li>
-          <li><a class="uitklap__link" href="ehs-rie.html"><span class="uitklap__naam">EHS RIE</span><span class="uitklap__uitleg">Risico&rsquo;s in kaart, met een plan dat werkt</span></a></li>
-          <li><a class="uitklap__link" href="safety-checks.html"><span class="uitklap__naam">Safety Checks</span><span class="uitklap__uitleg">Periodiek toetsen wat er echt gebeurt</span></a></li>
+          <li><a class="uitklap__link" href="diensten.html"><span class="uitklap__naam">Alle diensten</span><span class="uitklap__uitleg">Retrofit, maatwerk en onderzoek</span></a></li>
+          <li><a class="uitklap__link" href="retrofit.html"><span class="uitklap__naam">Retrofit en LED-geartrays</span><span class="uitklap__uitleg">Bestaande armaturen verledden</span></a></li>
+          <li><a class="uitklap__link" href="maatwerk.html"><span class="uitklap__naam">Maatwerk en engineering</span><span class="uitklap__uitleg">Van vraag tot armatuur, in eigen huis</span></a></li>
+          <li><a class="uitklap__link" href="thermolight.html"><span class="uitklap__naam">Thermografisch onderzoek</span><span class="uitklap__uitleg">Afwijkingen snel in beeld</span></a></li>
         </ul>
       </div>
       <div class="uitklap__kaart">
-        <picture><source type="image/avif" srcset="assets/foto/overleg-640.avif 640w, assets/foto/overleg-960.avif 960w" sizes="(max-width: 1199px) 0px, 40vw"><img src="assets/foto/overleg-960.webp" srcset="assets/foto/overleg-640.webp 640w, assets/foto/overleg-960.webp 960w" sizes="(max-width: 1199px) 0px, 40vw" width="960" height="640" alt="" loading="lazy" decoding="async"></picture>
+        <picture><source type="image/avif" srcset="assets/foto/ledmodule-buis-480.avif 480w, assets/foto/ledmodule-buis-800.avif 800w, assets/foto/ledmodule-buis-1200.avif 1200w" sizes="(max-width: 1199px) 0px, 40vw"><img src="assets/foto/ledmodule-buis-1200.webp" srcset="assets/foto/ledmodule-buis-480.webp 480w, assets/foto/ledmodule-buis-800.webp 800w, assets/foto/ledmodule-buis-1200.webp 1200w" sizes="(max-width: 1199px) 0px, 40vw" width="1200" height="336" alt="" loading="lazy" decoding="async"></picture>
         <span class="uitklap__sluier" aria-hidden="true"></span>
         <div class="uitklap__kaart-tekst">
-          <p class="uitklap__kaart-kop">Weten waar je staat?</p>
-          <p class="uitklap__kaart-body">In een gesprek van een halfuur brengen we in beeld welke van de drie het meest oplevert in jouw situatie.</p>
-          <a href="contact.html" class="button button--primary"><span class="button__inhoud">Plan een gesprek<span class="button__spoor" aria-hidden="true"><svg class="arrow--animation is-1" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg><svg class="arrow--animation is-2" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg></span></span></a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="uitklap" id="uitklap-cursussen" data-uitklap-paneel="cursussen" inert>
-    <div class="uitklap__inner">
-      <div class="uitklap__kolom">
-        <span class="subtitle">Cursussen</span>
-        <ul class="uitklap__lijst" role="list">
-          <li><a class="uitklap__link" href="cursusaanbod.html"><span class="uitklap__naam">Alle cursussen</span><span class="uitklap__uitleg">Het volledige aanbod op een rij</span></a></li>
-          <li><a class="uitklap__link" href="cursus-veiligheidsbewustzijn.html"><span class="uitklap__naam">Veiligheidsbewustzijn op de werkvloer</span><span class="uitklap__uitleg">Voor operators en uitvoerenden</span></a></li>
-          <li><a class="uitklap__link" href="cursus-risicobeoordeling.html"><span class="uitklap__naam">Risico&rsquo;s herkennen en beoordelen</span><span class="uitklap__uitleg">Voor voormannen en teamleiders</span></a></li>
-          <li><a class="uitklap__link" href="cursus-veiligheidsladder.html"><span class="uitklap__naam">Werken met de Veiligheidsladder</span><span class="uitklap__uitleg">Voor KAM- en HSE-co&ouml;rdinatoren</span></a></li>
-          <li><a class="uitklap__link" href="cursus-rie-praktijk.html"><span class="uitklap__naam">RI&amp;E in de praktijk</span><span class="uitklap__uitleg">Voor preventiemedewerkers</span></a></li>
-        </ul>
-      </div>
-      <div class="uitklap__kaart">
-        <picture><source type="image/avif" srcset="assets/foto/productiehal-640.avif 640w, assets/foto/productiehal-1024.avif 1024w" sizes="(max-width: 1199px) 0px, 40vw"><img src="assets/foto/productiehal-1024.webp" srcset="assets/foto/productiehal-640.webp 640w, assets/foto/productiehal-1024.webp 1024w" sizes="(max-width: 1199px) 0px, 40vw" width="1024" height="309" alt="" loading="lazy" decoding="async"></picture>
-        <span class="uitklap__sluier" aria-hidden="true"></span>
-        <div class="uitklap__kaart-tekst">
-          <p class="uitklap__kaart-kop">Twijfel je welke cursus past?</p>
-          <p class="uitklap__kaart-body">Vertel kort wie er meedoet en waar het werk om draait; we denken mee over de volgorde.</p>
-          <a href="contact.html" class="button button--primary"><span class="button__inhoud">Plan een gesprek<span class="button__spoor" aria-hidden="true"><svg class="arrow--animation is-1" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg><svg class="arrow--animation is-2" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg></span></span></a>
+          <p class="uitklap__kaart-kop">Bestaande armaturen behouden?</p>
+          <p class="uitklap__kaart-body">Met een LED-geartray blijft de behuizing hangen en gaat alleen de techniek eruit.</p>
+          <a href="contact.html" class="button button--primary"><span class="button__inhoud">Vraag een prijsopgave<span class="button__spoor" aria-hidden="true"><svg class="arrow--animation is-1" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg><svg class="arrow--animation is-2" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg></span></span></a>
         </div>
       </div>
     </div>
@@ -159,7 +142,7 @@
 <div class="mobile-panel--overlay" id="panelOverlay" hidden></div>
 <div class="mobile-panel" id="mobilePanel" role="dialog" aria-modal="true" aria-label="Menu">
   <div class="mobile-panel--topbar">
-    <a class="mobile-panel--chip" href="contact.html">Contact</a>
+    <a class="mobile-panel--chip" href="tel:+31628553641">Bel 06 28553641</a>
     <button type="button" class="mobile-panel--chip is-close" id="panelSluit">
       Sluiten
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M19 19L5 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M19 5L5 19" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg>
@@ -171,32 +154,32 @@
       <li><a class="mobile-panel--nav-link" href="index.html" data-panel-sluit style="transition-delay:0ms"><span class="mobile-panel--text-slide"><span class="mobile-panel--text-slide-inner"><span>Home</span><span>Home</span></span></span></a></li>
       <li>
         <button type="button" class="mobile-panel--nav-link mobile-panel--nav-knop"
-                data-mobiel-uitklap="diensten" aria-expanded="false"
-                aria-controls="mobiel-diensten" style="transition-delay:60ms"><span class="mobile-panel--text-slide"><span class="mobile-panel--text-slide-inner"><span>Diensten</span><span>Diensten</span></span></span><svg class="submenu--chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 8L12 17L3 8" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg></button>
-        <ul class="mobile-panel--sublijst" id="mobiel-diensten" role="list" hidden>
-          <li><a class="mobile-panel--sublink" href="veilig-gedrag.html" data-panel-sluit>Veilig gedrag</a></li>
-          <li><a class="mobile-panel--sublink" href="ehs-rie.html" data-panel-sluit>EHS RIE</a></li>
-          <li><a class="mobile-panel--sublink" href="safety-checks.html" data-panel-sluit>Safety Checks</a></li>
+                data-mobiel-uitklap="armaturen" aria-expanded="false"
+                aria-controls="mobiel-armaturen" style="transition-delay:60ms"><span class="mobile-panel--text-slide"><span class="mobile-panel--text-slide-inner"><span>Armaturen</span><span>Armaturen</span></span></span><svg class="submenu--chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 8L12 17L3 8" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg></button>
+        <ul class="mobile-panel--sublijst" id="mobiel-armaturen" role="list" hidden>
+          <li><a class="mobile-panel--sublink" href="armaturen.html" data-panel-sluit>Alle armaturen</a></li>
+          <li><a class="mobile-panel--sublink" href="solarbolder.html" data-panel-sluit>Solarbolder</a></li>
+          <li><a class="mobile-panel--sublink" href="tunnelarmaturen.html" data-panel-sluit>Tunnelarmaturen</a></li>
+          <li><a class="mobile-panel--sublink" href="paaltop-armaturen.html" data-panel-sluit>Paaltop-armaturen</a></li>
         </ul>
       </li>
       <li>
         <button type="button" class="mobile-panel--nav-link mobile-panel--nav-knop"
-                data-mobiel-uitklap="cursussen" aria-expanded="false"
-                aria-controls="mobiel-cursussen" style="transition-delay:120ms"><span class="mobile-panel--text-slide"><span class="mobile-panel--text-slide-inner"><span>Cursussen</span><span>Cursussen</span></span></span><svg class="submenu--chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 8L12 17L3 8" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg></button>
-        <ul class="mobile-panel--sublijst" id="mobiel-cursussen" role="list" hidden>
-          <li><a class="mobile-panel--sublink" href="cursusaanbod.html" data-panel-sluit>Alle cursussen</a></li>
-          <li><a class="mobile-panel--sublink" href="cursus-veiligheidsbewustzijn.html" data-panel-sluit>Veiligheidsbewustzijn op de werkvloer</a></li>
-          <li><a class="mobile-panel--sublink" href="cursus-risicobeoordeling.html" data-panel-sluit>Risico&rsquo;s herkennen en beoordelen</a></li>
-          <li><a class="mobile-panel--sublink" href="cursus-veiligheidsladder.html" data-panel-sluit>Werken met de Veiligheidsladder</a></li>
-          <li><a class="mobile-panel--sublink" href="cursus-rie-praktijk.html" data-panel-sluit>RI&amp;E in de praktijk</a></li>
+                data-mobiel-uitklap="diensten" aria-expanded="false"
+                aria-controls="mobiel-diensten" style="transition-delay:120ms"><span class="mobile-panel--text-slide"><span class="mobile-panel--text-slide-inner"><span>Diensten</span><span>Diensten</span></span></span><svg class="submenu--chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 8L12 17L3 8" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg></button>
+        <ul class="mobile-panel--sublijst" id="mobiel-diensten" role="list" hidden>
+          <li><a class="mobile-panel--sublink" href="diensten.html" data-panel-sluit>Alle diensten</a></li>
+          <li><a class="mobile-panel--sublink" href="retrofit.html" data-panel-sluit>Retrofit en LED-geartrays</a></li>
+          <li><a class="mobile-panel--sublink" href="maatwerk.html" data-panel-sluit>Maatwerk en engineering</a></li>
+          <li><a class="mobile-panel--sublink" href="thermolight.html" data-panel-sluit>Thermografisch onderzoek</a></li>
         </ul>
       </li>
-      <li><a class="mobile-panel--nav-link" href="cases.html" data-panel-sluit style="transition-delay:180ms"><span class="mobile-panel--text-slide"><span class="mobile-panel--text-slide-inner"><span>Cases</span><span>Cases</span></span></span></a></li>
+      <li><a class="mobile-panel--nav-link" href="projecten.html" data-panel-sluit style="transition-delay:180ms"><span class="mobile-panel--text-slide"><span class="mobile-panel--text-slide-inner"><span>Projecten</span><span>Projecten</span></span></span></a></li>
       <li><a class="mobile-panel--nav-link" href="over-ons.html" data-panel-sluit style="transition-delay:240ms"><span class="mobile-panel--text-slide"><span class="mobile-panel--text-slide-inner"><span>Over ons</span><span>Over ons</span></span></span></a></li>
     </ul>
   </nav>
   <div class="mobile-panel--cta button__mobile-width">
-    <a href="contact.html" class="button button--primary"><span class="button__inhoud">Contact opnemen<span class="button__spoor" aria-hidden="true"><svg class="arrow--animation is-1" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg><svg class="arrow--animation is-2" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg></span></span></a>
+    <a href="contact.html" class="button button--primary"><span class="button__inhoud">Bespreek je project<span class="button__spoor" aria-hidden="true"><svg class="arrow--animation is-1" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg><svg class="arrow--animation is-2" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg></span></span></a>
   </div>
 </div>
 
@@ -227,12 +210,12 @@
       <div class="row">
         <div class="col-lg-4 col-12">
           <div class="article-body">
-            <p>Vertel kort waar je tegenaan loopt. Of dat nu een RI&amp;E is die verlopen is, een audit die eraan komt of het gevoel dat de regels op papier niet terugkomen op de vloer.</p>
-            <p>We reageren binnen twee werkdagen.</p>
+            <p>Vertel kort om welke plek het gaat en wat er nu hangt of staat. Een foto, een tekening of de maten van een sparing helpen ons om meteen gericht mee te denken.</p>
+            <p>Na je bericht nemen we contact op om de vraag door te spreken. Daarna volgt een voorstel of een prijsopgave.</p>
           </div>
           <p class="contact-direct">Liever meteen iemand spreken? Bel
-            <a href="tel:+31654243822">06 54243822</a> of mail naar
-            <a href="mailto:info@madegro.nl">info@madegro.nl</a>.</p>
+            <a href="tel:+31628553641">06 28553641</a> of mail naar
+            <a href="mailto:info@delichtfabriekbv.nl">info@delichtfabriekbv.nl</a>.</p>
         </div>
 
         <div class="col-lg-8 col-12">
@@ -240,7 +223,7 @@
             <div data-contactformulier data-onderwerp="overig"></div>
             <noscript>
               <p class="article-body">Het formulier heeft JavaScript nodig. Mail ons gerust op
-                <a href="mailto:info@madegro.nl">info@madegro.nl</a> of bel 06 54243822.</p>
+                <a href="mailto:info@delichtfabriekbv.nl">info@delichtfabriekbv.nl</a> of bel 06 28553641.</p>
             </noscript>
           </div>
         </div>
@@ -248,28 +231,86 @@
     </div>
   </section>
 
-  <section class="vlakkenband" id="s03-gegevens">
+  <section class="quotes" id="s03-reviews">
+    <div class="container">
+      <div class="quotes__kop">
+        <span class="subtitle">Wat opdrachtgevers zeggen</span>
+        <h2 class="section-heading">Uit de samenwerking</h2>
+      </div>
+      <!-- TODO-CONTENT: placeholder-reviews zonder naam; vervangen door echte reviews met toestemming -->
+      <div class="quotes__venster" data-quoteslider aria-live="polite">
+        <figure class="quote" role="group" aria-roledescription="citaat"
+               aria-label="Citaat 1 van 3">
+          <div class="quote__beeld">
+            <picture><source type="image/avif" srcset="assets/foto/citylight-kerk-480.avif 480w, assets/foto/citylight-kerk-800.avif 800w, assets/foto/citylight-kerk-1024.avif 1024w" sizes="(max-width: 767px) 100vw, 40vw"><img src="assets/foto/citylight-kerk-1024.webp" srcset="assets/foto/citylight-kerk-480.webp 480w, assets/foto/citylight-kerk-800.webp 800w, assets/foto/citylight-kerk-1024.webp 1024w" sizes="(max-width: 767px) 100vw, 40vw" width="1024" height="768" alt="Citylight-armatuur bij nacht naast een kerk, met blauw aangelichte gevel" loading="lazy" decoding="async"></picture>
+          </div>
+          <div class="quote__body">
+            <blockquote class="quote__tekst"><p>Het armatuur is precies gemaakt op de maten van onze onderdoorgang. Tekening, proefmontage en plaatsing liepen via één aanspreekpunt.</p></blockquote>
+            <hr class="quote__streep">
+            <figcaption class="quote__naam">Beheerder openbare verlichting, gemeente</figcaption>
+            <p class="quote__logo quote__logo--leeg"><span class="invulveld">Logo opdrachtgever</span></p>
+          </div>
+        </figure>
+        <figure class="quote" role="group" aria-roledescription="citaat"
+               aria-label="Citaat 2 van 3">
+          <div class="quote__beeld">
+            <picture><source type="image/avif" srcset="assets/foto/tunnel-gebogen-b-480.avif 480w, assets/foto/tunnel-gebogen-b-800.avif 800w, assets/foto/tunnel-gebogen-b-1200.avif 1200w" sizes="(max-width: 767px) 100vw, 40vw"><img src="assets/foto/tunnel-gebogen-b-1200.webp" srcset="assets/foto/tunnel-gebogen-b-480.webp 480w, assets/foto/tunnel-gebogen-b-800.webp 800w, assets/foto/tunnel-gebogen-b-1200.webp 1200w" sizes="(max-width: 767px) 100vw, 40vw" width="1200" height="739" alt="Fietstunnel met mozaïekwand, verlicht door armaturen met gebogen polycarbonaat venster" loading="lazy" decoding="async"></picture>
+          </div>
+          <div class="quote__body">
+            <blockquote class="quote__tekst"><p>Voor het verledden van bestaande armaturen kregen we een geartray die zonder aanpassingen paste. Dat scheelde een complete vervanging.</p></blockquote>
+            <hr class="quote__streep">
+            <figcaption class="quote__naam">Projectleider, installatiebedrijf</figcaption>
+            <p class="quote__logo quote__logo--leeg"><span class="invulveld">Logo opdrachtgever</span></p>
+          </div>
+        </figure>
+        <figure class="quote" role="group" aria-roledescription="citaat"
+               aria-label="Citaat 3 van 3">
+          <div class="quote__beeld">
+            <picture><source type="image/avif" srcset="assets/foto/tuin-schielandhuis-2-480.avif 480w, assets/foto/tuin-schielandhuis-2-800.avif 800w, assets/foto/tuin-schielandhuis-2-1024.avif 1024w" sizes="(max-width: 767px) 100vw, 40vw"><img src="assets/foto/tuin-schielandhuis-2-1024.webp" srcset="assets/foto/tuin-schielandhuis-2-480.webp 480w, assets/foto/tuin-schielandhuis-2-800.webp 800w, assets/foto/tuin-schielandhuis-2-1024.webp 1024w" sizes="(max-width: 767px) 100vw, 40vw" width="1024" height="683" alt="Tuin van het Schielandhuis in Rotterdam met Solarbolders" loading="lazy" decoding="async"></picture>
+          </div>
+          <div class="quote__body">
+            <blockquote class="quote__tekst"><p>De Solarbolder staat waar geen kabel ligt. Ontwerp en uitvoering sloten goed op elkaar aan.</p></blockquote>
+            <hr class="quote__streep">
+            <figcaption class="quote__naam">Lichtontwerper, ontwerpbureau</figcaption>
+            <p class="quote__logo quote__logo--leeg"><span class="invulveld">Logo opdrachtgever</span></p>
+          </div>
+        </figure>
+      </div>
+      <div class="quotes__nav" hidden>
+        <button type="button" class="button--icon button--icon--56 button--grijs quotes__pijl" data-quote="vorige" aria-label="Vorige quote">
+          <span class="button--circle"><span class="circle-container"><svg class="arrow--animation is-1" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 12H3H3.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M10 19L3 12L10 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg><svg class="arrow--animation is-2" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 12H3H3.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M10 19L3 12L10 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg></span></span>
+        </button>
+        <button type="button" class="button--icon button--icon--56 button--grijs quotes__pijl" data-quote="volgende" aria-label="Volgende quote">
+          <span class="button--circle"><span class="circle-container"><svg class="arrow--animation is-1" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg><svg class="arrow--animation is-2" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H21H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/><path d="M14 19L21 12L14 5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/></svg></span></span>
+        </button>
+        <p class="quotes__teller" data-quote-teller>1 / 3</p>
+        <span class="quotes__timer" aria-hidden="true"><span class="quotes__timer-balk"></span></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="vlakkenband" id="s04-gegevens">
     <div class="container">
       <div class="vlakkenband__kop">
         <h2 class="section-heading">Onze gegevens</h2>
       </div>
     </div>
     <ul class="vlakkenrij">
-      <li class="vlak vlak--geel">
+      <li class="vlak vlak--oranje">
         <h3 class="vlak__kop">Telefoon</h3>
-        <p class="vlak__tekst"><a href="tel:+31654243822">06 54243822</a><br>Op werkdagen bereikbaar</p>
+        <p class="vlak__tekst"><a href="tel:+31628553641">06 28553641</a><br>Op werkdagen bereikbaar</p>
       </li>
       <li class="vlak vlak--grijs">
         <h3 class="vlak__kop">E-mail</h3>
-        <p class="vlak__tekst"><a href="mailto:info@madegro.nl">info@madegro.nl</a><br>Antwoord binnen twee werkdagen</p>
+        <p class="vlak__tekst"><a href="mailto:info@delichtfabriekbv.nl">info@delichtfabriekbv.nl</a></p>
       </li>
       <li class="vlak vlak--wit">
-        <h3 class="vlak__kop">Adres</h3>
-        <p class="vlak__tekst">Madegro Advies B.V.<br>Wieling 39<br>3371 PB Hardinxveld-Giessendam<br>KvK 81812892</p>
+        <h3 class="vlak__kop">Bezoekadres</h3>
+        <p class="vlak__tekst">De Licht Fabriek B.V.<br>Rosbayerweg 19<br>1522 RW Wormerveer</p>
       </li>
-      <li class="vlak vlak--groen">
-        <h3 class="vlak__kop">Onze expertise</h3>
-        <p class="vlak__tekst">Veiligheid op de werkvloer<br>Training, advies en begeleiding</p>
+      <li class="vlak vlak--donker">
+        <h3 class="vlak__kop">Bedrijfsgegevens</h3>
+        <p class="vlak__tekst">KvK 72963204<br>BTW NL859301655B01</p>
       </li>
     </ul>
   </section>
@@ -282,42 +323,43 @@
     <div class="footer--widgets">
       <div class="row footer--gap">
         <div class="col-lg-3 col-md-4 col-12 widget">
-          <img src="assets/logo/madegro-logo.svg" alt="MADEGRO" width="227" height="40" style="margin-bottom:var(--space-500)">
-          <p class="footer--intro">Advies en begeleiding op het gebied van veiligheid en kwaliteit, voor bedrijven die verder willen dan het vinkje.</p>
+          <img src="assets/logo/logo-donker.png" srcset="assets/logo/logo-donker.png 1x, assets/logo/logo-donker@2x.png 2x" alt="De Licht Fabriek" width="228" height="40" style="margin-bottom:var(--space-500)">
+          <p class="footer--intro">LED-verlichting voor openbare ruimte, outdoor en solar. Ontwerp, engineering en productie in Wormerveer, met 5 jaar garantie.</p>
+        </div>
+        <div class="col-lg-3 col-md-4 col-12 widget">
+          <h4>Armaturen</h4>
+          <ul role="list">
+            <li><a href="armaturen.html">Alle armaturen</a></li>
+            <li><a href="solarbolder.html">Solarbolder</a></li>
+            <li><a href="tunnelarmaturen.html">Tunnelarmaturen</a></li>
+            <li><a href="paaltop-armaturen.html">Paaltop-armaturen</a></li>
+          </ul>
         </div>
         <div class="col-lg-3 col-md-4 col-12 widget">
           <h4>Diensten</h4>
           <ul role="list">
-            <li><a href="veilig-gedrag.html">Veilig gedrag</a></li>
-            <li><a href="ehs-rie.html">EHS RIE</a></li>
-            <li><a href="safety-checks.html">Safety Checks</a></li>
-          </ul>
-        </div>
-        <div class="col-lg-3 col-md-4 col-12 widget">
-          <h4>Cursussen</h4>
-          <ul role="list">
-            <li><a href="cursus-veiligheidsbewustzijn.html">Veiligheidsbewustzijn op de werkvloer</a></li>
-            <li><a href="cursus-risicobeoordeling.html">Risico&rsquo;s herkennen en beoordelen</a></li>
-            <li><a href="cursus-veiligheidsladder.html">Werken met de Veiligheidsladder</a></li>
-            <li><a href="cursus-rie-praktijk.html">RI&amp;E in de praktijk</a></li>
+            <li><a href="diensten.html">Alle diensten</a></li>
+            <li><a href="retrofit.html">Retrofit en LED-geartrays</a></li>
+            <li><a href="maatwerk.html">Maatwerk en engineering</a></li>
+            <li><a href="thermolight.html">Thermografisch onderzoek</a></li>
+            <li><a href="projecten.html">Projecten</a></li>
           </ul>
         </div>
         <div class="col-lg-3 col-md-4 col-12 widget">
           <h4>Contact</h4>
           <ul role="list">
-            <li><a href="tel:+31654243822">06 54243822</a></li>
-            <li><a href="mailto:info@madegro.nl">info@madegro.nl</a></li>
+            <li><a href="tel:+31628553641">06 28553641</a></li>
+            <li><a href="mailto:info@delichtfabriekbv.nl">info@delichtfabriekbv.nl</a></li>
           </ul>
-          <p class="footer--adres">Wieling 39, 3371 PB Hardinxveld-Giessendam<br>KvK 81812892</p>
+          <p class="footer--adres">Rosbayerweg 19<br>1522 RW Wormerveer<br>KvK 72963204</p>
         </div>
       </div>
     </div>
     <div class="footer--line"></div>
     <div class="footer--copyright">
-      <span>&copy; 2026 Madegro Advies B.V.</span>
+      <span>&copy; 2026 De Licht Fabriek B.V.</span>
       <a href="privacybeleid.html">Privacybeleid</a>
       <a href="cookies.html">Cookies</a>
-      <a href="admin.html">Admin</a>
     </div>
   </div>
 </footer>
@@ -377,11 +419,6 @@
   </div>
 </aside>
 
-<!-- ================= PAGINA-OVERGANGEN =================
-     Barba wisselt alleen de container hierboven om, GSAP animeert de wissel. -->
-<!-- defer: de browser haalt ze op terwijl hij de pagina nog aan het ontleden is
-     en voert ze daarna uit, in deze volgorde. Die volgorde is nodig, want
-     ScrollTrigger heeft gsap nodig en page-transitions.js heeft Barba nodig. -->
 <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>

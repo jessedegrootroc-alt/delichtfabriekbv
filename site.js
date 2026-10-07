@@ -25,14 +25,14 @@
 
      window en document worden al opgeruimd door page-transitions.js; het gaat
      hier om de listeners die rechtstreeks op die vaste elementen hangen. */
-  window.__madegroVast?.abort();
-  window.__madegroVast = new AbortController();
-  const vast = { signal: window.__madegroVast.signal };
+  window.__dlfVast?.abort();
+  window.__dlfVast = new AbortController();
+  const vast = { signal: window.__dlfVast.signal };
   const $vast = (kiezer) => document.querySelector(kiezer);
 
   const gsapAanwezig = window.gsap || null;
   const kalm = window.matchMedia('(prefers-reduced-motion: reduce)');
-  const smoother = () => window.MADEGRO?.smoother?.instantie || null;
+  const smoother = () => window.De Licht Fabriek?.smoother?.instantie || null;
 
   /* Met ScrollSmoother loopt de inhoud achter op de scrollbalk. Voor de header
      telt wat je ziet en niet waar de scrollbalk staat, anders wisselt hij van
@@ -78,7 +78,7 @@
       /* Elk beeldje, want na een sprong in de scrollbalk houdt de scroll-
          gebeurtenis op terwijl de inhoud nog aan het inhalen is. */
       gsapAanwezig.ticker.add(werkHeaderBij);
-      window.__madegroVast.signal.addEventListener('abort',
+      window.__dlfVast.signal.addEventListener('abort',
         () => gsapAanwezig.ticker.remove(werkHeaderBij));
     } else {
       window.addEventListener('scroll', werkHeaderBij, { passive: true });
@@ -312,7 +312,7 @@
       if (document.visibilityState === 'visible' && video.paused && video.isConnected) {
         video.play().catch(() => {});
       }
-    }, { signal: window.__madegroVast?.signal });
+    }, { signal: window.__dlfVast?.signal });
   });
 
   container.querySelectorAll('[data-quoteslider]').forEach((venster) => {
@@ -398,7 +398,7 @@
       sectie.addEventListener('focusout', (e) => { if (!sectie.contains(e.relatedTarget)) hervat(); });
     }
     document.addEventListener('visibilitychange', () => { document.hidden ? pauze() : hervat(); }, vast);
-    window.__madegroVast.signal.addEventListener('abort', () => clearTimeout(timer));
+    window.__dlfVast.signal.addEventListener('abort', () => clearTimeout(timer));
     herstart();
   });
 

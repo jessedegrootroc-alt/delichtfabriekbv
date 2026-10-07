@@ -4,137 +4,81 @@ sys.path.insert(0, str(pathlib.Path(__file__).parent))
 from schil import *
 from schil import _plat
 
-UIT = pathlib.Path("/Users/jessevialuxury.nl/Library/CloudStorage/OneDrive-Advalley(2)/Documenten/Code/SERVICE.BASED.LANDINGSPAGE/madegro")
-
 FAQ = [
-    ("Werken jullie ook voor kleinere bedrijven?", [
-        "Ja. De aanpak schaalt mee: bij een bedrijf van vijftien man ziet een traject er anders uit dan bij een fabriek met tweehonderd medewerkers, maar de vragen zijn dezelfde.",
-        "Bij minder dan 25 medewerkers hoeft een RI&amp;E in veel gevallen niet getoetst te worden door een kerndeskundige. Dat scheelt tijd en geld; we kijken samen wat er in jouw situatie wel en niet moet.",
+    ("Maken jullie ook armaturen op maat?", [
+        "Ja. Tunnelarmaturen ontwerpen en produceren we in eigen beheer op klantspecificatie, en voor bruggen, trappen en bijzondere objecten maken we verlichting die er niet uit de catalogus is: leuningverlichting op 48V, grondspots in een trap, een UV-A lichtbak voor een restauratieatelier.",
+        "Alles gebeurt in eigen huis in Wormerveer: ontwerp, engineering, productie en installatie.",
     ]),
-    ("Hoe lang duurt een traject?", [
-        "Een safety check is meestal binnen een week rond, inclusief rapportage. Een RI&amp;E met plan van aanpak kost twee tot zes weken, afhankelijk van de omvang en het aantal locaties.",
-        "Een gedragstraject loopt langer: cultuur verandert niet in een maand. We werken daar in blokken, met vaste meetmomenten.",
+    ("Kunnen bestaande armaturen worden omgebouwd naar LED?", [
+        "Ja. Met een LED-geartray vervangen we alleen de binnenkant: module, driver en waar nodig optiek en venster. De behuizing blijft hangen. Er zijn geartrays voor tunnelarmaturen en voor de Schréder Valentino en Albany, en we bouwen TL en CDO om naar LED.",
     ]),
-    ("Blijven jullie betrokken na afloop?", [
-        "Ja. Het doel is dat je het zelf kunt, niet dat je ons nodig blijft hebben. Daarom dragen we werkwijzen over aan je eigen mensen en blijven we daarna bereikbaar voor vragen.",
-        "Veel klanten kiezen voor een periodieke check om scherp te blijven.",
+    ("Welke lichtkleuren en sturingen leveren jullie?", [
+        "Standaard 2200K, 3000K en 4000K; afwijkende kleuren op aanvraag. Voor de sturing: Aan/Uit, DALI of DALI SR, 1-10V, of een Dynadimmer met het standaard 3A-dimregime of een klantspecifiek regime.",
     ]),
 ]
 
-# De drie cijfers komen uit Martins eigen LinkedIn-profiel: MADEGRO staat daar
-# als eigen bedrijf sinds juli 2002, met achttien opdrachtgevers bij naam.
-# Het aantal branches is uit diezelfde lijst geteld.
-# TODO-CONTENT: laat Martin ze bevestigen. Er stond hier eerder "450 cursisten
-# opgeleid"; dat cijfer was verzonnen en is nergens op terug te voeren.
-USPS = [
-    ("24", "jaar zelfstandig", "MADEGRO bestaat sinds 2002. De adviezen komen uit ervaring op de vloer, niet uit een handboek."),
-    ("18", "opdrachtgevers", "Van constructiebedrijf tot energiecentrale, van verpakkingsfabriek tot afvalverwerker."),
-    ("6", "branches", "Industrie, energie, bouw en infra, voedingsmiddelen, verpakking en afvalverwerking."),
+# De drie getallen en waar ze vandaan komen:
+# - 5 jaar garantie: de badge "Made in Holland, vijf jaar garantie" op de bronsite;
+# - 200 lumen per watt: bijschrift "vervangende geartray zeer efficiënt 200 lumen per watt";
+# - 365 dagen: "De Solarbolder ... geeft 365 dagen per jaar licht in de duisternis".
+CIJFERS = [
+    ("5", "jaar garantie", "Op onze armaturen, ontworpen en gemaakt in Nederland."),
+    ("200", "lumen per watt", "Het rendement van onze efficiëntste LED-geartray voor bestaande armaturen."),
+    ("365", "dagen per jaar licht", "De Solarbolder werkt op zon en daglicht, zonder aansluiting op het net."),
 ]
 
-# De projectrijen komen uit dezelfde lijst als het cases-overzicht (schil.py),
-# zodat een wijziging niet op twee plekken hoeft.
-PROJECTEN = CASES[:3]
+HOME_PROJECTEN = ["brug-buikslotermeer-amsterdam", "solarbolder-schielandhuis-rotterdam", "verledden-tunnel-geartray-22w"]
 
-def projectkaart(c, grijs):
-    return f'''      <a class="cases-grid__row {'cases-grid__row--grey' if grijs else 'cases-grid__row--white'} hover--icon"
-         href="case.html?slug=case-{c["slug"]}" aria-label="{c["klant"]}: {_plat(c["titel"])}">
-        <div class="cases-grid__body">
-          <div class="cases-grid__meta">
-            <span class="cases-grid__meta-item">{c["dienst"]}</span>
-            <span class="cases-grid__meta-item">{c["plaats"]}</span>
-          </div>
-          <h3 class="cases-grid__title">{c["klant"]}</h3>
-          <div class="cases-grid__wrapper">
-            <p class="cases-grid__text">{c["kort"]}</p>
-            {icoonknop("button--icon--54", "button--secundair")}
-          </div>
-        </div>
-        <figure class="cases-grid__image">
-          {foto(c["beeld"], maten="(max-width: 991px) 100vw, 50vw")}
-        </figure>
-      </a>'''
+INTROS_ARMATUREN = [
+    "Een staand armatuur dat alleen zon en daglicht nodig heeft. Ontwerp van Atelier LEK, gemaakt in Nederland in RVS en terrazzo.",
+    "In eigen beheer ontworpen en geproduceerd op klantspecificatie. Slagvast tot IK10, optioneel met antigraffiticoating.",
+    "Het Citylight-armatuur voor straat, plein en speelplaats: slagvast polycarbonaat en een optiek die het licht legt waar het hoort.",
+]
+armaturen = "\n".join(aanbodkaart(i, a, intro, "Armatuur")
+                      for i, (a, intro) in enumerate(zip(ARMATUREN, INTROS_ARMATUREN)))
 
+diensten = "\n".join(fotokaart(i, d) for i, d in enumerate(DIENSTEN))
 
-projecten = "\n".join(projectkaart(c, grijs=(i % 2 == 0)) for i, c in enumerate(PROJECTEN))
+projecten = "\n".join(projectrij(project(s), grijs=(i % 2 == 0)) for i, s in enumerate(HOME_PROJECTEN))
 
-usps = "\n".join(f'''        <div>
+cijfers = "\n".join(f'''        <div>
           <div class="panel panel--{'grey' if i % 2 == 0 else 'wit'}">
             <p class="usp__getal" data-telop="{getal}">{getal}</p>
             <p class="usp__label">{label}</p>
             <p class="panel__body">{tekst}</p>
           </div>
-        </div>''' for i, (getal, label, tekst) in enumerate(USPS))
-
-INTROS_DIENSTEN = [
-    "Het gedrag op de werkvloer laten aansluiten op wat er op papier staat, met de Veiligheidsladder als meetlat.",
-    "De wettelijk verplichte risico-inventarisatie, vertaald naar een plan van aanpak dat je echt kunt uitvoeren.",
-    "Periodiek toetsen of de praktijk nog klopt met de eisen, met een rapportage waar concrete punten in staan.",
-]
-diensten = "\n".join(dienstkaart(i, d, intro)
-                     for i, (d, intro) in enumerate(zip(SERVICES, INTROS_DIENSTEN)))
-
-cursussen = "\n".join(cursuskaart(i, c) for i, c in enumerate(CURSUSSEN))
-
-# De vierde waarde is de foto naast het citaat, de vijfde het logo van de
-# opdrachtgever. Dat is bewust een werkplek en
-# geen portret: van deze mensen hebben we geen foto, en een willekeurig gezicht
-# naast een naam zetten maakt er een bestaand persoon van die dit nooit gezegd
-# heeft.
-TESTIMONIALS = [
-    # TODO-CONTENT: echte getuigenissen aanleveren; onderstaande namen zijn fictief
-    ("De rapportage was de eerste die onze ploegleiders uit zichzelf hebben doorgelezen. Geen lijst met tekortkomingen, maar een paar dingen die je maandag kunt aanpakken.",
-     "Karin Vermeer", "KAM-co&ouml;rdinator, Van Deursen Metaal B.V.", "productiehal", "van-deursen-metaal"),
-    ("We dachten dat we op trede vier zaten. Na de nulmeting bleek het drie te zijn, en dat gesprek was precies wat we nodig hadden.",
-     "Stefan de Bruin", "Operationeel manager, Rivierpoort Logistiek", "transport", "rivierpoort-logistiek"),
-    ("MADEGRO praat met de mensen op de vloer, niet alleen met de directie. Dat merk je aan wat er daarna verandert.",
-     "Hans Molenaar", "Directeur, Merwede Bouwgroep", "bouwplaats", "merwede-bouwgroep"),
-    ("Het gekke is: we hebben niets nieuws bedacht. We hebben opgeschreven wat de beste ploeg al deed.",
-     "Ellen Rietveld", "Planner, Hollands Diep Transport", "overleg", "hollands-diep-transport"),
-    ("Twee dagen meelopen was genoeg. Ze zagen dingen die wij al jaren niet meer zien.",
-     "Peter Vonk", "Terminalmanager, Waalhaven Terminal", "haven", "waalhaven-terminal"),
-    ("We hadden een RI&amp;E om te hebben. Nu hebben we er een om mee te werken.",
-     "Joke van Wijk", "Preventiemedewerker, De Groot Bouwstoffen", "lassen", "de-groot-bouwstoffen"),
-]
-
+        </div>''' for i, (getal, label, tekst) in enumerate(CIJFERS))
 
 inhoud = f'''  <!-- ================= 01 INTRODUCTIE ================= -->
   <section class="hero" id="s01-introductie" data-header-theme="light">
     <div class="hero--beeld" aria-hidden="true">
-      {foto("logistiek", laden="eager", maten="100vw")}
-      <!-- De film ligt over het stilstaande beeld heen en komt pas in beeld als
-           hij speelt. site.js hangt de bron er pas in op een breed scherm en
-           alleen als beweging aan staat: zonder script, op een telefoon of met
-           prefers-reduced-motion blijft het bij de foto hierboven, en dat is
-           het eerste beeldje van dezelfde film. -->
-      <video class="hero--video" data-herovideo="assets/video/hero-logistiek.mp4"
-             width="1600" height="900" muted loop playsinline preload="none"></video>
+      {foto("hero-tunnel-titan", laden="eager", maten="100vw")}
       <span class="hero--sluier"></span>
     </div>
     <div class="container hero--container">
       <div class="hero--content">
-        <span class="subtitle" style="color:var(--color-white)">Veiligheidskunde en kwaliteit</span>
-        <h1 class="hero--title">Veiligheid die niet alleen op papier klopt</h1>
+        <span class="subtitle" style="color:var(--color-white)">LED-verlichting voor openbare ruimte, outdoor en solar</span>
+        <h1 class="hero--title">Licht dat past bij de plek</h1>
         <div class="hero--intro article-body">
-          <p>MADEGRO helpt productie-, bouw-, techniek- en logistiekbedrijven om het veiligheidsniveau echt omhoog te brengen. Niet met een map in de kast, maar met werkwijzen die op de vloer standhouden.</p>
-          <p>Veiligheid is geen kostenpost. Het is een verbeterdimensie naast kwaliteit, productiviteit en kosten. Meestal zie je het effect het eerst terug in minder stilstand en minder herstelwerk.</p>
+          <p>De Licht Fabriek ontwerpt, engineert en produceert LED-verlichting voor tunnels, bruggen, straten en pleinen: armaturen op maat, de offgrid Solarbolder en LED-geartrays om bestaande armaturen te verledden.</p>
+          <p>Gemaakt in Wormerveer, met vijf jaar garantie.</p>
         </div>
         <div class="hero--actions">
-          {knop("Contact opnemen", "contact.html")}
-          {knop("Over ons", "over-ons.html", "secondary")}
+          {knop("Bespreek je project", "contact.html")}
+          {knop("Bekijk de projecten", "projecten.html", "secondary")}
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ================= 02 WAT MADEGRO DOET ================= -->
+  <!-- ================= 02 WAT WE DOEN ================= -->
   <section class="content-text-side-cta" id="s02-wat-we-doen">
     <div class="container">
       <div class="content-text-side-cta--container background--grey">
         <div class="row gx-0">
           <div class="col-lg-8 col-12">
             <div class="content-text-side-cta--body">
-              <p>Veiligheid is geen papieren oefening. Met wisselende ploegen, nieuwe machines en een inspectie die zomaar langs kan komen, wil je weten waar je staat. MADEGRO brengt dat in beeld en zorgt dat het niveau omhoog gaat, van de werkvloer tot het plan van aanpak.</p>
+              <p>Een tunnel heeft andere maten dan de vorige, een brugleuning moet veilig op lage spanning, en een armatuur dat nog goed hangt hoeft niet weg omdat de lamp verouderd is. Daarom maken we verlichting op de vraag: ontwerp, engineering en productie in eigen huis, en de techniek erin die dimt, lang meegaat en tegen een stootje kan.</p>
             </div>
           </div>
         </div>
@@ -142,42 +86,35 @@ inhoud = f'''  <!-- ================= 01 INTRODUCTIE ================= -->
     </div>
   </section>
 
-  <section class="content-text-side-visual background--white" id="s03-hoe-we-werken">
+  <!-- ================= 03 EEN PARTIJ ================= -->
+  <section class="content-text-side-visual background--white" id="s03-eigen-huis">
     <div class="container">
       <div class="row gx-0">
         <article class="col-lg-4 col-12">
           <div class="content-text-side-visual--stack content-text-side-visual--article">
-            <h2>De regie over veiligheid op je eigen terrein</h2>
+            <h2>Van vraag tot armatuur, onder één dak</h2>
             <div class="content-text-side-visual--body content-fit--quarter">
-              <p>We lopen je terrein af zoals een inspecteur dat zou doen: bij de poort, op de laadkuil, in de hal en op kantoor. Wat we zien leggen we vast in taal die je voormannen begrijpen, met maatregelen die in de planning passen.</p>
-              <p>Daarna dragen we het over. Je eigen mensen houden de RI&amp;E bij, herkennen de risico&rsquo;s en spreken elkaar aan. Wij blijven bereikbaar, maar je hebt ons niet meer nodig om het draaiende te houden.</p>
+              <p>De klantwens wordt vertaald naar een passende oplossing. Onze interne engineering en productie waarborgen de kwaliteit: het ontwerp wordt in 3D uitgewerkt, de behuizing in RVS of polycarbonaat gemaakt, de LED-module en de driver gemonteerd en ingeregeld op het dimregime dat jij wilt.</p>
+              <p>Daarna plaatsen we het armatuur, of leveren we het aan je installateur. Komt er later een vraag, dan zit de kennis van het armatuur nog bij dezelfde mensen.</p>
             </div>
-            {knop("Plan een kennismaking", "contact.html")}
+            {knop("Lees over onze werkwijze", "over-ons.html")}
           </div>
         </article>
       </div>
     </div>
     <div class="content-text-side-visual--visual added-distance">
-      {foto("terrein", maten="(max-width: 991px) calc(100vw - 32px), (max-width: 1199px) calc(100vw - 96px), (max-width: 1352px) 940px, 70vw")}
+      {foto("citylight-2025", maten="(max-width: 991px) calc(100vw - 32px), (max-width: 1199px) calc(100vw - 96px), (max-width: 1352px) 940px, 70vw")}
     </div>
   </section>
 
-  <!-- ================= 04 DE DRIE DIENSTEN ================= -->
-  <section class="content-block" id="s04-diensten">
+  <!-- ================= 04 ARMATUREN ================= -->
+  <section class="content-block" id="s04-armaturen">
     <div class="container">
-      <div class="content-block--container background--white" style="padding-bottom:var(--space-700)">
-        <div class="row">
-          <div class="col-md-8 col-12">
-            <span class="subtitle" style="margin-bottom:var(--space-500)">Wat we doen</span>
-            <h2 class="section-heading">Drie manieren om het veiligheidsniveau te verhogen</h2>
-            <p class="article-body" style="margin-top:var(--space-500); max-width:var(--content-max-half)">
-              De drie diensten grijpen op elkaar in: een safety check laat zien waar je staat, een RI&amp;E legt de risico&rsquo;s en de maatregelen vast, en een gedragstraject zorgt dat het ook zo blijft. Je kunt met elk van de drie beginnen.
-            </p>
-          </div>
-        </div>
-      </div>
+{sectiekop("Armaturen", "Drie armaturen, elk voor een andere plek",
+           "Een offgrid bolder voor waar geen kabel ligt, een tunnelarmatuur dat we op jouw maten maken en een paaltoparmatuur voor straat en plein. Alle drie in 2200K, 3000K of 4000K en dimbaar met DALI, 1-10V of Dynadimmer.",
+           knop("Alle armaturen", "armaturen.html"))}
       <div class="row g-0">
-{diensten}
+{armaturen}
       </div>
     </div>
   </section>
@@ -186,91 +123,70 @@ inhoud = f'''  <!-- ================= 01 INTRODUCTIE ================= -->
   <section class="cases-grid" id="s05-projecten">
     <div class="container">
       <div class="cases-grid__header">
-        <h2 class="cases-grid__heading">Recente trajecten</h2>
-        {knop("Alle cases", "cases.html", "secundair")}
+        <h2 class="cases-grid__heading">Gerealiseerde projecten</h2>
+        {knop("Alle projecten", "projecten.html", "secundair")}
       </div>
-      <!-- TODO-CONTENT: echte projecten, data en locaties aanleveren door Martin -->
       <div class="cases-grid__list">
 {projecten}
       </div>
     </div>
   </section>
 
-  <!-- ================= 06 USP'S ================= -->
-  <section class="content-block" id="s06-usps">
+  <!-- ================= 06 CIJFERS ================= -->
+  <section class="content-block" id="s06-cijfers">
     <div class="container">
-      <div class="content-block--container background--white" style="padding-bottom:var(--space-700)">
-        <div class="row">
-          <div class="col-md-8 col-12">
-            <span class="subtitle" style="margin-bottom:var(--space-500)">In cijfers</span>
-            <h2 class="section-heading">Waar we vandaan komen</h2>
-          </div>
-        </div>
-      </div>
-      <!-- TODO-CONTENT: de drie getallen aanleveren door Martin -->
+{sectiekop("In cijfers", "Waar je op kunt rekenen")}
       <div class="panel-row panel-row--3">
-{usps}
+{cijfers}
       </div>
     </div>
   </section>
 
-  <!-- ================= 07 CURSUSAANBOD ================= -->
-  <section class="content-block" id="s07-cursusaanbod">
+  <!-- ================= 07 DIENSTEN ================= -->
+  <section class="content-block" id="s07-diensten">
     <div class="container">
-      <div class="content-block--container background--white" style="padding-bottom:var(--space-700)">
-        <div class="row">
-          <div class="col-md-8 col-12">
-            <span class="subtitle" style="margin-bottom:var(--space-500)">Cursussen</span>
-            <h2 class="section-heading">Kennis die op de vloer blijft</h2>
-            <p class="article-body" style="margin-top:var(--space-500); max-width:var(--content-max-half)">
-              De cursussen zijn kort en praktisch. Deelnemers werken met situaties uit hun eigen bedrijf, zodat wat ze leren de volgende dag al bruikbaar is.
-            </p>
-          </div>
-          <div class="col-md-4 col-12 text-md-end">
-            {knop("Hele aanbod", "cursusaanbod.html")}
-          </div>
-        </div>
-      </div>
-      <!-- TODO-CONTENT: cursusnamen, doelgroepen, duur en prijzen bevestigen -->
-      <div class="panel-row panel-row--4">
-{cursussen}
+{sectiekop("Diensten", "Ook als er al iets hangt",
+           "Bestaande armaturen verledden met een geartray, verlichting op maat voor een object waar geen standaardarmatuur past, of een warmtebeeld van een installatie die kuren vertoont.",
+           knop("Alle diensten", "diensten.html"))}
+      <div class="panel-row panel-row--3">
+{diensten}
       </div>
     </div>
   </section>
 
-{quoteslider("08", "testimonials", "Wat klanten zeggen", "Uit de praktijk", TESTIMONIALS)}
+{quoteslider("08", "reviews", "Wat opdrachtgevers zeggen", "Uit de samenwerking", REVIEWS)}
 
-{faq_blok("09", FAQ, "Wat mensen meestal eerst vragen")}
+{faq_blok("09", FAQ, "Wat men meestal eerst vraagt")}
 
-  <!-- ================= 10 OVER MADEGRO ================= -->
-  <section class="streamer streamer--employee background--groen" id="s10-madegro">
+  <!-- ================= 10 OVER DE LICHT FABRIEK ================= -->
+  <section class="streamer streamer--employee background--donker" id="s10-over">
     <div class="container">
       <div class="streamer--employee-row">
         <figure class="streamer--employee-portrait">
-          {foto("inspecteur-haven", maten="(max-width: 991px) 100vw, 40vw")}
+          {foto("citylight-mini", maten="(max-width: 991px) 100vw, 40vw")}
         </figure>
         <div class="streamer--employee-panel band">
-          <span class="subtitle" style="color:var(--color-white)">Over MADEGRO</span>
-          <h2 class="streamer--employee-name">Veiligheidskunde sinds 2002</h2>
+          <span class="subtitle" style="color:var(--color-white)">Over De Licht Fabriek</span>
+          <h2 class="streamer--employee-name">Gemaakt in Wormerveer</h2>
           <div class="article-body content-fit--half">
-            <p>MADEGRO is een adviesbureau voor veiligheid, kwaliteit en milieu en bestaat sinds 2002. In die ruim twintig jaar werkten we voor onder meer Cosun Beet Company, Huhtamaki, Stork, Ballast Nedam en GE Vernova: in de industrie, de energiesector en de bouw.</p>
-            <p>We komen de vloer op, kijken hoe het werk echt gaat en vertalen dat naar een paar dingen die je maandag kunt aanpakken. Een veiligheidscultuur haal je niet met een goed plan alleen, maar met gewoontes die het houden als het tegenzit. Daar werken we aan, samen met je eigen mensen.</p>
+            <p>De Licht Fabriek is een Nederlandse maker van LED-verlichting voor de openbare ruimte, outdoor en solar. Vanuit de werkplaats aan de Rosbayerweg in Wormerveer ontwerpen, engineeren en produceren we armaturen, en bouwen we bestaande armaturen om naar LED.</p>
+            <p>We denken in maatwerk, duurzaamheid en slim licht: een armatuur dat past bij het project, lang meegaat en vanzelf terugregelt als er niemand is. Op wat we maken geven we vijf jaar garantie.</p>
           </div>
           <div>
-            {knop("Meer over MADEGRO", "over-ons.html")}
+            {knop("Meer over ons", "over-ons.html")}
           </div>
         </div>
       </div>
     </div>
   </section>
 
-{slotblok("11", "Even sparren over waar je staat?")}
+{slotblok("11", "Een plek die licht nodig heeft?")}
 '''
 
 (UIT / "index.html").write_text(pagina(
     bestand="index.html",
-    titel="MADEGRO | Veiligheidskunde voor productie, bouw en techniek",
-    omschrijving="MADEGRO brengt het veiligheidsniveau van bedrijven omhoog: veilig gedrag, EHS RI&E en safety checks. Praktisch, met kennisoverdracht aan je eigen mensen.",
+    titel="De Licht Fabriek | LED-verlichting voor openbare ruimte, outdoor en solar",
+    omschrijving="De Licht Fabriek ontwerpt, engineert en produceert LED-verlichting in Wormerveer: tunnelarmaturen op maat, de offgrid Solarbolder, het Citylight paaltoparmatuur en LED-geartrays voor retrofit. Vijf jaar garantie.",
     namespace="home",
     pagina_css="index.css",
     css_naam="index",

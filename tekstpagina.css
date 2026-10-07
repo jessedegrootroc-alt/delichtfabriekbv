@@ -46,7 +46,7 @@
 
 /* Nog aan te leveren tekst. Geen streepjesrand en geen radius (DR-1/DR-3):
    een geel vlak is opvallend genoeg. */
-.invulblok { background: var(--color-geel); padding: var(--space-500); margin-bottom: 1.6em; }
+.invulblok { background: var(--color-oranje); padding: var(--space-500); margin-bottom: 1.6em; }
 .invulblok p { margin: 0; }
 .invulblok p + p { margin-top: var(--space-300); }
 .invulblok::before {

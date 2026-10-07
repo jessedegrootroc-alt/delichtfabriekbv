@@ -233,6 +233,7 @@ detailpagina({
     "galerij": {
         "kop": "Voorbeelden van opnamen",
         "intro": "Een paar warmtebeelden uit onze praktijk: wat je op het beeld ziet, en waar het op wijst.",
+        "kolommen": 3,
         "items": [
             ("Elektrisch", "Opwarmende aansluiting",
              "Een klem die duidelijk warmer is dan de aders ernaast: een losse of overbelaste verbinding.", "thermo-connector"),
@@ -240,8 +241,6 @@ detailpagina({
              "Dezelfde kast op het warmtebeeld en op de gewone foto, zodat de afwijking te herleiden is.", "thermo-kast"),
             ("Machine", "Motor in bedrijf",
              "Een elektromotor tijdens het draaien; de warmste delen springen eruit.", "thermo-motor"),
-            ("Verwarming", "Radiator met koud vlak",
-             "Een radiator die niet gelijkmatig warm wordt, zichtbaar als een koud vlak onderin.", "thermo-radiator"),
         ],
     },
     "faq": [

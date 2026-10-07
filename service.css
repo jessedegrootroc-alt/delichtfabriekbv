@@ -23,7 +23,7 @@
   padding: var(--space-panel) var(--inset-x);
   background-color: var(--color-white);
   margin-left: calc(var(--trede) * 6%);
-  border-left: 4px solid var(--color-geel);
+  border-left: 4px solid var(--color-oranje);
 }
 .trede:nth-child(even) { background-color: var(--color-grey); }
 @media (max-width: 991px) {

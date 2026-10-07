@@ -17,7 +17,7 @@
    (de tekstpagina's) blijven kloppen. */
 .app__wrapper {
   background-color: var(--color-background, #FFFFFF);
-  color: var(--color-text-primary, #014144);
+  color: var(--color-text-primary, #111518);
   min-height: 100svh;
   display: flex;
   flex-direction: column;

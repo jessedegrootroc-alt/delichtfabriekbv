@@ -24,7 +24,7 @@
    de site precies zoals hij zonder dit bestand zou doen.
    ========================================================================== */
 
-window.MADEGRO = window.MADEGRO || {};
+window.De Licht Fabriek = window.De Licht Fabriek || {};
 
 (() => {
   const { gsap, ScrollTrigger, ScrollSmoother } = window;
@@ -79,7 +79,7 @@ window.MADEGRO = window.MADEGRO || {};
     },
   };
 
-  window.MADEGRO.smoother = api;
+  window.De Licht Fabriek.smoother = api;
   api.maak();
 
   /* --------------------------------------------------------- ankerlinks ----

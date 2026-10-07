@@ -184,17 +184,31 @@ def detailpagina(cfg):
 
         elif sectie == "galerij":
             g = cfg["galerij"]
-            kleuren = ("grey", "white", "white", "grey")
-            kaarten = "\n".join(
-                beeldkaart(kop, tekst, beeld, meta=meta, kleur=kleuren[i % 4])
-                for i, (meta, kop, tekst, beeld) in enumerate(g["items"]))
+            if g.get("kolommen") == 3:
+                # Drie kleinere panelen met de foto erboven, voor een reeks
+                # voorbeelden die geen eigen verhaal vertellen.
+                kaarten = "\n".join(f'''        <div>
+          <div class="panel panel--{'grey' if i % 2 == 0 else 'wit'} panel--beeld">
+            <figure class="panel__beeld">
+              {foto(beeld, maten=BEELD_MATEN_3)}
+            </figure>
+            <span class="panel__meta">{meta}</span>
+            <h3 class="panel__title">{kop}</h3>
+            <p class="panel__body">{tekst}</p>
+          </div>
+        </div>''' for i, (meta, kop, tekst, beeld) in enumerate(g["items"]))
+                raster = f'<div class="panel-row panel-row--3">\n{kaarten}\n      </div>'
+            else:
+                kleuren = ("grey", "white", "white", "grey")
+                kaarten = "\n".join(
+                    beeldkaart(kop, tekst, beeld, meta=meta, kleur=kleuren[i % 4])
+                    for i, (meta, kop, tekst, beeld) in enumerate(g["items"]))
+                raster = f'<div class="row g-0">\n{kaarten}\n      </div>'
             blokken.append(f'''  <!-- ================= {n} IN BEELD ================= -->
   <section class="content-block" id="s{n}-{g.get("ident", "in-beeld")}">
     <div class="container">
 {sectiekop(g.get("subtitel", "In beeld"), g["kop"], g.get("intro"))}
-      <div class="row g-0">
-{kaarten}
-      </div>
+      {raster}
     </div>
   </section>''')
 

@@ -48,22 +48,22 @@
 
 :root {
   /* ---------- Merkkleuren (§2) ---------- */
-  --color-geel:              #FFFC58;
-  --color-geel-hover:        #F2EE3E;
-  /* Het groen komt uit het logo dat Martin heeft aangeleverd: #017E84. Alle
+  --color-oranje:              #FF6310;
+  --color-oranje-hover:        #E85300;
+  /* Het groen komt uit het logo dat Martin heeft aangeleverd: #2A3340. Alle
      drie de tonen hebben dezelfde tint (182,7&deg;) en verzadiging als het logo
      zelf; ze verschillen alleen in helderheid. Daarvoor stond hier een groen
      dat niet uit de huisstijl kwam. */
-  --color-groen:              #017E84;  /* het logo: merkvlakken en accenten */
-  --color-groen-diep:         #01575B;  /* haarlijnen en kleine labels */
+  --color-leisteen:              #2A3340;  /* het logo: merkvlakken en accenten */
+  --color-leisteen-diep:         #1C232D;  /* haarlijnen en kleine labels */
   --color-ink:               #030104;
   --color-black:             #000000;
   --color-white:             #ffffff;
   --color-grey:              #f1f1f1;
   --color-grey-placeholder:  #ededed;
   --color-grey-diep:         #d7d7d7;  /* vulling van de grijze icoonknop */
-  --color-groen-diepst:      #014144;  /* lopende tekst, sluier over foto, donkerste vlak */
-  --color-focus:             var(--color-groen-diepst);
+  --color-nacht:      #111518;  /* lopende tekst, sluier over foto, donkerste vlak */
+  --color-focus:             var(--color-nacht);
 
   /* Bediening. Een groen vlak wordt bij aanwijzen een stap donkerder en bij
      indrukken nog een stap; dat zijn dezelfde twee tonen als hierboven. Ze
@@ -73,35 +73,35 @@
 
      Een vlak dat al op de donkerste toon staat (de knop naar een case) kan niet
      donkerder en gaat de ramp juist op; dat staat bij .button--secundair. */
-  --color-groen-hover:       var(--color-groen-diep);
-  --color-groen-pressed:     var(--color-groen-diepst);
+  --color-leisteen-hover:       var(--color-leisteen-diep);
+  --color-leisteen-pressed:     var(--color-nacht);
 
   /* ---------- Semantisch ---------- */
   --color-background:      #FFFFFF;
   --color-surface:         var(--color-white);
   --color-surface-alt:     var(--color-grey);
-  --color-surface-inverse: var(--color-groen);
-  /* Lopende tekst staat in het diepere groen. Het merkgroen #017E84 haalt op
+  --color-surface-inverse: var(--color-leisteen);
+  /* Lopende tekst staat in het diepere groen. Het merkgroen #2A3340 haalt op
      wit 4.86:1 en op het grijs #F1F1F1 nog maar 4.30:1, en dat is onder de
      4.5:1 die kleine tekst nodig heeft. Koppen mogen wél het merkgroen
      houden: die zijn groot genoeg voor de 3:1-eis. */
-  --color-text-primary:    var(--color-groen-diepst);
+  --color-text-primary:    var(--color-nacht);
   --color-text-inverse:    var(--color-white);
   --color-text-on-accent:  var(--color-black);
-  --color-heading:         var(--color-groen-diepst);
-  --color-accent:          var(--color-geel);
-  --color-accent-hover:    var(--color-geel-hover);
-  --color-border-hairline: var(--color-groen-diep);
+  --color-heading:         var(--color-nacht);
+  --color-accent:          var(--color-oranje);
+  --color-accent-hover:    var(--color-oranje-hover);
+  --color-border-hairline: var(--color-leisteen-diep);
   --color-divider:         var(--color-grey);
 
   /* ---------- Overlays en verlopen ---------- */
-  --overlay-card-backdrop: rgba(1, 87, 91, 0.35);
+  --overlay-card-backdrop: rgba(28, 35, 45, 0.35);
   --overlay-panel:         rgba(0, 0, 0, 0.40);
   --overlay-slide-in:      rgba(0, 0, 0, 0.75);
   --overlay-modal:         rgba(0, 0, 0, 0.80);
   --gradient-black-fade:   linear-gradient(0deg, rgba(0,0,0,0.30) 0%, rgba(0,0,0,0) 100%);
-  --gradient-groen-fade:   linear-gradient(0deg, rgba(1,65,68,0.60) 0%, rgba(1,65,68,0) 100%);
-  --gradient-nav-card:     linear-gradient(180deg, #014144 0%, #017E84 14.21%, rgba(0,0,0,0) 62.32%),
+  --gradient-donker-fade:   linear-gradient(0deg, rgba(17, 21, 24,0.60) 0%, rgba(17, 21, 24,0) 100%);
+  --gradient-nav-card:     linear-gradient(180deg, #111518 0%, #2A3340 14.21%, rgba(0,0,0,0) 62.32%),
                            linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5));
 
   /* ---------- Dekking ---------- */
@@ -333,14 +333,14 @@ li { font-family: var(--font-light); font-weight: var(--weight-light); font-size
 }
 
 /* Het merkgroen mag op de grote koppen: vanaf 24px geldt de 3:1-eis en die
-   haalt #017E84 ook op het grijs (4.30:1). Kleinere koppen blijven in het
+   haalt #2A3340 ook op het grijs (4.30:1). Kleinere koppen blijven in het
    diepe groen, anders zakken ze onder de 4.5:1. */
 .section-heading,
 .cases-grid__heading,
 .font-size--xl,
 .cta-blocks-advanced__title,
 .usp__getal,
-.streamer--employee-name { color: var(--color-groen); }
+.streamer--employee-name { color: var(--color-leisteen); }
 
 /* Fluïde kopmaten (§3.3) */
 .hero--title     { font-size: clamp(24px, 8vw, 80px); }
@@ -352,7 +352,7 @@ li { font-family: var(--font-light); font-weight: var(--weight-light); font-size
 h1 > span.highlight, h2 > span.highlight, h3 > span.highlight {
   padding: 0 1rem 0.25rem;
   border-radius: var(--radius-chip);
-  background-color: var(--color-geel);
+  background-color: var(--color-oranje);
   color: var(--color-text-primary);
 }
 
@@ -399,7 +399,7 @@ h1 > span.highlight, h2 > span.highlight, h3 > span.highlight {
 /* Een geel gemarkeerd gat in de content: hier hoort een echt gegeven te staan
    dat we nog niet hebben. Bewust opvallend, zodat het niet per ongeluk live gaat. */
 .invulveld {
-  background: var(--color-geel); padding: 0 .25em;
+  background: var(--color-oranje); padding: 0 .25em;
   font-family: var(--font-medium); font-weight: var(--weight-medium); color: var(--color-text-primary);
 }
 
@@ -490,9 +490,9 @@ main > section:has(+ section) > .container > .content-text-side-cta--container {
 
 .background--white { background-color: var(--color-white); }
 .background--grey  { background-color: var(--color-grey); }
-.background--groen  { background-color: var(--color-groen); color: var(--color-white); }
-.background--groen :is(h1,h2,h3,h4,h5,h6,p,li,a:not(.button)) { color: var(--color-white); }
-.background--geel  { background-color: var(--color-geel); color: var(--color-text-primary); }
+.background--donker  { background-color: var(--color-leisteen); color: var(--color-white); }
+.background--donker :is(h1,h2,h3,h4,h5,h6,p,li,a:not(.button)) { color: var(--color-white); }
+.background--oranje  { background-color: var(--color-oranje); color: var(--color-text-primary); }
 
 .ratio-1x1  { aspect-ratio: 1/1;  display: flex; align-items: center; justify-content: center; width: 100%; }
 .ratio-16x9 { aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; width: 100%; }
@@ -524,22 +524,22 @@ main > section:has(+ section) > .container > .content-text-side-cta--container {
   text-transform: uppercase;
   transition: all var(--duration-legacy) var(--ease-legacy);
 }
-.button--primary   { background-color: var(--color-geel);  color: var(--color-black); }
+.button--primary   { background-color: var(--color-oranje);  color: var(--color-black); }
 .button--secondary { background-color: var(--color-white); color: var(--color-black); }
-.button--groen      { background-color: var(--color-groen);  color: var(--color-white); }
+.button--donker      { background-color: var(--color-leisteen);  color: var(--color-white); }
 /* De tweede keus, in diepgroen. Diensten en cursussen zijn waar iemand voor
    komt en houden het geel; de cases zijn onderbouwing daarbij en trekken
    daarom niet dezelfde aandacht. */
-.button--secundair  { background-color: var(--color-groen-diepst); color: var(--color-white); }
-.button:hover      { background-color: var(--color-geel-hover); color: var(--color-black); }
+.button--secundair  { background-color: var(--color-nacht); color: var(--color-white); }
+.button:hover      { background-color: var(--color-oranje-hover); color: var(--color-black); }
 /* Een groen vlak wordt donkerder in plaats van van kleur te wisselen. */
-.button--groen:hover  { background-color: var(--color-groen-hover); color: var(--color-white); }
-.button--groen:active { background-color: var(--color-groen-pressed); color: var(--color-white); }
+.button--donker:hover  { background-color: var(--color-leisteen-hover); color: var(--color-white); }
+.button--donker:active { background-color: var(--color-leisteen-pressed); color: var(--color-white); }
 /* Blijft bij hover in het groen: naar geel springen zou hem alsnog als
    primaire actie laten lezen. Deze knop staat al op de donkerste toon en kan
    dus niet donkerder; hij gaat de ramp op en zakt bij indrukken terug. */
-.button--secundair:hover  { background-color: var(--color-groen); color: var(--color-white); }
-.button--secundair:active { background-color: var(--color-groen-diep); color: var(--color-white); }
+.button--secundair:hover  { background-color: var(--color-leisteen); color: var(--color-white); }
+.button--secundair:active { background-color: var(--color-leisteen-diep); color: var(--color-white); }
 .button:has(.button--icon) { padding-left: 0; }
 .button--link {
   padding: 0;
@@ -625,19 +625,19 @@ main > section:has(+ section) > .container > .content-text-side-cta--container {
    accentvulling die van een pilletje rechts naar de hele cirkel groeit. De
    pijlen blijven groen, want die staan zowel op grijs als op geel goed. */
 .button--icon { background-color: var(--color-grey); }
-.button--icon .button--circle { background-color: var(--color-geel); }
+.button--icon .button--circle { background-color: var(--color-oranje); }
 .button--icon :is(svg, i) { fill: none; color: var(--color-text-primary); }
 
-.button--icon.button--groen-vlak { background-color: var(--color-groen); }
-.button--icon.button--groen-vlak :is(svg, i) { fill: none; color: var(--color-white); }
-.button--icon.button--groen-vlak .button--circle { background-color: var(--color-geel); }
-.button--icon.button--groen-vlak:hover :is(svg, i),
-.hover--icon:hover .button--icon.button--groen-vlak :is(svg, i) { fill: none; color: var(--color-text-primary); }
+.button--icon.button--donker-vlak { background-color: var(--color-leisteen); }
+.button--icon.button--donker-vlak :is(svg, i) { fill: none; color: var(--color-white); }
+.button--icon.button--donker-vlak .button--circle { background-color: var(--color-oranje); }
+.button--icon.button--donker-vlak:hover :is(svg, i),
+.hover--icon:hover .button--icon.button--donker-vlak :is(svg, i) { fill: none; color: var(--color-text-primary); }
 /* Dezelfde tweede keus voor de ronde knop: de vulling wordt diepgroen en de
    pijl wit, in plaats van geel met een groene pijl. */
-.button--icon.button--secundair .button--circle { background-color: var(--color-groen-diepst); }
+.button--icon.button--secundair .button--circle { background-color: var(--color-nacht); }
 .button--icon.button--secundair:active .button--circle,
-.hover--icon:active .button--icon.button--secundair .button--circle { background-color: var(--color-groen-diep); }
+.hover--icon:active .button--icon.button--secundair .button--circle { background-color: var(--color-leisteen-diep); }
 .button--icon.button--secundair :is(svg, i) { fill: none; color: var(--color-white); }
 
 /* Derde keus: helemaal grijs. Voor knoppen die geen actie zijn maar bediening,
@@ -666,7 +666,7 @@ main > section:has(+ section) > .container > .content-text-side-cta--container {
 }
 .cta-blocks-advanced__banner {
   position: relative; margin: 0; width: 100%; height: 192px;
-  overflow: hidden; background: var(--color-groen); flex-shrink: 0;
+  overflow: hidden; background: var(--color-leisteen); flex-shrink: 0;
 }
 .cta-blocks-advanced__banner img {
   width: 100%; height: 100%; object-fit: cover; display: block;
@@ -682,8 +682,8 @@ main > section:has(+ section) > .container > .content-text-side-cta--container {
 }
 .cta-blocks-advanced__body--bg-grey  { background-color: var(--color-grey); }
 .cta-blocks-advanced__body--bg-white { background-color: var(--color-white); }
-.cta-blocks-advanced__body--bg-geel  { background-color: var(--color-geel); }
-.cta-blocks-advanced__body--bg-groen  { background-color: var(--color-groen); }
+.cta-blocks-advanced__body--bg-geel  { background-color: var(--color-oranje); }
+.cta-blocks-advanced__body--bg-groen  { background-color: var(--color-leisteen); }
 .cta-blocks-advanced__body--bg-groen :is(h1,h2,h3,h4,h5,h6,p,li) { color: var(--color-white); }
 .cta-blocks-advanced__wrapper {
   flex: 1 1 auto; display: grid; grid-template-columns: 5fr 1fr;
@@ -695,7 +695,7 @@ main > section:has(+ section) > .container > .content-text-side-cta--container {
                                 font-size: 1rem; line-height: 1.5; color: var(--color-ink); }
 .cta-blocks-advanced__content p { margin: 0; font: inherit; }
 .cta-blocks-advanced__content p + p { margin-top: 1em; }
-.cta-blocks-advanced__card--linked:focus-visible { outline: 2px solid var(--color-groen); outline-offset: 2px; }
+.cta-blocks-advanced__card--linked:focus-visible { outline: 2px solid var(--color-leisteen); outline-offset: 2px; }
 
 /* Horizontale variant: beeld en tekst naast elkaar */
 .cta-blocks-advanced__card--horizontal { flex-direction: row-reverse; }
@@ -783,7 +783,7 @@ main > section:has(+ section) > .container > .content-text-side-cta--container {
   transition: transform var(--duration-image) var(--ease-image);
 }
 .cases-grid__row.hover--icon:hover .cases-grid__image img { transform: scale(1.05); }
-.cases-grid__row:focus-visible { outline: 2px solid var(--color-groen); outline-offset: -2px; }
+.cases-grid__row:focus-visible { outline: 2px solid var(--color-leisteen); outline-offset: -2px; }
 @media (max-width: 991px) {
   .cases-grid__row { flex-direction: column-reverse; }
   .cases-grid__body { padding: var(--space-panel-md) var(--inset-x); }
@@ -885,7 +885,7 @@ main > section:has(+ section) > .container > .content-text-side-cta--container {
 
 .content-block--container { padding: var(--space-section-y) var(--inset-x); }
 @media (max-width: 576px) { .content-block--container { padding: var(--space-section-y-mobile) var(--inset-x); } }
-.content-block--container.background--groen { color: var(--color-white); }
+.content-block--container.background--donker { color: var(--color-white); }
 .content-block--content strong { font-size: 2rem; line-height: 140%; font-weight: var(--weight-regular); }
 
 /* ============================================================================
@@ -954,14 +954,14 @@ main > section:has(+ section) > .container > .content-text-side-cta--container {
    dan is dit de regel:
 
      background-image:
-       linear-gradient(rgba(1, 65, 68, .70), rgba(1, 65, 68, .70)),
+       linear-gradient(rgba(17, 21, 24, .70), rgba(17, 21, 24, .70)),
        url("assets/patronen/cta-patroon-2880.webp");
 
    36% waas is de bovengrens waarbij wit overal nog 4,5:1 haalt. Het alternatief
    zonder waas is de tekst uit het midden halen, naar de donkere hoek
    linksonder. */
 .cta-slot__hoofd {
-  background-color: var(--color-groen-diepst);
+  background-color: var(--color-nacht);
   /* image-set laat de browser kiezen: op een telefoon is 2880px zinloos breed.
      De url() eronder is de terugval voor browsers zonder image-set. */
   background-image: url("assets/patronen/cta-patroon-1440.webp");
@@ -1081,7 +1081,7 @@ main > section:has(+ section) > .container > .content-text-side-cta--container {
 }
 .kerncijfer__getal {
   margin: 0; font-family: var(--font-light); font-weight: var(--weight-light);
-  font-size: clamp(2.5rem, 2rem + 2vw, 4rem); line-height: 1; color: var(--color-groen);
+  font-size: clamp(2.5rem, 2rem + 2vw, 4rem); line-height: 1; color: var(--color-leisteen);
 }
 .kerncijfer__eenheid { font-size: 1rem; margin-left: var(--space-200);
                        font-family: var(--font-medium); font-weight: var(--weight-medium); }
@@ -1244,18 +1244,18 @@ main > section:has(+ section) > .container > .content-text-side-cta--container {
 .vlak__tekst a { color: inherit; text-decoration: underline; }
 .vlak__tekst a:hover { color: var(--color-focus); }
 
-.vlak--geel  { background-color: var(--color-geel); }
+.vlak--oranje  { background-color: var(--color-oranje); }
 .vlak--grijs { background-color: var(--color-grey); }
 .vlak--wit   { background-color: var(--color-white); }
 /* Het merkgroen uit het logo, niet de donkerste toon: dit is een gekleurd vlak
    in een rij naast geel, grijs en wit, en dan hoort er de merkkleur te staan.
-   Wit haalt op #017E84 4,86:1; de kop is 24px en heeft aan 3:1 genoeg, de tekst
+   Wit haalt op #2A3340 4,86:1; de kop is 24px en heeft aan 3:1 genoeg, de tekst
    is 16px en zit met 4,86 net boven de 4,5 die daarvoor geldt. Wordt die tekst
    ooit kleiner, dan moet dit vlak terug naar een donkerdere toon. */
-.vlak--groen { background-color: var(--color-groen); }
-.vlak--groen .vlak__kop,
-.vlak--groen .vlak__tekst { color: var(--color-white); }
-.vlak--groen .vlak__tekst a:hover { color: var(--color-geel); }
+.vlak--donker { background-color: var(--color-leisteen); }
+.vlak--donker .vlak__kop,
+.vlak--donker .vlak__tekst { color: var(--color-white); }
+.vlak--donker .vlak__tekst a:hover { color: var(--color-oranje); }
 
 .vlak:first-child { padding-left: var(--inset-x); }
 .vlak:last-child  { padding-right: var(--inset-x); }
@@ -1359,7 +1359,7 @@ main > section:has(+ section) > .container > .content-text-side-cta--container {
 /* Het streepje uit de referentie: kort, boven de naam. */
 .quote__streep {
   width: 88px; height: 0; margin: var(--space-800) 0 var(--space-600);
-  border: 0; border-top: 1px solid var(--color-groen);
+  border: 0; border-top: 1px solid var(--color-leisteen);
 }
 .quote__naam {
   font-family: var(--font-regular); font-weight: var(--weight-regular);
@@ -1390,7 +1390,7 @@ main > section:has(+ section) > .container > .content-text-side-cta--container {
 /* Het tijdbalkje: loopt in zes seconden vol, dan wisselt het citaat. Pauzeert
    alleen zolang er iets in de sectie focus heeft. */
 .quotes__timer { display: block; width: 64px; height: 3px; margin-left: var(--space-300); border-radius: 2px; background: var(--color-grey-diep); overflow: hidden; }
-.quotes__timer-balk { display: block; height: 100%; width: 100%; background: var(--color-groen); transform: scaleX(0); transform-origin: left center; }
+.quotes__timer-balk { display: block; height: 100%; width: 100%; background: var(--color-leisteen); transform: scaleX(0); transform-origin: left center; }
 .quotes__timer-balk.is-lopend { animation: quotes-timer 6s linear forwards; }
 .quotes--gepauzeerd .quotes__timer-balk { animation-play-state: paused; }
 @keyframes quotes-timer { from { transform: scaleX(0); } to { transform: scaleX(1); } }
@@ -1462,11 +1462,11 @@ main > section:has(+ section) > .container > .content-text-side-cta--container {
   transition: background-color var(--duration-base) var(--ease-rotate);
 }
 .accordion__header:hover .accordion__suffix,
-.accordion__item.open .accordion__suffix { background-color: var(--color-geel); }
+.accordion__item.open .accordion__suffix { background-color: var(--color-oranje); }
 .accordion__icon { position: absolute; inset: 12px; width: 16px; height: 16px; }
 .accordion__icon::before, .accordion__icon::after {
   content: ""; position: absolute; top: 50%; left: 0; width: 16px; height: 2px;
-  margin-top: -1px; background-color: var(--color-groen);
+  margin-top: -1px; background-color: var(--color-leisteen);
   transition: transform var(--duration-quick) ease-out;
 }
 .accordion__icon::after { transform: rotate(90deg); }
@@ -1507,7 +1507,7 @@ textarea.field { height: auto; min-height: 10em; line-height: 1.5; }
 #hamburger:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 2px; }
 
 a:focus-visible, button:focus-visible, [tabindex]:focus-visible, .field:focus-visible {
-  outline: 2px solid var(--color-groen); outline-offset: 2px;
+  outline: 2px solid var(--color-leisteen); outline-offset: 2px;
 }
 
 /* ============================================================================
@@ -1566,7 +1566,7 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible, .field:focus-vi
 .header--tagline {
   font-family: var(--font-regular); font-weight: var(--weight-regular);
   font-size: 0.675rem; line-height: 1.1; letter-spacing: var(--tracking-label);
-  text-transform: uppercase; color: var(--color-groen-diep);
+  text-transform: uppercase; color: var(--color-leisteen-diep);
 }
 @media (max-width: 1199px) { .header--tagline { display: none; } }
 
@@ -1581,11 +1581,11 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible, .field:focus-vi
 .header--light .submenu--link { background-color: transparent; color: var(--color-white); }
 .header--light .submenu--link:not(.highlight):hover { background-color: var(--color-white); color: var(--color-text-primary); }
 .header--light .hamburger { background-color: transparent; color: var(--color-white); }
-.header--light .hamburger:hover { background-color: var(--color-geel); color: var(--color-text-primary); }
+.header--light .hamburger:hover { background-color: var(--color-oranje); color: var(--color-text-primary); }
 
 .header--scrolled { background-color: var(--color-grey); }
 .header--scrolled .hamburger { background-color: var(--color-white); }
-.header--scrolled .hamburger:hover { background-color: var(--color-geel); }
+.header--scrolled .hamburger:hover { background-color: var(--color-oranje); }
 .header--scroll-hidden { transform: translateY(-100%); }
 
 /* Navigatie ≥1200px: één doorlopende witte balk, geen tussenruimte */
@@ -1605,9 +1605,9 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible, .field:focus-vi
   border: none; border-radius: var(--radius-none); cursor: pointer; text-decoration: none;
   transition: all var(--duration-legacy) var(--ease-legacy);
 }
-.submenu--link:not(.highlight):hover { background-color: var(--color-groen); color: var(--color-white); }
-.submenu--link.highlight { background-color: var(--color-geel); color: var(--color-text-primary); }
-.submenu--link.highlight:hover { background-color: var(--color-groen); color: var(--color-white); }
+.submenu--link:not(.highlight):hover { background-color: var(--color-leisteen); color: var(--color-white); }
+.submenu--link.highlight { background-color: var(--color-oranje); color: var(--color-text-primary); }
+.submenu--link.highlight:hover { background-color: var(--color-leisteen); color: var(--color-white); }
 
 /* ---- Uitklapmenu --------------------------------------------------------
    Een menu-item met sublinks opent een vlak over de volle breedte onder de
@@ -1629,7 +1629,7 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible, .field:focus-vi
 .submenu--trigger[aria-expanded="true"],
 .header--light .submenu--trigger[aria-expanded="true"],
 .submenu--link.is-actief.submenu--trigger[aria-expanded="true"] {
-  background-color: var(--color-groen); color: var(--color-white);
+  background-color: var(--color-leisteen); color: var(--color-white);
 }
 
 .uitklap {
@@ -1666,13 +1666,13 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible, .field:focus-vi
   font-family: var(--font-regular); font-weight: var(--weight-regular);
   font-size: 0.9375rem; line-height: 1.4; color: var(--color-text-primary);
 }
-.uitklap__link:hover .uitklap__naam { color: var(--color-groen); }
+.uitklap__link:hover .uitklap__naam { color: var(--color-leisteen); }
 .uitklap__link:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 2px; }
 
 .uitklap__kaart {
   flex: 1 1 40%; min-width: 0; position: relative; overflow: hidden;
   display: flex; align-items: flex-end;
-  background-color: var(--color-groen-diepst);
+  background-color: var(--color-nacht);
 }
 .uitklap__kaart img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 /* Dezelfde twee lagen als de fotohero's: de gradient uit Figma met daaronder
@@ -1685,7 +1685,7 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible, .field:focus-vi
 .uitklap__sluier {
   position: absolute; inset: 0;
   background:
-    linear-gradient(rgba(1, 126, 132, .20) 0%, rgba(1, 126, 132, .80) 100%),
+    linear-gradient(rgba(42, 51, 64, .20) 0%, rgba(42, 51, 64, .80) 100%),
     linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0, 0, 0, .75) 100%);
 }
 .uitklap__kaart-tekst {
@@ -1707,7 +1707,7 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible, .field:focus-vi
   display: none; align-items: center; gap: var(--space-200);
   height: 45px; padding: var(--space-200) var(--space-300);
   border: none; cursor: pointer;
-  background-color: var(--color-grey); color: var(--color-groen-diep);
+  background-color: var(--color-grey); color: var(--color-leisteen-diep);
   font-family: var(--font-regular); font-weight: var(--weight-regular);
   font-size: 0.6875rem; line-height: 1.1; letter-spacing: var(--tracking-label);
   text-decoration: none; white-space: nowrap;
@@ -1715,7 +1715,7 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible, .field:focus-vi
               color var(--duration-instant) linear;
 }
 @media (max-width: 1199px) { .hamburger { display: flex; } }
-.hamburger:hover { background-color: var(--color-geel); color: var(--color-text-primary); }
+.hamburger:hover { background-color: var(--color-oranje); color: var(--color-text-primary); }
 
 /* ============================================================================
    Mobiel schuifpaneel (§6.5)
@@ -1762,8 +1762,8 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible, .field:focus-vi
   font-size: 0.6875rem; letter-spacing: var(--tracking-label); text-transform: uppercase;
   transition: all var(--duration-fast) var(--ease-legacy);
 }
-.mobile-panel--chip:hover { background-color: var(--color-groen); color: var(--color-white); }
-.mobile-panel--chip.is-close { background-color: var(--color-geel); }
+.mobile-panel--chip:hover { background-color: var(--color-leisteen); color: var(--color-white); }
+.mobile-panel--chip.is-close { background-color: var(--color-oranje); }
 
 /* Hier stond een vaste marge van 200px boven het menu (120 op een telefoon).
    Dat was gemaakt voor een korte lijst; met de uitklappers erbij werd het een
@@ -1814,7 +1814,7 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible, .field:focus-vi
   font-family: var(--font-regular); font-weight: var(--weight-regular);
   font-size: 1.375rem; line-height: 1.3; color: var(--color-text-primary);
 }
-.mobile-panel--sublink:hover { color: var(--color-groen); }
+.mobile-panel--sublink:hover { color: var(--color-leisteen); }
 @media (max-width: 768px) { .mobile-panel--sublink { font-size: 1.125rem; } }
 
 /* Tekst die bij hover omhoog rolt naar de identieke tweede span */
@@ -1843,7 +1843,7 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible, .field:focus-vi
   position: absolute; left: var(--space-400); top: var(--space-400);
   z-index: calc(var(--z-header) + 1);
   transform: translateY(-200%);
-  background: var(--color-geel); color: var(--color-black);
+  background: var(--color-oranje); color: var(--color-black);
   padding: var(--space-300) var(--space-400);
   font-family: var(--font-medium); font-weight: var(--weight-medium);
   font-size: 0.6875rem; letter-spacing: var(--tracking-label); text-transform: uppercase;
@@ -1875,7 +1875,7 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible, .field:focus-vi
   font-family: var(--font-medium); font-weight: var(--weight-medium);
   font-size: 0.6875rem; letter-spacing: var(--tracking-label); text-transform: uppercase;
   color: var(--color-text-primary);
-  background: var(--color-geel);
+  background: var(--color-oranje);
   padding: var(--space-200) var(--space-300);
   align-self: flex-start;
 }
@@ -1887,11 +1887,11 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible, .field:focus-vi
    geen randen om het af te bakenen (DR-3), dus het vlak is het veld. Op wit
    draaien we de twee kleuren daarom om. */
 .background--white .field { background: var(--color-grey); }
-.background--white .veld__fout { background: var(--color-geel); }
+.background--white .veld__fout { background: var(--color-oranje); }
 
 select.field { appearance: none; cursor: pointer;
-               background-image: linear-gradient(45deg, transparent 50%, var(--color-groen) 50%),
-                                 linear-gradient(135deg, var(--color-groen) 50%, transparent 50%);
+               background-image: linear-gradient(45deg, transparent 50%, var(--color-leisteen) 50%),
+                                 linear-gradient(135deg, var(--color-leisteen) 50%, transparent 50%);
                background-position: calc(100% - 20px) 50%, calc(100% - 14px) 50%;
                background-size: 6px 6px, 6px 6px; background-repeat: no-repeat;
                padding-right: var(--space-800); }
@@ -1900,7 +1900,7 @@ select.field { appearance: none; cursor: pointer;
            font-family: var(--font-regular); font-weight: var(--weight-regular);
            font-size: 1rem; line-height: 1.5; }
 .akkoord input { width: 24px; height: 24px; flex-shrink: 0; margin: 0;
-                 accent-color: var(--color-groen); cursor: pointer; }
+                 accent-color: var(--color-leisteen); cursor: pointer; }
 .akkoord a { color: var(--color-text-primary); }
 
 .honeypot { position: absolute; left: -9999px; width: 0; height: 0; opacity: 0; }
@@ -1912,9 +1912,9 @@ select.field { appearance: none; cursor: pointer;
   font-size: 0.6875rem; letter-spacing: var(--tracking-label); text-transform: uppercase;
 }
 .contactformulier__melding:empty { display: none; }
-.contactformulier__melding.is-goed { background: var(--color-geel); color: var(--color-text-primary);
+.contactformulier__melding.is-goed { background: var(--color-oranje); color: var(--color-text-primary);
                                      padding: var(--space-300) var(--space-400); }
-.contactformulier__melding.is-fout { background: var(--color-groen); color: var(--color-white);
+.contactformulier__melding.is-fout { background: var(--color-leisteen); color: var(--color-white);
                                      padding: var(--space-300) var(--space-400); }
 
 /* ============================================================================
@@ -1922,7 +1922,7 @@ select.field { appearance: none; cursor: pointer;
    ========================================================================== */
 
 /* De pagina waar je nu bent, in de navigatie. */
-.submenu--link.is-actief { background-color: var(--color-groen); color: var(--color-white); }
+.submenu--link.is-actief { background-color: var(--color-leisteen); color: var(--color-white); }
 .header--light .submenu--link.is-actief { background-color: var(--color-white); color: var(--color-text-primary); }
 
 .footer--intro { font-family: var(--font-regular); font-weight: var(--weight-regular);
@@ -1957,7 +1957,7 @@ section + section { margin-top: 0; }
   color: var(--color-text-primary); text-decoration: none;
 }
 .panel--grey { background-color: var(--color-grey); }
-.panel--groen { background-color: var(--color-groen); }
+.panel--groen { background-color: var(--color-leisteen); }
 .panel--groen :is(h2, h3, p, span) { color: var(--color-white); }
 @media (max-width: 991px) { .panel { padding: var(--space-panel-md) var(--inset-x); } }
 @media (max-width: 576px) { .panel { padding: var(--space-panel-sm) var(--inset-x); } }
@@ -2004,7 +2004,7 @@ section + section { margin-top: 0; }
 .panel__body { font-family: var(--font-regular); font-weight: var(--weight-regular);
                font-size: 1rem; line-height: 1.5; margin: 0; }
 .panel__actie { margin-top: auto; }
-.panel--link:focus-visible { outline: 2px solid var(--color-groen); outline-offset: -2px; }
+.panel--link:focus-visible { outline: 2px solid var(--color-leisteen); outline-offset: -2px; }
 
 /* ---- Testimonials -------------------------------------------------------
    Opgebouwd uit de carousel-attributie (§6.13): een haarlijn van 54px boven de
@@ -2015,7 +2015,7 @@ section + section { margin-top: 0; }
 .review--name { position: relative; padding-top: 3rem; margin-top: auto; }
 .review--name::after {
   content: ""; position: absolute; left: 0; top: 24px;
-  width: 54px; height: 1px; border-top: 1px solid var(--color-groen-diep);
+  width: 54px; height: 1px; border-top: 1px solid var(--color-leisteen-diep);
 }
 .review--name strong { display: block; font-family: var(--font-medium); font-weight: var(--weight-medium);
                        font-size: 0.875rem; line-height: 1.35; }

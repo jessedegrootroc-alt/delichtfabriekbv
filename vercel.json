@@ -1,5 +1,0 @@
-{
-  "redirects": [
-    { "source": "/case-:slug.html", "destination": "/case.html?slug=case-:slug", "permanent": true }
-  ]
-}
