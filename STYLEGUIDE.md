@@ -81,4 +81,5 @@ Nieuwe afwijkingen markeer je in de CSS met een comment dat begint met
 - **Foto met witte tekst erover: altijd twee lagen** (leisteen 20% naar 80%, zwart
   50% naar 75%). Zo staan de hero's van de projectpagina's; de homepagehero heeft
   zwart 30% naar 70% omdat de tekst daar onderin staat.
+- **Het slotblok wijkt bewust af van de contrasteis**: witte tekst op het rood-oranje verloop zonder waas, op verzoek. Zie het commentaar bij `.cta-slot__hoofd`.
 - **Dark mode** is er niet (`color-scheme: light`); de template had hem ook niet.
