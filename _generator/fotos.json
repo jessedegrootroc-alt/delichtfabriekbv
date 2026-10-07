@@ -1,0 +1,962 @@
+{
+ "hero-tunnel-titan": {
+  "bron": "Titan-Tuscan-angle-60-2200K-High-Efficiency-IK10.jpg",
+  "breedtes": [
+   480,
+   800,
+   1200,
+   1800,
+   2400
+  ],
+  "groot": [
+   2400,
+   1476
+  ],
+  "klein": [
+   480,
+   295
+  ],
+  "alt": "Onderdoorgang bij nacht met warmwit licht uit Titan-tunnelarmaturen, weerspiegeld in het water"
+ },
+ "tunnel-3000k": {
+  "bron": "Tunnelverlichting-3000K-dynadim-3A-in-polycarbonaat-en-anti-graffiti-IK10.jpg",
+  "breedtes": [
+   480,
+   800,
+   1200,
+   1800,
+   2400
+  ],
+  "groot": [
+   2400,
+   1434
+  ],
+  "klein": [
+   480,
+   287
+  ],
+  "alt": "Fietstunnel in de schemering, gelijkmatig verlicht met tunnelarmaturen in 3000K"
+ },
+ "titan-uhe": {
+  "bron": "Titan-DLF13-60-22-RVS-2200K-60-graden-IK10.jpg",
+  "breedtes": [
+   480,
+   800,
+   1200,
+   1800,
+   2400
+  ],
+  "groot": [
+   2400,
+   1476
+  ],
+  "klein": [
+   480,
+   295
+  ],
+  "alt": "Fietstunnel bij nacht met Titan-armaturen in roestvast staal, lichtkleur 2200K"
+ },
+ "titan-tuscan-3000k": {
+  "bron": "Titan-Tuscan-Angle-2200K-3000K-polycarbonaat-IK10-dynadim-3a-RVS.jpg",
+  "breedtes": [
+   480,
+   800,
+   1200
+  ],
+  "groot": [
+   1200,
+   739
+  ],
+  "klein": [
+   480,
+   296
+  ],
+  "alt": "Tunnel met Titan-armaturen in polycarbonaat, lichtkleur 2200K en 3000K naast elkaar"
+ },
+ "titan-antigraffiti": {
+  "bron": "Tunnelarmatuur-Titan-60-graden-IK10-anti-graffiti-high-efficiency-HE.jpg",
+  "breedtes": [
+   480,
+   800,
+   1200
+  ],
+  "groot": [
+   1200,
+   739
+  ],
+  "klein": [
+   480,
+   296
+  ],
+  "alt": "Onderdoorgang vol graffiti, verlicht met Titan-armaturen met antigraffiticoating"
+ },
+ "tunnel-gebogen-a": {
+  "bron": "Tunnel-gebogen-polycarbonaat-afscherming-2200K-Dynadim-3a-IK10-dimbaar.jpg",
+  "breedtes": [
+   480,
+   800,
+   1200
+  ],
+  "groot": [
+   1200,
+   739
+  ],
+  "klein": [
+   480,
+   296
+  ],
+  "alt": "Tunnelwand met gebogen polycarbonaat afscherming, lichtkleur 2200K"
+ },
+ "tunnel-gebogen-b": {
+  "bron": "Tunnel-gebogen-polycarbonaat-afscherming-2200K-Dynadim-3A-IK10-dimbaar-2.jpg",
+  "breedtes": [
+   480,
+   800,
+   1200
+  ],
+  "groot": [
+   1200,
+   739
+  ],
+  "klein": [
+   480,
+   296
+  ],
+  "alt": "Fietstunnel met mozaïekwand, verlicht door armaturen met gebogen polycarbonaat venster"
+ },
+ "tunnel-2e-keus": {
+  "bron": "Tunnel-2e-keus-upgrade-verlichting-naar-LED-in-2200K-met-nieuw-venster.jpg",
+  "breedtes": [
+   480,
+   800,
+   1200,
+   1800,
+   2400
+  ],
+  "groot": [
+   2400,
+   1476
+  ],
+  "klein": [
+   480,
+   295
+  ],
+  "alt": "Onderdoorgang met nieuwe LED-geartray en nieuw venster, lichtkleur 2200K"
+ },
+ "verledden-tunnel": {
+  "bron": "Verledden-Tunnel-armatuur-geartray-dynadimmer-3A-3000K-22W-polycarbonaat.jpg",
+  "breedtes": [
+   480,
+   800,
+   1200,
+   1800,
+   2400
+  ],
+  "groot": [
+   2400,
+   1476
+  ],
+  "klein": [
+   480,
+   295
+  ],
+  "alt": "Tunnel met naar LED omgebouwde armaturen en nieuw polycarbonaat venster, 3000K"
+ },
+ "verledden-geartray": {
+  "bron": "Verledden-geartray-LED-3000K-High-efficiency-dynadimmer-3A-polycarbonaat.jpg",
+  "breedtes": [
+   480,
+   800,
+   1200,
+   1800,
+   2400
+  ],
+  "groot": [
+   2400,
+   1476
+  ],
+  "klein": [
+   480,
+   295
+  ],
+  "alt": "Lange fietstunnel met graffiti, verlicht met LED-geartrays in 3000K"
+ },
+ "geartray-tunnel-2200k": {
+  "bron": "LED-geartray-tunnel-2200K-dimming-3A-dyna.jpg",
+  "breedtes": [
+   480,
+   800,
+   1200
+  ],
+  "groot": [
+   1200,
+   739
+  ],
+  "klein": [
+   480,
+   296
+  ],
+  "alt": "Fietstunnel met wandschilderingen, verlicht met dimbare LED-geartrays in 2200K"
+ },
+ "brug-buikslotermeer": {
+  "bron": "Brug-Buikslotermeer-Amsterdam-De-Licht-Fabriek-trapopgang-48V-ELV-Extra-low-voltage-1.jpg",
+  "breedtes": [
+   480,
+   800,
+   1200,
+   1800,
+   2400
+  ],
+  "groot": [
+   2400,
+   1476
+  ],
+  "klein": [
+   480,
+   295
+  ],
+  "alt": "Houten brug met trapopgang bij nacht, verlicht met 48V-leuningverlichting"
+ },
+ "brug-hoofddorp": {
+  "bron": "Brugverlichting-Hoofddorp-ELV-54V-DC-IK10-1.jpg",
+  "breedtes": [
+   480,
+   800,
+   1200
+  ],
+  "groot": [
+   1200,
+   739
+  ],
+  "klein": [
+   480,
+   296
+  ],
+  "alt": "Brugleuning met ingebouwde LED-verlichting in de schemering"
+ },
+ "trapopgang-grondspots": {
+  "bron": "Trapopgang-grondspots-en-leuningverlichting-LED-360-ELV-48V-IK10.jpg",
+  "breedtes": [
+   480,
+   800,
+   1200,
+   1800,
+   2400
+  ],
+  "groot": [
+   2400,
+   1476
+  ],
+  "klein": [
+   480,
+   295
+  ],
+  "alt": "Trap in het groen bij nacht met grondspots en leuningverlichting"
+ },
+ "bimhuis": {
+  "bron": "Herstel-trap-brug-verlichting-muziekgebouw-Amsterdam-BIMhuis.jpg",
+  "breedtes": [
+   480,
+   800,
+   1200
+  ],
+  "groot": [
+   1200,
+   553
+  ],
+  "klein": [
+   480,
+   221
+  ],
+  "alt": "Trapleuning op het dak van het Muziekgebouw aan het IJ, Amsterdam"
+ },
+ "cruijff": {
+  "bron": "LED-Johan-Cruijff-Arena-De-Licht-Fabriek.jpg",
+  "breedtes": [
+   480,
+   800,
+   1200,
+   1800,
+   2400
+  ],
+  "groot": [
+   2400,
+   1400
+  ],
+  "klein": [
+   480,
+   280
+  ],
+  "alt": "Bronzen standbeeld van Johan Cruijff bij de Johan Cruijff ArenA, aangelicht met LED"
+ },
+ "noodverlichting": {
+  "bron": "TL-naar-LED-noodverlichting-Dali-dimbaar-polycarbonaat.jpg",
+  "breedtes": [
+   480,
+   800,
+   1200,
+   1800,
+   2400
+  ],
+  "groot": [
+   2400,
+   1476
+  ],
+  "klein": [
+   480,
+   295
+  ],
+  "alt": "Voetgangerstunnel bij een station met LED-verlichting en noodverlichting"
+ },
+ "uv-lichtbak": {
+  "bron": "UV-Lichtbak-herstel-kunstwerken-vergeling-schade.jpg",
+  "breedtes": [
+   480,
+   800,
+   1200
+  ],
+  "groot": [
+   1200,
+   1045
+  ],
+  "klein": [
+   480,
+   418
+  ],
+  "alt": "Paars oplichtende UV-A lichtbak voor het herstel van vergeelde kunstwerken"
+ },
+ "tl-vs-led": {
+  "bron": "Verschil-oude-tl-vs-LEDmodule-200lm-per-watt.jpg",
+  "breedtes": [
+   480,
+   800
+  ],
+  "groot": [
+   800,
+   802
+  ],
+  "klein": [
+   480,
+   481
+  ],
+  "alt": "Oude TL-buis naast de vervangende LED-module op een werkbank"
+ },
+ "ledmodule-buis": {
+  "bron": "Custom-LEDmodule-3000K-180-lumen-per-watt-in-buis.jpg",
+  "breedtes": [
+   480,
+   800,
+   1200
+  ],
+  "groot": [
+   1200,
+   336
+  ],
+  "klein": [
+   480,
+   134
+  ],
+  "alt": "Op maat gemaakte LED-module in een buis met aansluitkabel"
+ },
+ "geartray-ontwerp": {
+  "bron": "Designplan-vervangende-geartray-zeer-efficient-200-lumen-per-watt.jpg",
+  "breedtes": [
+   480,
+   800,
+   1200
+  ],
+  "groot": [
+   1200,
+   573
+  ],
+  "klein": [
+   480,
+   229
+  ],
+  "alt": "Technische weergave van een vervangende LED-geartray"
+ },
+ "retrofit-module": {
+  "bron": "LED-retrofit-module-slimme-driver-dynadimmer-3A.jpg",
+  "breedtes": [
+   480,
+   800
+  ],
+  "groot": [
+   800,
+   504
+  ],
+  "klein": [
+   480,
+   303
+  ],
+  "alt": "LED-retrofitmodule met driver op een montageplaat"
+ },
+ "retrofit-straat": {
+  "bron": "Retrofit-2200K-dynadim-optiek-t3-16W.jpg",
+  "breedtes": [
+   480,
+   800,
+   1200,
+   1800,
+   2400
+  ],
+  "groot": [
+   2400,
+   1476
+  ],
+  "klein": [
+   480,
+   295
+  ],
+  "alt": "Woonstraat in de schemering met straatverlichting in 2200K na retrofit"
+ },
+ "schreder-cdo": {
+  "bron": "Schreder-CDO-70W-naar-2200K-LED-module-T3-optiek-Dynadim-22W.jpg",
+  "breedtes": [
+   480,
+   800,
+   1200
+  ],
+  "groot": [
+   1200,
+   739
+  ],
+  "klein": [
+   480,
+   296
+  ],
+  "alt": "Besneeuwde woonstraat bij nacht met warmwitte straatverlichting na ombouw naar LED"
+ },
+ "citylight-beverwijk": {
+  "bron": "Citylight-Beverwijk-Wijkertoren-1.jpg",
+  "breedtes": [
+   480,
+   800,
+   1200
+  ],
+  "groot": [
+   1200,
+   1392
+  ],
+  "klein": [
+   480,
+   557
+  ],
+  "alt": "Citylight-paaltoparmaturen op een plein bij de Wijkertoren in Beverwijk, in de schemering"
+ },
+ "citylight-speelplaats": {
+  "bron": "Citylight-armatuur-Speelplaats-1.jpg",
+  "breedtes": [
+   480,
+   800,
+   1200
+  ],
+  "groot": [
+   1200,
+   646
+  ],
+  "klein": [
+   480,
+   258
+  ],
+  "alt": "Speelplaats in de avond verlicht met Citylight-paaltoparmaturen"
+ },
+ "citylight-lens": {
+  "bron": "Citylight-lens-detail-T2-T3-T4-De-Licht-Fabriek.jpg",
+  "breedtes": [
+   480,
+   800,
+   1200
+  ],
+  "groot": [
+   1200,
+   810
+  ],
+  "klein": [
+   480,
+   324
+  ],
+  "alt": "Vier LED-optieken van het Citylight-armatuur naast elkaar"
+ },
+ "citylight-mini": {
+  "bron": "Citylight-mini-De-Licht-Fabriek-urban-lighting.jpg",
+  "breedtes": [
+   480,
+   800,
+   1200
+  ],
+  "groot": [
+   1200,
+   1439
+  ],
+  "klein": [
+   480,
+   575
+  ],
+  "alt": "Citylight mini paaltoparmatuur, brandend, in de werkplaats"
+ },
+ "citylight-straat": {
+  "bron": "Citylight-straatverlichting.jpg",
+  "breedtes": [
+   480,
+   800,
+   1200
+  ],
+  "groot": [
+   1200,
+   646
+  ],
+  "klein": [
+   480,
+   258
+  ],
+  "alt": "Woonstraat in de avond met Citylight-paaltoparmaturen"
+ },
+ "citylight-2025": {
+  "bron": "Citylight-urban-lighting-De-Licht-Fabriek-2025.jpg",
+  "breedtes": [
+   480,
+   800,
+   1200,
+   1800,
+   2400
+  ],
+  "groot": [
+   2400,
+   1501
+  ],
+  "klein": [
+   480,
+   300
+  ],
+  "alt": "Citylight-paaltoparmatuur op een mast tegen een blauwe lucht"
+ },
+ "citylight-ontwerp": {
+  "bron": "Citylight-v2-Fusion360-design.jpg",
+  "breedtes": [
+   480,
+   800,
+   1200
+  ],
+  "groot": [
+   1200,
+   500
+  ],
+  "klein": [
+   480,
+   200
+  ],
+  "alt": "3D-ontwerp van het Citylight-armatuur"
+ },
+ "citylight-kerk": {
+  "bron": "IMG_3329.jpg",
+  "breedtes": [
+   480,
+   800,
+   1024
+  ],
+  "groot": [
+   1024,
+   768
+  ],
+  "klein": [
+   480,
+   360
+  ],
+  "alt": "Citylight-armatuur bij nacht naast een kerk, met blauw aangelichte gevel"
+ },
+ "citylight-plein": {
+  "bron": "IMG_8555-2.jpg",
+  "breedtes": [
+   480,
+   768
+  ],
+  "groot": [
+   768,
+   1024
+  ],
+  "klein": [
+   480,
+   640
+  ],
+  "alt": "Citylight-armatuur op een plein bij een school, overdag"
+ },
+ "schielandhuis-entree": {
+  "bron": "IMG_2465.jpg",
+  "breedtes": [
+   480,
+   800,
+   1200,
+   1800,
+   2400
+  ],
+  "groot": [
+   2400,
+   1600
+  ],
+  "klein": [
+   480,
+   320
+  ],
+  "alt": "Entree van het Schielandhuis in Rotterdam met Solarbolders langs het pad"
+ },
+ "schielandhuis-pad": {
+  "bron": "IMG_2485.jpg",
+  "breedtes": [
+   480,
+   800,
+   1200,
+   1800,
+   2400
+  ],
+  "groot": [
+   2400,
+   1600
+  ],
+  "klein": [
+   480,
+   320
+  ],
+  "alt": "Tuinpad bij het Schielandhuis met Solarbolders en hagen"
+ },
+ "schielandhuis-entree-2": {
+  "bron": "IMG_2479a.jpg",
+  "breedtes": [
+   480,
+   800,
+   1200,
+   1800,
+   2400
+  ],
+  "groot": [
+   2400,
+   1600
+  ],
+  "klein": [
+   480,
+   320
+  ],
+  "alt": "Tuin van het Schielandhuis met Solarbolders bij de ingang"
+ },
+ "schielandhuis-bolder": {
+  "bron": "IMG_2437.jpg",
+  "breedtes": [
+   480,
+   800,
+   1200,
+   1800,
+   2400
+  ],
+  "groot": [
+   2400,
+   1600
+  ],
+  "klein": [
+   480,
+   320
+  ],
+  "alt": "Solarbolder van dichtbij tegen de gevel van het Schielandhuis"
+ },
+ "schielandhuis-bolder-2": {
+  "bron": "IMG_2438.jpg",
+  "breedtes": [
+   480,
+   800,
+   1200,
+   1800,
+   2400
+  ],
+  "groot": [
+   2400,
+   1600
+  ],
+  "klein": [
+   480,
+   320
+  ],
+  "alt": "Solarbolder in het groen voor een bakstenen muur"
+ },
+ "schielandhuis-reflector-detail": {
+  "bron": "IMG_2447.jpg",
+  "breedtes": [
+   480,
+   800,
+   1200,
+   1800,
+   2400
+  ],
+  "groot": [
+   2400,
+   1600
+  ],
+  "klein": [
+   480,
+   320
+  ],
+  "alt": "Detail van de terrazzo reflector van de Solarbolder"
+ },
+ "schielandhuis-gebouw": {
+  "bron": "IMG_2457.jpg",
+  "breedtes": [
+   480,
+   800,
+   1200,
+   1800,
+   2400
+  ],
+  "groot": [
+   2400,
+   1600
+  ],
+  "klein": [
+   480,
+   320
+  ],
+  "alt": "Solarbolder in de tuin met de bebouwing van Rotterdam op de achtergrond"
+ },
+ "solarbolder-crooswijk": {
+  "bron": "SolarBolder-Crooswijk-Rotterdam-3000K-Terrazzo-reflector-De-Licht-Fabriek.jpg",
+  "breedtes": [
+   480,
+   800,
+   1200
+  ],
+  "groot": [
+   1200,
+   739
+  ],
+  "klein": [
+   480,
+   296
+  ],
+  "alt": "Solarbolders langs een parkpad in Crooswijk, Rotterdam"
+ },
+ "solarbolder-crooswijk-2": {
+  "bron": "SolarBolder-Crooswijk-3-Rotterdam-De-Licht-Fabriek.jpg",
+  "breedtes": [
+   480,
+   800,
+   1024
+  ],
+  "groot": [
+   1024,
+   768
+  ],
+  "klein": [
+   480,
+   360
+  ],
+  "alt": "Parkpad in Crooswijk met Solarbolders tussen de bomen"
+ },
+ "solarbolder-boven": {
+  "bron": "Solarbolder-Schielandhuis-boven.jpg",
+  "breedtes": [
+   480,
+   800,
+   1024
+  ],
+  "groot": [
+   1024,
+   683
+  ],
+  "klein": [
+   480,
+   320
+  ],
+  "alt": "Solarbolder van bovenaf met het zonnepaneel in het bovenvlak"
+ },
+ "solarbolder-zonnepaneel": {
+  "bron": "Solarbolder-Schielandhuis-detail-zonnepaneel-met-RVS-afgewerkt-met-poedercoat.jpg",
+  "breedtes": [
+   480,
+   800,
+   1200
+  ],
+  "groot": [
+   1200,
+   649
+  ],
+  "klein": [
+   480,
+   260
+  ],
+  "alt": "Detail van het zonnepaneel van de Solarbolder in gepoedercoat roestvast staal"
+ },
+ "solarbolder-reflector": {
+  "bron": "Solarbolder-Schielandhuis-reflector-terrazzo-wit-carrera.jpg",
+  "breedtes": [
+   480,
+   800,
+   1200
+  ],
+  "groot": [
+   1200,
+   1620
+  ],
+  "klein": [
+   480,
+   648
+  ],
+  "alt": "Solarbolder met witte terrazzo reflector voor het Schielandhuis"
+ },
+ "solarbolder-amber": {
+  "bron": "SolarBolder-Amber-met-Azobe-in-RVS-met-poedercoat.jpeg",
+  "breedtes": [
+   480,
+   800,
+   1200
+  ],
+  "groot": [
+   1200,
+   549
+  ],
+  "klein": [
+   480,
+   220
+  ],
+  "alt": "Solarbolder met amberkleurig licht en azobé reflector, in de avond bij een weiland"
+ },
+ "solarbolder-amber-2": {
+  "bron": "Solarbolder-amber-met-azobe.png",
+  "breedtes": [
+   480,
+   800,
+   1024
+  ],
+  "groot": [
+   1024,
+   632
+  ],
+  "klein": [
+   480,
+   296
+  ],
+  "alt": "Solarbolder met amber LED en azobé reflector voor een groene loods"
+ },
+ "tuin-schielandhuis-2": {
+  "bron": "Tuin-Schielandhuis-Rotterdam-2-De-Licht-Fabriek-.jpg",
+  "breedtes": [
+   480,
+   800,
+   1024
+  ],
+  "groot": [
+   1024,
+   683
+  ],
+  "klein": [
+   480,
+   320
+  ],
+  "alt": "Tuin van het Schielandhuis in Rotterdam met Solarbolders"
+ },
+ "tuin-schielandhuis-3": {
+  "bron": "Tuin-Schielandhuis-Rotterdam-3-De-Licht-Fabriek.jpg",
+  "breedtes": [
+   480,
+   800,
+   1024
+  ],
+  "groot": [
+   1024,
+   683
+  ],
+  "klein": [
+   480,
+   320
+  ],
+  "alt": "Solarbolders langs het pad naar het Schielandhuis"
+ },
+ "thermo-radiator": {
+  "bron": "thermal-image-of-radiator-CUF11621.jpg",
+  "breedtes": [
+   480,
+   800,
+   1232
+  ],
+  "groot": [
+   1232,
+   924
+  ],
+  "klein": [
+   480,
+   360
+  ],
+  "alt": "Warmtebeeld van een radiator met zichtbare temperatuurverschillen"
+ },
+ "thermo-connector": {
+  "bron": "Thermografische-foto.png",
+  "breedtes": [
+   480,
+   828
+  ],
+  "groot": [
+   828,
+   738
+  ],
+  "klein": [
+   480,
+   428
+  ],
+  "alt": "Warmtebeeld van een elektrische aansluiting met een opwarmende klem"
+ },
+ "thermo-kast": {
+  "bron": "thermografisch-onderzoek.jpg",
+  "breedtes": [
+   480,
+   600
+  ],
+  "groot": [
+   600,
+   1136
+  ],
+  "klein": [
+   480,
+   909
+  ],
+  "alt": "Warmtebeeld naast een gewone foto van een schakelkast met zekeringen"
+ },
+ "thermo-motor": {
+  "bron": "thermography-services-500x500-1.jpg",
+  "breedtes": [
+   480,
+   500
+  ],
+  "groot": [
+   500,
+   500
+  ],
+  "klein": [
+   480,
+   480
+  ],
+  "alt": "Warmtebeeld van een elektromotor"
+ },
+ "badge-made-in-holland": {
+  "bron": "Made-in-Holland-logo.jpg",
+  "maat": [
+   640,
+   428
+  ],
+  "alt": "Made in Holland",
+  "badge": true
+ },
+ "badge-garantie": {
+  "bron": "Made-in-Holland-vijf-5-jaar-garantie.png",
+  "maat": [
+   1024,
+   447
+  ],
+  "alt": "Made in Holland, vijf jaar garantie",
+  "badge": true
+ },
+ "badge-ik10": {
+  "bron": "IK10-rated-De-Licht-Fabriek.jpg",
+  "maat": [
+   225,
+   225
+  ],
+  "alt": "IK10 rated",
+  "badge": true
+ }
+}
