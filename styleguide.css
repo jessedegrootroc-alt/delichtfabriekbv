@@ -979,14 +979,12 @@ main > section:has(+ section) > .container > .content-text-side-cta--container {
   background-color: var(--color-nacht);
   /* image-set laat de browser kiezen: op een telefoon is 2880px zinloos breed.
      De url() eronder is de terugval voor browsers zonder image-set. */
-  /* Het verloop loopt van oranje boven naar rood onder en is bovenin te licht
-     voor witte tekst (wit op #FFA850 haalt 2:1). Een donkere aanloop van 45%
-     boven naar 0% onder laat het rood onderin staan en brengt de kop bovenin
-     op 4,5:1. */
-  background-image: linear-gradient(rgba(17, 21, 24, .45) 0%, rgba(17, 21, 24, 0) 100%),
-                    url("assets/patronen/cta-patroon-1440.webp");
-  background-image: linear-gradient(rgba(17, 21, 24, .45) 0%, rgba(17, 21, 24, 0) 100%),
-                    image-set(url("assets/patronen/cta-patroon-1440.webp") 1x,
+  /* Het verloop staat zonder waas erover (op verzoek). Het loopt van oranje
+     boven naar rood onder; wit op het lichte oranje bovenin haalt maar 2:1,
+     dus label, kop en tekst staan in nacht (5,0:1 of beter op de plek waar ze
+     staan) en alleen de belregel onderin, op het rood, blijft wit (5,2:1). */
+  background-image: url("assets/patronen/cta-patroon-1440.webp");
+  background-image: image-set(url("assets/patronen/cta-patroon-1440.webp") 1x,
                               url("assets/patronen/cta-patroon-2880.webp") 2x);
   background-size: cover;
   background-position: center;
@@ -994,15 +992,15 @@ main > section:has(+ section) > .container > .content-text-side-cta--container {
   display: flex; flex-direction: column; align-items: center;
   text-align: center;
 }
-.cta-slot__label { color: var(--color-white); }
+.cta-slot__label { color: var(--color-nacht); }
 .cta-slot__kop {
   margin: var(--space-500) 0 0; max-width: 20ch;
   font-size: clamp(1.75rem, 1.25rem + 2vw, 3rem); line-height: 1.1;
-  color: var(--color-white);
+  color: var(--color-nacht);
 }
 .cta-slot__tekst {
   margin: var(--space-500) 0 0; max-width: 46ch;
-  color: var(--color-white);
+  color: var(--color-nacht);
 }
 .cta-slot__actie { margin-top: var(--space-700); }
 @media (max-width: 767px) {
