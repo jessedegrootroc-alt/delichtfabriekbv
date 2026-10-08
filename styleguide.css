@@ -96,7 +96,6 @@
   --color-divider:         var(--color-grey);
 
   /* ---------- Overlays en verlopen ---------- */
-  --overlay-card-backdrop: rgba(28, 35, 45, 0.35);
   --overlay-panel:         rgba(0, 0, 0, 0.40);
   --overlay-slide-in:      rgba(0, 0, 0, 0.75);
   --overlay-modal:         rgba(0, 0, 0, 0.80);
@@ -687,9 +686,9 @@ main > section:has(+ section) > .container > .content-text-side-cta--container {
   transition: transform var(--duration-image) var(--ease-image);
 }
 .cta-blocks-advanced__card--linked:hover .cta-blocks-advanced__banner img { transform: scale(1.05); }
-.cta-blocks-advanced__backdrop {
-  position: absolute; inset: 0; background: var(--overlay-card-backdrop); pointer-events: none;
-}
+/* INFERRED: de template legde een leisteen waas van 35% over elk kaartbeeld
+   (--overlay-card-backdrop). Hier staat geen tekst op de foto's, dus de waas
+   maakte ze alleen donkerder; op verzoek verwijderd. */
 .cta-blocks-advanced__body {
   flex: 1 1 auto; display: flex; flex-direction: column;
   gap: var(--space-600); padding: var(--space-panel) var(--inset-x);

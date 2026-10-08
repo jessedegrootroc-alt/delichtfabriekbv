@@ -116,7 +116,6 @@ inhoud = f'''  <!-- ================= 01 INTRODUCTIE ================= -->
           <div class="cta-blocks-advanced__card cta-blocks-advanced__card--horizontal">
             <figure class="cta-blocks-advanced__banner">
               {foto("citylight-2025", maten="(max-width: 991px) 100vw, 50vw")}
-              <span class="cta-blocks-advanced__backdrop" aria-hidden="true"></span>
             </figure>
             <div class="cta-blocks-advanced__body cta-blocks-advanced__body--bg-white">
               <span class="subtitle">Eigen huis</span>

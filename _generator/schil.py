@@ -1039,7 +1039,6 @@ def beeldkaart(kop, tekst, beeld, alt=None, kleur="grey", href=None, meta=None):
     metaregel = f'        <span class="subtitle">{meta}</span>\n' if meta else ""
     binnen = (f'      <figure class="cta-blocks-advanced__banner">\n'
               f'        {foto(beeld, maten="(max-width: 991px) 100vw, 50vw", alt=alt)}\n'
-              '        <span class="cta-blocks-advanced__backdrop" aria-hidden="true"></span>\n'
               '      </figure>\n'
               f'      <div class="cta-blocks-advanced__body cta-blocks-advanced__body--bg-{kleur}">\n'
               f'{metaregel}'

@@ -68,6 +68,7 @@ wat je moet weten om hier te werken, en waar De Licht Fabriek afwijkt.
 | Kerncijfers | getallen | getallen én woorden (`.kerncijfer__getal--tekst`) | "terrazzo" of "Rotterdam" past niet in de cijferstijl |
 | Slotblok | kop, tekst, knop | plus een belregel (`.cta-slot__bel`) | bellen is op de bronsite de eerste contactroute |
 | Paginakop | vaste regelbreedte | `hyphens: auto` op `.paginahero__titel` | "Tunnelarmaturen" en "Thermografisch" lopen anders over het beeld |
+| Kaartbeeld | leisteen waas van 35% over de foto | geen waas | er staat geen tekst op het beeld; de foto toont op volle sterkte, op verzoek |
 | Container | maximaal 1800px | geen maximum | geen witte stroken naast de kleurbanden op brede schermen, op verzoek |
 | Cursussen, CMS, admin | aanwezig | verwijderd | niet van toepassing |
 
