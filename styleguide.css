@@ -533,6 +533,11 @@ main > section:has(+ section) > .container > .content-text-side-cta--container {
    daarom niet dezelfde aandacht. */
 .button--secundair  { background-color: var(--color-nacht); color: var(--color-white); }
 .button:hover      { background-color: var(--color-oranje-hover); color: var(--color-black); }
+/* De witte knop gaat bij hover naar nacht in plaats van naar oranje: op het
+   rood-oranje verloop van het slotblok en op een hero is oranje op oranje
+   niet te onderscheiden. Wit op nacht haalt 17,9:1. */
+.button--secondary:hover  { background-color: var(--color-nacht); color: var(--color-white); }
+.button--secondary:active { background-color: var(--color-leisteen); color: var(--color-white); }
 /* Een groen vlak wordt donkerder in plaats van van kleur te wisselen. */
 .button--donker:hover  { background-color: var(--color-leisteen-hover); color: var(--color-white); }
 .button--donker:active { background-color: var(--color-leisteen-pressed); color: var(--color-white); }
