@@ -952,7 +952,16 @@ main > section:has(+ section) > .container > .content-text-side-cta--container {
    staan daar.
 
    Geen ruimte onder het slotblok: het groene vlak sluit direct aan op de voet. */
-.cta-slot { background-color: var(--color-white); }
+/* Het verloop staat op de sectie zelf en niet op het blok in de container,
+   zodat het op schermen breder dan 1800px tot de rand loopt. */
+.cta-slot {
+  background-color: var(--color-nacht);
+  background-image: url("assets/patronen/cta-patroon-1440.webp");
+  background-image: image-set(url("assets/patronen/cta-patroon-1440.webp") 1x,
+                              url("assets/patronen/cta-patroon-2880.webp") 2x);
+  background-size: cover;
+  background-position: center;
+}
 /* Het merkpatroon op volle sterkte, op verzoek zonder waas ertussen. Het zit in
    de achtergrond en niet in een <img>: het is versiering en heeft geen
    alternatieve tekst nodig.
@@ -976,7 +985,6 @@ main > section:has(+ section) > .container > .content-text-side-cta--container {
    zonder waas is de tekst uit het midden halen, naar de donkere hoek
    linksonder. */
 .cta-slot__hoofd {
-  background-color: var(--color-nacht);
   /* image-set laat de browser kiezen: op een telefoon is 2880px zinloos breed.
      De url() eronder is de terugval voor browsers zonder image-set. */
   /* Het verloop staat zonder waas erover en de tekst is wit, allebei op
@@ -986,11 +994,7 @@ main > section:has(+ section) > .container > .content-text-side-cta--container {
      en 3), de tekst haalt 4,0:1. Wil je dit later oplossen zonder waas, zet
      de tekst dan in nacht (var(--color-nacht)) of laat het blok beginnen in
      het rood. */
-  background-image: url("assets/patronen/cta-patroon-1440.webp");
-  background-image: image-set(url("assets/patronen/cta-patroon-1440.webp") 1x,
-                              url("assets/patronen/cta-patroon-2880.webp") 2x);
-  background-size: cover;
-  background-position: center;
+  background: none;
   padding: var(--space-1000) var(--inset-x);
   display: flex; flex-direction: column; align-items: center;
   text-align: center;
@@ -1442,7 +1446,9 @@ main > section:has(+ section) > .container > .content-text-side-cta--container {
 
 .footer { width: 100%; }
 .footer--gap { row-gap: var(--space-700); }
-.footer--widgets { padding: var(--space-800) var(--inset-x); background-color: var(--color-grey); }
+.footer--widgets { padding: var(--space-800) var(--inset-x); background-color: var(--color-grey);
+                   /* Grijs tot de schermrand, ook voorbij de 1800px van de container. */
+                   box-shadow: 0 0 0 100vmax var(--color-grey); clip-path: inset(0 -100vmax); }
 @media (max-width: 576px) {
   .footer--widgets { padding: var(--space-section-y-mobile) var(--inset-x); }
   .footer .widget { margin-bottom: var(--space-700); }
