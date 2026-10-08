@@ -110,6 +110,7 @@ Vervalt uit de template: cursussen (4 + overzicht), cases uit Supabase, admin.ht
 | Formulier | contactpagina | zeven onderwerpen, labels, verplichte velden, akkoordvinkje; endpoint nog leeg (CONTENT-TODO) |
 | Reduced motion | code | smoother uit, band stil, timer verborgen, tellers over (template) |
 | Volle breedte | JS-meting op 15 pagina's bij 1920px en 2560px | geen enkel gekleurd vlak breder dan 60% blijft van de schermrand af (`--container-max: none`); leesbreedte begrensd: statement 36em, kaarttekst 664px, citaat 30em |
+| Brede schermen, projecten en over ons | screenshots per sectie bij 1920px, JS-meting bij 2560px | alle banden tot de rand; projectkaarten vanaf 2200px in vier kolommen (640px per kaart op 2560px) |
 | Dark mode / navigatiegradient | n.v.t. | de template heeft geen dark mode en geen gradient in de balk; niet toegevoegd |
 
 Niet uitvoerbaar: Lighthouse/LCP-meting in een echte browser (pane zonder meetgereedschap); echte browsers buiten Chromium.

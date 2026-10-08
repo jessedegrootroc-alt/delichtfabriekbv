@@ -90,6 +90,9 @@
 .case-kaart { display: flex; width: 100%; }
 @media (min-width: 768px)  { .case-kaart { width: 50%; } }
 @media (min-width: 1200px) { .case-kaart { width: 33.3333%; } }
+/* INFERRED: nu de container tot de rand loopt worden drie kaarten op een
+   scherm van 2560px elk 850px breed; vier kolommen houden de kaart op maat. */
+@media (min-width: 2200px) { .case-kaart { width: 25%; } }
 .case-kaart[hidden] { display: none; }
 
 .case-kaart__link {
