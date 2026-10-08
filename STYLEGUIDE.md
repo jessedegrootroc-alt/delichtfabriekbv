@@ -40,6 +40,11 @@ wat je moet weten om hier te werken, en waar De Licht Fabriek afwijkt.
   elke overgang dezelfde lucht heeft.
 - **Eén zijinzet voor de hele pagina: `--inset-x`.** 48px, 16px onder 992px.
   Alles wat de linkerrand raakt gebruikt die ene variabele.
+- **De container heeft geen maximumbreedte** (`--container-max: none`; de
+  template hield 1800px aan). Elke kleurband loopt dus op elk scherm tot de
+  rand; er staat nooit een witte strook naast een grijs, donker of oranje vlak.
+  De leesbreedte komt uit `--content-max-*` en uit maxima op de statementtekst,
+  de kaarttekst en de citaten.
 - **Links uitlijnen.** Gecentreerde tekst alleen in het slotblok.
 - **Beweging is beperkt** tot hover, menu's, de doorlopende kenmerkenband, de
   quoteslider (6 s per citaat, timerbalk, pauze bij focus) en de tellers op de
@@ -63,6 +68,7 @@ wat je moet weten om hier te werken, en waar De Licht Fabriek afwijkt.
 | Kerncijfers | getallen | getallen én woorden (`.kerncijfer__getal--tekst`) | "terrazzo" of "Rotterdam" past niet in de cijferstijl |
 | Slotblok | kop, tekst, knop | plus een belregel (`.cta-slot__bel`) | bellen is op de bronsite de eerste contactroute |
 | Paginakop | vaste regelbreedte | `hyphens: auto` op `.paginahero__titel` | "Tunnelarmaturen" en "Thermografisch" lopen anders over het beeld |
+| Container | maximaal 1800px | geen maximum | geen witte stroken naast de kleurbanden op brede schermen, op verzoek |
 | Cursussen, CMS, admin | aanwezig | verwijderd | niet van toepassing |
 
 Nieuwe afwijkingen markeer je in de CSS met een comment dat begint met

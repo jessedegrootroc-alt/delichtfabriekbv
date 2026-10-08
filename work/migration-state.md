@@ -109,6 +109,7 @@ Vervalt uit de template: cursussen (4 + overzicht), cases uit Supabase, admin.ht
 | Beeldgewicht | bestandsgroottes + netwerklog | hero 1800px AVIF ≈ 120 kB, 2400px ≈ 184 kB; de browser kiest AVIF; alle foto's lazy behalve de hero (`fetchpriority="high"`) |
 | Formulier | contactpagina | zeven onderwerpen, labels, verplichte velden, akkoordvinkje; endpoint nog leeg (CONTENT-TODO) |
 | Reduced motion | code | smoother uit, band stil, timer verborgen, tellers over (template) |
+| Volle breedte | JS-meting op 15 pagina's bij 1920px en 2560px | geen enkel gekleurd vlak breder dan 60% blijft van de schermrand af (`--container-max: none`); leesbreedte begrensd: statement 36em, kaarttekst 664px, citaat 30em |
 | Dark mode / navigatiegradient | n.v.t. | de template heeft geen dark mode en geen gradient in de balk; niet toegevoegd |
 
 Niet uitvoerbaar: Lighthouse/LCP-meting in een echte browser (pane zonder meetgereedschap); echte browsers buiten Chromium.

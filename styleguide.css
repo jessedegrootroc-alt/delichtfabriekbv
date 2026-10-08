@@ -162,7 +162,11 @@
   --space-gutter:              24px;
 
   /* ---------- Container ---------- */
-  --container-max:        1800px;
+  /* INFERRED: geen maximum. De template hield 1800px aan, maar dan blijft
+     op schermen breder dan dat een witte strook naast elke kleurband over
+     (caserijen, panelen, grijze kaders). De banden lopen nu overal tot de
+     schermrand; de leesbreedte komt uit --content-max-* en de kolommen. */
+  --container-max:        none;
   --content-max-quarter:  437px;
   --content-max-half:     664px;
   --content-max-box:      480px;
@@ -431,8 +435,7 @@ h1 > span.highlight, h2 > span.highlight, h3 > span.highlight {
    De zijinzet zit binnen de .container, niet erbuiten. Dat is hoe §4.1 het
    bedoelt (de container heeft zelf geen padding, de inzet komt uit de wikkel
    erbinnen) en het is ook hoe de kaarten, caserijen en panelen het doen. Zet je
-   de padding op de sectie, dan lopen de twee patronen uiteen zodra het scherm
-   breder is dan 1800 + 2 x 48px. */
+   de padding op de sectie, dan hangt de uitlijning af van de containerbreedte. */
 .band { padding: var(--space-section-y) var(--inset-x); }
 section.band { padding-inline: 0; }
 section.band > .container { padding-inline: var(--inset-x); }
@@ -711,6 +714,7 @@ main > section:has(+ section) > .container > .content-text-side-cta--container {
 .cta-blocks-advanced__title { font-size: clamp(1.5rem, 1.25rem + 1.5vw, 2.5rem); line-height: 1.1; }
 .cta-blocks-advanced__content { font-family: var(--font-regular); font-weight: var(--weight-regular);
                                 font-size: 1rem; line-height: 1.5; color: var(--color-ink); }
+.cta-blocks-advanced__content { max-width: var(--content-max-half); }  /* INFERRED: leesbreedte */
 .cta-blocks-advanced__content p { margin: 0; font: inherit; }
 .cta-blocks-advanced__content p + p { margin-top: 1em; }
 .cta-blocks-advanced__card--linked:focus-visible { outline: 2px solid var(--color-leisteen); outline-offset: 2px; }
@@ -873,7 +877,9 @@ main > section:has(+ section) > .container > .content-text-side-cta--container {
 .content-text-side-cta--container { background-color: var(--color-white); padding: var(--space-800) var(--inset-x); }
 .content-text-side-cta--container.background--grey { background-color: var(--color-grey); }
 @media (max-width: 576px) { .content-text-side-cta--container { padding: var(--space-700) var(--inset-x); } }
-.content-text-side-cta--body { font-size: 2.25rem; margin: 0; }
+/* INFERRED: leesbreedte. Nu de container geen maximum meer heeft zou de
+   statementregel op een breed scherm boven de 100 tekens komen. */
+.content-text-side-cta--body { font-size: 2.25rem; margin: 0; max-width: 36em; }
 .content-text-side-cta--body p { font-size: 2.25rem; line-height: 1.3; margin-bottom: var(--space-700); }
 .content-text-side-cta--body p:last-child { margin-bottom: 0; }
 
@@ -958,7 +964,7 @@ main > section:has(+ section) > .container > .content-text-side-cta--container {
 
    Geen ruimte onder het slotblok: het groene vlak sluit direct aan op de voet. */
 /* Het verloop staat op de sectie zelf en niet op het blok in de container,
-   zodat het op schermen breder dan 1800px tot de rand loopt. */
+   zodat het altijd tot de schermrand loopt. */
 .cta-slot {
   background-color: var(--color-nacht);
   background-image: url("assets/patronen/cta-patroon-1440.webp");
@@ -1386,6 +1392,7 @@ main > section:has(+ section) > .container > .content-text-side-cta--container {
   font-size: clamp(1.375rem, 1rem + 1.4vw, 2.25rem); line-height: 1.25;
   color: var(--color-heading);
 }
+.quote__tekst { max-width: 30em; }  /* INFERRED: leesbreedte op brede schermen */
 .quote__tekst p { margin: 0; font: inherit; }
 /* Het streepje uit de referentie: kort, boven de naam. */
 .quote__streep {
@@ -1451,9 +1458,7 @@ main > section:has(+ section) > .container > .content-text-side-cta--container {
 
 .footer { width: 100%; }
 .footer--gap { row-gap: var(--space-700); }
-.footer--widgets { padding: var(--space-800) var(--inset-x); background-color: var(--color-grey);
-                   /* Grijs tot de schermrand, ook voorbij de 1800px van de container. */
-                   box-shadow: 0 0 0 100vmax var(--color-grey); clip-path: inset(0 -100vmax); }
+.footer--widgets { padding: var(--space-800) var(--inset-x); background-color: var(--color-grey); }
 @media (max-width: 576px) {
   .footer--widgets { padding: var(--space-section-y-mobile) var(--inset-x); }
   .footer .widget { margin-bottom: var(--space-700); }
